@@ -2447,7 +2447,7 @@ window.LESSONS_DATA = {
           "options": [
             "TSE (Türk Standardları Enstitüsü)",
             "TRT",
-            "MEB",
+            "Eğitim",
             "DSİ"
           ],
           "correct": 0,

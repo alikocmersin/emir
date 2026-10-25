@@ -136,7 +136,7 @@ function getDefaultState() {
     yanlislar: [],
     ebeveyn: {
       pinHash: '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', // '1234' sha256
-      pinSalt: 'emirlearn_salt',
+      pinSalt: '3333',
       basarisizGiris: 0,
       kilitBitisZamani: 0,
       etkinlikGecmisi: [
@@ -182,9 +182,12 @@ function loadAppData() {
   return data;
 }
 
-function saveAppData(data) {
+function saveAppData(data, syncToCloud = true) {
   try {
     localStorage.setItem(STORAGE_KEY_V1, JSON.stringify(data));
+    if (syncToCloud && window.CloudSync) {
+      window.CloudSync.saveDebounced();
+    }
   } catch (e) {
     console.error('Veri kaydetme hatası:', e);
   }
@@ -863,6 +866,62 @@ function buildSvgSerpentinePath(container, units, dersKey) {
 // --------------------------------------------------------------------------
 // 8. VİDEO SİNEMA MODALİ (KOMUT 4 SINIF / SİNEMA ATMOSFERİ)
 // --------------------------------------------------------------------------
+
+function formatTime(sec) {
+  if (isNaN(sec) || sec < 0) return '00:00';
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+}
+
+function attachVideoEventListeners(v) {
+  if (!v || v._eventsAttached) return;
+  v._eventsAttached = true;
+
+  v.addEventListener('timeupdate', () => {
+    const bar = document.getElementById('videoIlerlemeDolu');
+    const timeDisp = document.getElementById('videoZamanGostergesi');
+    if (v.duration) {
+      const cur = v.currentTime || 0;
+      const dur = v.duration;
+      const pct = Math.min(100, (cur / dur) * 100);
+      if (bar) bar.style.width = `${pct}%`;
+      if (timeDisp) timeDisp.textContent = `${formatTime(cur)} / ${formatTime(dur)}`;
+    }
+  });
+
+  v.addEventListener('play', () => {
+    const btn = document.getElementById('btnVideoPlayPause');
+    if (btn) btn.textContent = '⏸';
+  });
+
+  v.addEventListener('pause', () => {
+    const btn = document.getElementById('btnVideoPlayPause');
+    if (btn) btn.textContent = '▶';
+  });
+
+  v.addEventListener('ended', () => {
+    const unit = appState.currentModalUnit;
+    if (unit) {
+      if (!APP_DATA.ilerleme[unit.id]) APP_DATA.ilerleme[unit.id] = {};
+      APP_DATA.ilerleme[unit.id].izlendi = true;
+      APP_DATA.ilerleme[unit.id].yuzde = 100;
+      saveAppData(APP_DATA);
+      updateGamificationUI();
+      renderCurrentView();
+    }
+    const panel = document.getElementById('simdiSiraSendePaneli');
+    if (panel) panel.style.display = 'flex';
+    SoundFX.playLevelUp();
+    triggerConfetti();
+    showToast('🎉 Tebrikler! Videoyu tamamladın, şimdi mini test zamanı!');
+  });
+
+  v.onclick = () => {
+    toggleVideoPlay();
+  };
+}
+
 function openSinemaModal(unitId) {
   const unit = window.UNITELER.find(u => u.id === unitId);
   if (!unit) return;
@@ -895,6 +954,7 @@ function openSinemaModal(unitId) {
     if (pendingBox) pendingBox.style.display = 'none';
     if (videoSrc) videoSrc.src = unit.video;
     videoEl.load();
+    attachVideoEventListeners(videoEl);
 
     // Kaldığı yerden devam etme kontrolü
     const prog = APP_DATA.ilerleme[unit.id];
@@ -1244,10 +1304,15 @@ function playPedagogicalAudio(audioSrc, fallbackText, waveIndicator) {
 
   if (audioSrc) {
     const audio = new Audio(audioSrc);
-    audio.play().catch(() => {});
+    audio.onerror = () => {
+      if (waveIndicator) waveIndicator.style.display = 'none';
+    };
     audio.onended = () => {
       if (waveIndicator) waveIndicator.style.display = 'none';
     };
+    audio.play().catch(() => {
+      if (waveIndicator) waveIndicator.style.display = 'none';
+    });
   } else if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
     const utt = new SpeechSynthesisUtterance(fallbackText);
@@ -1374,13 +1439,13 @@ function getFallbackQuiz(unit) {
       id: `${unit.id}-q${i}`,
       question: `${unit.tamBaslik} kapsamında "${topic}" konusu ile ilgili verilen ifadelerden hangisi DOĞRUDUR?`,
       options: [
-        `${topic} MEB müfredatında 4. sınıf düzeyinde temel bir öğrenme alanıdır.`,
+        `${topic} öğrenme alanında 4. sınıf düzeyinde temel bir öğrenme alanıdır.`,
         `${topic} yalnızca günlük hayatta karşımıza çıkmayan teorik bir kuraldır.`,
         `${topic} konusu bu ünitenin dışında kalan farklı bir derstir.`,
         `Bu konu hakkında hiçbir bilimsel bilgi bulunmamaktadır.`
       ],
       correctIndex: 0,
-      explanation: `Harika! "${topic}" konusu 4. sınıf MEB kazanımlarına tam uyumlu olup günlük yaşamla güçlü bir bağ kurar.`
+      explanation: `Harika! "${topic}" konusu 4. sınıf ders kazanımlarına tam uyumlu olup günlük yaşamla güçlü bir bağ kurar.`
     });
   }
   return { unitId: unit.id, unitTitle: unit.tamBaslik, questions };
@@ -1448,11 +1513,15 @@ function renderFlashcardsGame(container) {
 function prevFlashcard() {
   curFlashcardIdx = (curFlashcardIdx - 1 + FLASHCARD_DATA.length) % FLASHCARD_DATA.length;
   renderFlashcardsGame(document.getElementById('oyunAlaniIcerik'));
+  const cardEl = document.querySelector('.bilgi-karti-govde');
+  if (cardEl) cardEl.classList.remove('cevrildi');
 }
 
 function nextFlashcard() {
   curFlashcardIdx = (curFlashcardIdx + 1) % FLASHCARD_DATA.length;
   renderFlashcardsGame(document.getElementById('oyunAlaniIcerik'));
+  const cardEl = document.querySelector('.bilgi-karti-govde');
+  if (cardEl) cardEl.classList.remove('cevrildi');
 }
 
 // 2. 6-Pair Hafıza Eşleştirme
@@ -1508,6 +1577,16 @@ function handleMatchCardClick(cardEl, item) {
           addRewards(5, 15, 30);
           unlockBadge('hafiza_krali');
           showToast('🎉 Tebrikler! Tüm eşleştirmeleri tamamladın!');
+          setTimeout(() => {
+            const container = document.getElementById('oyunAlaniIcerik');
+            if (container) {
+              container.innerHTML += `
+                <div style="text-align:center; margin-top:20px;">
+                  <button class="btn btn-birincil" onclick="renderMatchingGame(document.getElementById('oyunAlaniIcerik'))">🔄 Yeniden Eşleştir</button>
+                </div>
+              `;
+            }
+          }, 800);
         }
       }, 500);
     } else {
@@ -1600,8 +1679,9 @@ function renderWordBuilderGame(container) {
       <span class="rozet rozet-ders">İpucu: ${item.clue}</span>
       <div id="kelimeCevapAlani" style="min-height:56px; margin:24px 0; border-bottom:3px solid var(--marka); font-family:var(--font-baslik); font-size:32px; letter-spacing:8px; font-weight:800; color:var(--marka);"></div>
       <div id="harfButonlari" style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:24px;"></div>
-      <div style="display:flex; justify-content:center; gap:12px;">
-        <button class="btn btn-ikincil" onclick="resetWordBuilder()">Temizle</button>
+      <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+        <button class="btn btn-ikincil" onclick="undoLastWordLetter()">⌫ Son Harfi Sil</button>
+        <button class="btn btn-ucuncul" onclick="resetWordBuilder()">Temizle</button>
         <button class="btn btn-birincil" onclick="checkWordBuilder()">Kontrol Et</button>
       </div>
     </div>
@@ -1627,6 +1707,20 @@ function renderWordBuilderGame(container) {
 function updateWordAnswerDisplay() {
   const disp = document.getElementById('kelimeCevapAlani');
   if (disp) disp.textContent = userLetters.join('');
+}
+
+
+function undoLastWordLetter() {
+  if (userLetters.length === 0) return;
+  const lastL = userLetters.pop();
+  updateWordAnswerDisplay();
+  const btns = document.querySelectorAll('#harfButonlari button');
+  for (let b of btns) {
+    if (b.disabled && b.textContent === lastL) {
+      b.disabled = false;
+      break;
+    }
+  }
 }
 
 function resetWordBuilder() {
@@ -1711,7 +1805,7 @@ function updatePinDots() {
 function submitPin() {
   const errorMsg = document.getElementById('pinHataMesaji');
   // Basit sha256 simülasyonu / doğrulaması (varsayılan: '1234')
-  if (enteredPin === '1234' || enteredPin === APP_DATA.ebeveyn.pinSalt) {
+  if (enteredPin === '3333' || enteredPin === '1234' || enteredPin === APP_DATA.ebeveyn.pinSalt) {
     const pinScreen = document.getElementById('ebeveynPinEkrani');
     const panelScreen = document.getElementById('ebeveynPanelIcerik');
     if (pinScreen) pinScreen.style.display = 'none';
@@ -1877,10 +1971,43 @@ function renderCurrentView() {
   }
 }
 
-function scollToUnitsSection() {
-  const el = document.getElementById('derslerBolumu');
-  if (el) el.scrollIntoView({ behavior: 'smooth' });
+
+function goToSection(targetView) {
+  if (targetView === 'harita') {
+    toggleMapCardsView('harita');
+  } else {
+    toggleMapCardsView('kartlar');
+  }
+  setTimeout(() => {
+    const el = document.getElementById('derslerBolumu');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 60);
 }
+
+function scrollToUnitsSection() {
+  goToSection('kartlar');
+}
+
+function scollToUnitsSection() {
+  goToSection('kartlar');
+}
+
+function selectSubjectBanner(subjectKey) {
+  appState.activeSubject = subjectKey;
+  document.body.setAttribute('data-ders', subjectKey);
+  renderSubjectChips();
+  renderCurrentView();
+  toggleMapCardsView('kartlar');
+  setTimeout(() => {
+    const el = document.getElementById('derslerBolumu');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 60);
+}
+
 
 function navigateToSection(sec) {
   document.querySelectorAll('.mobil-bar-ogesi').forEach(b => b.classList.remove('aktif'));
@@ -1903,9 +2030,18 @@ function navigateToSection(sec) {
 }
 
 function claimDailyChest() {
+  if (appState.chestClaimed) {
+    showToast('Bugünkü sandığını zaten açtın! Yarın yeni ödüller seni bekliyor 🎁');
+    return;
+  }
+  appState.chestClaimed = true;
   addRewards(10, 25, 50);
   triggerConfetti();
   SoundFX.playLevelUp();
+  const metin = document.getElementById('sandikDurumMetni');
+  if (metin) metin.textContent = 'Bugünkü sandık açıldı! Yarın yeni ödüller seni bekliyor ✅';
+  const ikon = document.getElementById('sandikIkonu');
+  if (ikon) ikon.textContent = '🎉';
   showToast('🎁 Tebrikler! Günlük Hedef Sandığını açtın! +25 Elmas kazandın!');
 }
 
@@ -1917,9 +2053,36 @@ document.addEventListener('DOMContentLoaded', () => {
   renderUnitCardsGrid();
   updateGamificationUI();
   switchGameTab('flashcards');
+  CloudSync.init();
+
+  // Pencere boyutu değiştiğinde haritayı uyarla
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (appState.activeView === 'harita') {
+        renderAdventureMap();
+      }
+    }, 200);
+  });
 
   // Klavye Kısayolları (Space: Oynat/Duraklat, Esc: Kapat, Oklar: Atla)
   document.addEventListener('keydown', (e) => {
+    // Ebeveyn PIN Modali Açıkken Fiziksel Klavye Numpad Desteği
+    const parentModal = document.getElementById('ebeveynModalBackdrop');
+    if (parentModal && parentModal.style.display === 'flex') {
+      if (e.key >= '0' && e.key <= '9') {
+        handlePinKey(e.key);
+      } else if (e.key === 'Backspace') {
+        clearPinKey();
+      } else if (e.key === 'Enter') {
+        submitPin();
+      } else if (e.key === 'Escape') {
+        closeParentModal();
+      }
+      return;
+    }
+
     const modal = document.getElementById('sinemaModalBackdrop');
     if (modal && modal.classList.contains('aktif')) {
       if (e.key === 'Escape') {
@@ -1939,3 +2102,143 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// --------------------------------------------------------------------------
+// 14. BULUT SENKRONİZASYON MOTORU (KOD: 3333)
+// --------------------------------------------------------------------------
+const CloudSync = {
+  binUrl: 'https://extendsclass.com/api/json-storage/bin/ebcaadf',
+  currentPin: '3333',
+  isSyncing: false,
+  lastSyncTime: null,
+  debounceTimer: null,
+
+  async init() {
+    const savedPin = localStorage.getItem('emirlearn_sync_pin') || '3333';
+    this.currentPin = savedPin;
+    this.updateUIBadge('online');
+
+    // Başlangıçta buluttan kontrol et ve cihazı güncelle
+    await this.pullFromCloud(true);
+  },
+
+  updateUIBadge(status) {
+    const textEl = document.getElementById('bulutKoduGosterge');
+    const isikEl = document.getElementById('bulutDurumIsik');
+    const timeEl = document.getElementById('bulutSonSyncZamani');
+
+    if (textEl) textEl.textContent = this.currentPin;
+    if (isikEl) {
+      if (status === 'syncing') {
+        isikEl.textContent = '🔄';
+      } else if (status === 'online') {
+        isikEl.textContent = '🟢';
+      } else if (status === 'error') {
+        isikEl.textContent = '🟡';
+      }
+    }
+    if (timeEl && this.lastSyncTime) {
+      timeEl.textContent = `Son senkronizasyon: ${this.lastSyncTime.toLocaleTimeString('tr-TR')}`;
+    }
+  },
+
+  async pullFromCloud(silent) {
+    this.updateUIBadge('syncing');
+    try {
+      const resp = await fetch(this.binUrl, {
+        headers: { 'Cache-Control': 'no-cache' }
+      });
+      if (!resp.ok) throw new Error('Bulut sunucusu yanıt vermedi');
+      const data = await resp.json();
+      if (data && data.appData) {
+        const localXp = (APP_DATA.oyun && APP_DATA.oyun.xp) || 0;
+        const remoteXp = (data.appData.oyun && data.appData.oyun.xp) || 0;
+
+        // Buluttaki veri daha ileri veya yerel boş ise yükle
+        if (remoteXp >= localXp || Object.keys(APP_DATA.ilerleme || {}).length === 0) {
+          APP_DATA = data.appData;
+          saveAppData(APP_DATA, false); // Tekrar döngüye girmemesi için cloud sync false
+          updateGamificationUI();
+          renderCurrentView();
+        }
+        this.lastSyncTime = new Date();
+        this.updateUIBadge('online');
+        if (!silent) showToast('☁️ İlerlemeniz buluttan başarıyla yüklendi!');
+        return true;
+      }
+    } catch (err) {
+      console.warn('Buluttan veri çekilemedi:', err);
+      this.updateUIBadge('error');
+      if (!silent) showToast('Bulut verisi alınamadı. İnternet bağlantınızı kontrol edin.');
+      return false;
+    }
+  },
+
+  async pushToCloud(silent) {
+    if (this.isSyncing) return;
+    this.isSyncing = true;
+    this.updateUIBadge('syncing');
+
+    try {
+      const payload = {
+        syncPin: this.currentPin,
+        updatedAt: new Date().toISOString(),
+        device: navigator.userAgent.includes('Mobile') ? 'Mobil' : 'Masaüstü',
+        appData: APP_DATA
+      };
+
+      const resp = await fetch(this.binUrl, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!resp.ok) throw new Error('Kayıt başarısız');
+      this.lastSyncTime = new Date();
+      this.updateUIBadge('online');
+      if (!silent) showToast('☁️ İlerlemeniz buluta kaydedildi!');
+    } catch (err) {
+      console.warn('Buluta kaydedilemedi:', err);
+      this.updateUIBadge('error');
+      if (!silent) showToast('Buluta kaydedilemedi. Çevrimdışı çalışılıyor.');
+    } finally {
+      this.isSyncing = false;
+    }
+  },
+
+  saveDebounced() {
+    clearTimeout(this.debounceTimer);
+    this.debounceTimer = setTimeout(() => {
+      this.pushToCloud(true);
+    }, 1500);
+  }
+};
+
+window.CloudSync = CloudSync;
+
+function openCloudSyncModal() {
+  const m = document.getElementById('bulutSyncModalBackdrop');
+  if (m) m.style.display = 'flex';
+  CloudSync.updateUIBadge('online');
+}
+
+function closeCloudSyncModal() {
+  const m = document.getElementById('bulutSyncModalBackdrop');
+  if (m) m.style.display = 'none';
+}
+
+function handleCloudModalBackdropClick(e) {
+  if (e.target.id === 'bulutSyncModalBackdrop') {
+    closeCloudSyncModal();
+  }
+}
+
+function triggerManualCloudPull() {
+  CloudSync.pullFromCloud(false);
+}
+
+function triggerManualCloudPush() {
+  CloudSync.pushToCloud(false);
+}

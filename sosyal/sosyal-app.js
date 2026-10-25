@@ -32,7 +32,7 @@ async function initSosyalPage() {
       curriculum = await res.json();
     } catch (err) {
       document.getElementById('unitsContainer').innerHTML =
-        '<p style="color:#EF4444;padding:40px;text-align:center">⚠️ Sosyal Bilgiler müfredat verisi yüklenemedi.</p>';
+        '<p style="color:#EF4444;padding:40px;text-align:center">⚠️ Sosyal Bilgiler ders verisi yüklenemedi.</p>';
       return;
     }
   }

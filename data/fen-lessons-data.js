@@ -3,7 +3,7 @@ window.FEN_LESSONS_DATA = {
   "grade": "4. Sınıf",
   "icon": "🔬",
   "color": "#10B981",
-  "description": "MEB 4. Sınıf Fen Bilimleri Müfredatı — 7 Ünite, 28 Konu, İnteraktif Deneyler ve Testler",
+  "description": "4. Sınıf Fen Bilimleri  — 7 Ünite, 28 Konu, İnteraktif Deneyler ve Testler",
   "units": [
     {
       "id": "fen_unite1",
@@ -436,7 +436,7 @@ window.FEN_LESSONS_DATA = {
               "options": [
                 "TSE (Türk Standardları Enstitüsü)",
                 "TRT",
-                "MEB",
+                "Eğitim",
                 "DSİ"
               ],
               "correct": 0,

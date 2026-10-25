@@ -18,7 +18,7 @@ async function initMatematikPage() {
       curriculum = await res.json();
     } catch (err) {
       document.getElementById('unitsContainer').innerHTML =
-        '<p style="color:#EF4444;padding:40px;text-align:center">⚠️ Matematik müfredat verisi yüklenemedi.</p>';
+        '<p style="color:#EF4444;padding:40px;text-align:center">⚠️ Matematik ders verisi yüklenemedi.</p>';
       return;
     }
   }

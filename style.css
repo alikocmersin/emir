@@ -1188,6 +1188,7 @@ img, video {
   font-weight: 800;
   color: var(--marka-koyu);
   white-space: nowrap;
+  max-width: 140px;
   box-shadow: 0 6px 16px rgba(124, 58, 237, 0.25);
   display: flex;
   align-items: center;
@@ -2077,9 +2078,11 @@ img, video {
 @media (max-width: 768px) {
   .mobil-alt-bar {
     display: flex;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    height: calc(56px + env(safe-area-inset-bottom, 0px));
   }
   body {
-    padding-bottom: 64px;
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -2189,3 +2192,179 @@ img, video {
     page-break-after: always;
   }
 }
+
+/* Bulut Senkronizasyon Kapsülü ve Modali */
+.bulut-sync-kapsul {
+  cursor: pointer;
+  background: #EDE9FE;
+  border-color: rgba(124, 58, 237, 0.3);
+  color: var(--marka-koyu);
+  transition: all var(--gecis-hizli);
+}
+.bulut-sync-kapsul:hover {
+  background: var(--marka-acik);
+  border-color: var(--marka);
+  transform: translateY(-2px);
+}
+.bulut-durum-isik {
+  font-size: 0.8rem;
+  display: inline-block;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.bulut-modal-kart {
+  background: #FFFFFF;
+  border-radius: var(--r-lg);
+  width: 100%;
+  max-width: 520px;
+  padding: var(--s-32);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+  border-top: 8px solid var(--marka);
+}
+
+.bulut-kod-kutusu {
+  background: var(--zemin);
+  border: 2px dashed var(--marka);
+  border-radius: var(--r-md);
+  padding: 16px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.bulut-kod-deger {
+  font-family: var(--font-baslik);
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--marka);
+  letter-spacing: 6px;
+}
+
+
+/* Ders İsimleri Banner Vitrini */
+.ders-banner-alani {
+  max-width: 1280px;
+  margin: var(--s-24) auto 0;
+  padding: 0 var(--s-24);
+  width: 100%;
+}
+
+.ders-banner-govde {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-16);
+}
+
+.ders-banner-karti {
+  background: var(--kart);
+  border-radius: var(--r-lg);
+  border: 2px solid var(--cizgi);
+  padding: var(--s-16) var(--s-20);
+  display: flex;
+  align-items: center;
+  gap: var(--s-16);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--golge-kart);
+  transition: transform var(--gecis-normal), box-shadow var(--gecis-normal), border-color var(--gecis-normal);
+}
+
+.ders-banner-karti::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--ders-ana);
+}
+
+.ders-banner-karti:hover {
+  transform: translateY(-4px);
+  border-color: var(--ders-ana);
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.12);
+}
+
+.banner-sol-ikon {
+  font-size: 2.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  flex-shrink: 0;
+  transition: transform var(--gecis-hizli);
+}
+.ders-banner-karti:hover .banner-sol-ikon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.banner-icerik {
+  flex: 1;
+  min-width: 0;
+}
+
+.banner-ust-etiket {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--ders-koyu);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.banner-ders-adi {
+  font-family: var(--font-baslik);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--metin);
+  margin: 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-alt-metin {
+  font-size: 0.8rem;
+  color: var(--metin-ikincil);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-ok-butonu {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--ders-acik);
+  color: var(--ders-koyu);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: all var(--gecis-hizli);
+}
+.ders-banner-karti:hover .banner-ok-butonu {
+  background: var(--ders-ana);
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+@media (max-width: 1024px) {
+  .ders-banner-govde {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ders-banner-govde {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,8 +1,9 @@
 {
   "name": "EmirLearn — 4. Sınıf Eğitim Dünyası",
   "short_name": "EmirLearn",
-  "description": "4. Sınıf MEB Müfredatına Uygun Sosyal Bilgiler, Türkçe, Matematik ve Fen Bilimleri Kapsamlı Eğitim Portalı",
-  "start_url": "./index.html",
+  "description": "4. Sınıf Kapsamlı Sosyal Bilgiler, Türkçe, Matematik ve Fen Bilimleri Eğitim Portalı",
+  "start_url": "https://alikocmersin.github.io/emir/",
+  "scope": "https://alikocmersin.github.io/emir/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#F3F5FF",

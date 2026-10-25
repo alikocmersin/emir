@@ -3,7 +3,7 @@ window.MATEMATIK_LESSONS_DATA = {
   "grade": "4. Sınıf",
   "icon": "📐",
   "color": "#4361EE",
-  "description": "MEB 4. Sınıf Matematik Müfredatı — 6 Ünite, 29 Konu, İnteraktif Testler ve Video Anlatımlar",
+  "description": "4. Sınıf Matematik  — 6 Ünite, 29 Konu, İnteraktif Testler ve Video Anlatımlar",
   "units": [
     {
       "id": "mat_unite1",

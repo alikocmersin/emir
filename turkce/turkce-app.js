@@ -25,7 +25,7 @@ async function initTurkcePage() {
       curriculum = await res.json();
     } catch (err) {
       document.getElementById('unitsContainer').innerHTML =
-        '<p style="color:#EF4444;padding:40px;text-align:center">⚠️ Türkçe müfredat verisi yüklenemedi.</p>';
+        '<p style="color:#EF4444;padding:40px;text-align:center">⚠️ Türkçe ders verisi yüklenemedi.</p>';
       return;
     }
   }

@@ -3,7 +3,7 @@ window.SOSYAL_LESSONS_DATA = {
   "grade": "4. Sınıf",
   "icon": "🌍",
   "color": "#F59E0B",
-  "description": "MEB 4. Sınıf Sosyal Bilgiler — 7 Ünite, 28 Kapsamlı Konu, Bütünleşik 3D Pixar Ünite Özetleri ve İnteraktif Testler",
+  "description": "4. Sınıf Sosyal Bilgiler — 7 Ünite, 28 Kapsamlı Konu, Bütünleşik 3D Pixar Ünite Özetleri ve İnteraktif Testler",
   "units": [
     {
       "id": "sosyal_unite1",

@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="EmirLearn — 4. Sınıf Türkçe Çocuk Eğitim Platformu. Sosyal Bilgiler, Türkçe, Matematik, Fen Bilimleri kapsamlı MEB ünite videoları, mini testler ve macera haritası." />
+  <meta name="description" content="EmirLearn — 4. Sınıf Türkçe Çocuk Eğitim Platformu. Sosyal Bilgiler, Türkçe, Matematik, Fen Bilimleri kapsamlı ünite videoları, mini testler ve macera haritası." />
   <title>EmirLearn 🚀 — Emir'in Eğitim Dünyası</title>
+
+  <!-- Canonical & OpenGraph (GitHub Pages: https://alikocmersin.github.io/emir/) -->
+  <link rel="canonical" href="https://alikocmersin.github.io/emir/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alikocmersin.github.io/emir/" />
+  <meta property="og:title" content="EmirLearn 🚀 — Emir'in Eğitim Dünyası" />
+  <meta property="og:description" content="4. Sınıf Kapsamlı Sosyal Bilgiler, Türkçe, Matematik ve Fen Bilimleri Eğitim Portalı" />
+  <meta property="og:image" content="https://alikocmersin.github.io/emir/assets/thumbnails/sosyal/birey-ve-toplum-ozet.jpg" />
 
   <!-- PWA Manifest & Renk -->
   <link rel="manifest" href="manifest.webmanifest" />
@@ -68,6 +76,13 @@
           <span>Gün Seri</span>
         </div>
 
+        <!-- Bulut Senkronizasyon Rozeti -->
+        <button class="stat-kapsul bulut-sync-kapsul" id="bulutSyncBtn" onclick="openCloudSyncModal()" title="Bulut İlerleme Senkronizasyonu (Şifre: 3333)">
+          <span>☁️</span>
+          <span id="bulutKoduGosterge">3333</span>
+          <span class="bulut-durum-isik" id="bulutDurumIsik" title="Bulut Bağlantısı">🟢</span>
+        </button>
+
         <!-- Ebeveyn Paneli Giriş Butonu -->
         <button class="ebeveyn-giris-btn" onclick="openParentModal()" title="Ebeveyn Kontrol Paneli" aria-label="Ebeveyn Paneli">
           <span>🔒</span>
@@ -86,10 +101,10 @@
         <h1>Merhaba, <span id="cocukSelamAdi">Emir</span>! 👋</h1>
         <p>Aşağıdan istediğin dersi seç, ünite videosunu izle, 10 soruluk mini testle yıldızları topla ve macera haritasında kupaya doğru ilerle!</p>
         <div class="hero-aksiyonlar">
-          <button class="btn btn-birincil" onclick="scollToUnitsSection()">
+          <button class="btn btn-birincil" onclick="goToSection('kartlar')">
             <span>🚀</span> <span>Dersleri Keşfet</span>
           </button>
-          <button class="btn btn-ikincil" onclick="toggleMapCardsView('harita')">
+          <button class="btn btn-ikincil" onclick="goToSection('harita')">
             <span>🗺️</span> <span>Macera Haritasına Git</span>
           </button>
         </div>
@@ -110,6 +125,57 @@
   </section>
 
   <!-- ======================================================================
+       DERS İSİMLERİ & HIZLI ERİŞİM BANNER VİTRİNİ
+       ====================================================================== -->
+  <section class="ders-banner-alani" aria-label="Ders Seçimi">
+    <div class="ders-banner-govde">
+      <!-- Sosyal Bilgiler Kartı -->
+      <div class="ders-banner-karti ders-tema-sosyal" onclick="selectSubjectBanner('sosyal')" role="button" tabindex="0" title="Sosyal Bilgiler Dersini Aç">
+        <div class="banner-sol-ikon">🌍</div>
+        <div class="banner-icerik">
+          <div class="banner-ust-etiket">7 Master Ünite</div>
+          <h3 class="banner-ders-adi">Sosyal Bilgiler</h3>
+          <p class="banner-alt-metin">Birey, Toplum, Kültür & Küresel Bağlantılar</p>
+        </div>
+        <div class="banner-ok-butonu">→</div>
+      </div>
+
+      <!-- Türkçe Kartı -->
+      <div class="ders-banner-karti ders-tema-turkce" onclick="selectSubjectBanner('turkce')" role="button" tabindex="0" title="Türkçe Dersini Aç">
+        <div class="banner-sol-ikon">📖</div>
+        <div class="banner-icerik">
+          <div class="banner-ust-etiket">5 Master Ünite</div>
+          <h3 class="banner-ders-adi">Türkçe</h3>
+          <p class="banner-alt-metin">Sözcük Bilgisi, Cümle, Yazım & Metin Türleri</p>
+        </div>
+        <div class="banner-ok-butonu">→</div>
+      </div>
+
+      <!-- Matematik Kartı -->
+      <div class="ders-banner-karti ders-tema-matematik" onclick="selectSubjectBanner('matematik')" role="button" tabindex="0" title="Matematik Dersini Aç">
+        <div class="banner-sol-ikon">📐</div>
+        <div class="banner-icerik">
+          <div class="banner-ust-etiket">6 Master Ünite</div>
+          <h3 class="banner-ders-adi">Matematik</h3>
+          <p class="banner-alt-metin">Doğal Sayılar, Kesirler, Zaman & Geometri</p>
+        </div>
+        <div class="banner-ok-butonu">→</div>
+      </div>
+
+      <!-- Fen Bilimleri Kartı -->
+      <div class="ders-banner-karti ders-tema-fen" onclick="selectSubjectBanner('fen')" role="button" tabindex="0" title="Fen Bilimleri Dersini Aç">
+        <div class="banner-sol-ikon">🔬</div>
+        <div class="banner-icerik">
+          <div class="banner-ust-etiket">7 Master Ünite</div>
+          <h3 class="banner-ders-adi">Fen Bilimleri</h3>
+          <p class="banner-alt-metin">Yer Kabuğu, Kuvvet, Madde & Devreler</p>
+        </div>
+        <div class="banner-ok-butonu">→</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
        3. DERSLER VE ÜNİTELER BÖLÜMÜ (KARTLAR & MACERA HARİTASI)
        ====================================================================== -->
   <main class="dersler-bolumu" id="derslerBolumu">
@@ -117,7 +183,7 @@
     <div class="bolum-baslik-satiri">
       <div class="baslik-sol">
         <h2>📚 Dersler ve Üniteler</h2>
-        <span class="rozet rozet-marka">4. Sınıf MEB Müfredatı</span>
+        <span class="rozet rozet-marka">Kapsamlı Ünite Anlatımları</span>
       </div>
 
       <!-- Görünüm Değiştirici: 🃏 Kartlar | 🗺️ Harita -->
@@ -253,7 +319,7 @@
         <div id="videoHazirlaniyorKutusu" style="display:none; position:absolute; inset:0; background:#0F172A; color:#FFFFFF; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px;">
           <div style="font-size:3rem; margin-bottom:12px;">🎬</div>
           <h3>12-13 Dakikalık Kapsamlı Master Video Hazırlanıyor!</h3>
-          <p style="color:#94A3B8; max-width:480px; margin-top:8px;">Bu ünitenin tüm konularını baştan sona anlatan MEB müfredatına tam uyumlu master video yakında burada olacak.</p>
+          <p style="color:#94A3B8; max-width:480px; margin-top:8px;">Bu ünitenin tüm konularını baştan sona anlatan ünite anlatımlarına tam uyumlu master video yakında burada olacak.</p>
         </div>
       </div>
 
@@ -401,6 +467,39 @@
   </div>
 
   <!-- ======================================================================
+       BULUT SENKRONİZASYON MODALİ (FARKLI CİHAZLARDAN DEVAM ETME)
+       ====================================================================== -->
+  <div id="bulutSyncModalBackdrop" class="ebeveyn-modal-backdrop" style="display:none;" onclick="handleCloudModalBackdropClick(event)">
+    <div class="bulut-modal-kart" onclick="event.stopPropagation()">
+      <button class="sinema-kapat-butonu-48" onclick="closeCloudSyncModal()" title="Kapat">✕</button>
+      <div style="font-size:3rem; margin-bottom:8px;">☁️</div>
+      <h2>Bulut İlerleme Senkronizasyonu</h2>
+      <p style="color:var(--metin-ikincil); font-size:0.95rem; margin-top:6px;">
+        Telefon, tablet veya başka bir bilgisayardan girdiğinde yıldızların ve izlediğin videolar kaybolmaz!
+      </p>
+
+      <div class="bulut-kod-kutusu">
+        <span style="font-size:0.85rem; font-weight:800; color:var(--metin-ikincil);">ÖĞRENCİ BULUT KODU</span>
+        <div class="bulut-kod-deger" id="bulutKodInputBox">3333</div>
+        <small style="color:var(--basari); font-weight:800;">Otomatik Bulut Eşitlemesi Aktif ✅</small>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+        <button class="btn btn-birincil" onclick="triggerManualCloudPull()">
+          <span>📥</span> <span>Buluttan Şimdi Yükle (Eşitle)</span>
+        </button>
+        <button class="btn btn-ikincil" onclick="triggerManualCloudPush()">
+          <span>📤</span> <span>Buluta Şimdi Gönder (Yedekle)</span>
+        </button>
+      </div>
+
+      <p id="bulutSonSyncZamani" style="font-size:0.8rem; color:var(--metin-ikincil); margin-top:16px;">
+        Son senkronizasyon: Az önce
+      </p>
+    </div>
+  </div>
+
+  <!-- ======================================================================
        7. EBEVEYN KONTROL PANELİ MODALİ (KOMUT 8)
        ====================================================================== -->
   <div id="ebeveynModalBackdrop" class="ebeveyn-modal-backdrop" style="display:none;" onclick="handleParentBackdropClick(event)">
@@ -411,7 +510,7 @@
       <div id="ebeveynPinEkrani" class="pin-giris-sarmal">
         <div style="font-size:3rem;">🔒</div>
         <h3>Ebeveyn Kontrol Girişi</h3>
-        <p style="color:var(--metin-ikincil); font-size:0.9rem;">Lütfen 4 haneli ebeveyn güvenlik şifresini tuşlayın (Varsayılan: 1234):</p>
+        <p style="color:var(--metin-ikincil); font-size:0.9rem;">Lütfen 4 haneli ebeveyn güvenlik şifresini tuşlayın (Şifre: 3333):</p>
         
         <div class="pin-noktalar-satiri">
           <div class="pin-nokta" id="pinNokta1"></div>
