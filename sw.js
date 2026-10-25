@@ -1,12 +1,12 @@
-// sw.js — EmirLearn Service Worker (v2.1 Network-First)
-const CACHE_NAME = 'emirlearn-v2.1';
+// sw.js — EmirLearn Service Worker (v2.2 Network-First)
+const CACHE_NAME = 'emirlearn-v2.2';
 const STATIC_ASSETS = [
   './',
   './index.html',
-  './style.css?v=2.1',
-  './app.js?v=2.1',
-  './data/master-units-data.js?v=2.1',
-  './data/unit-quizzes-data.js?v=2.1',
+  './style.css?v=2.2',
+  './app.js?v=2.2',
+  './data/master-units-data.js?v=2.2',
+  './data/unit-quizzes-data.js?v=2.2',
   './manifest.webmanifest'
 ];
 

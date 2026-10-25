@@ -621,7 +621,7 @@ function createMasterUnitCard(unit, idx) {
       <div class="kart-sure-sag-alt">⏱ ${unit.sure}</div>
 
       <!-- Ortada 64px Oynat Butonu -->
-      <div class="kart-oynat-sarmal" onclick="openSinemaModal('${unit.id}')">
+      <div class="kart-oynat-sarmal" onclick="event.stopPropagation(); openSinemaModal('${unit.id}')">
         <div class="kart-oynat-butonu-64">
           <div class="nabiz-halkasi"></div>
           ▶
@@ -677,7 +677,7 @@ function createMasterUnitCard(unit, idx) {
 
   // Kartın bütününe tıklanınca videoyu aç
   card.onclick = (e) => {
-    if (e.target.closest('button')) return;
+    if (e.target.closest('button') || e.target.closest('.kart-oynat-sarmal')) return;
     openSinemaModal(unit.id);
   };
 
@@ -954,8 +954,13 @@ function openSinemaModal(unitId) {
     return;
   }
 
-  appState.currentModalUnit = unit;
   const modal = document.getElementById('sinemaModalBackdrop');
+  // Aynı ünite zaten açıksa tekrar baştan yükleme (AbortError engelleme)
+  if (appState.currentModalUnit && appState.currentModalUnit.id === unitId && modal && modal.classList.contains('aktif')) {
+    return;
+  }
+
+  appState.currentModalUnit = unit;
   const videoEl = document.getElementById('sinemaVideoEl');
   const videoSrc = document.getElementById('sinemaVideoSource');
   const pendingBox = document.getElementById('videoHazirlaniyorKutusu');
@@ -985,18 +990,31 @@ function openSinemaModal(unitId) {
   if (unit.video && unit.hasVideo) {
     if (pendingBox) pendingBox.style.display = 'none';
 
-    // Hem video.src hem source.src doğrudan ayarlanır
-    if (videoSrc) videoSrc.src = unit.video;
     if (videoEl) {
-      videoEl.src = unit.video;
-      videoEl.load();
+      // Sadece src değiştiyse yeniden yükle
+      const currentSrc = videoEl.getAttribute('src') || (videoSrc ? videoSrc.getAttribute('src') : '');
+      if (currentSrc !== unit.video) {
+        if (videoSrc) videoSrc.src = unit.video;
+        videoEl.src = unit.video;
+        videoEl.load();
+      }
+
       attachVideoEventListeners(videoEl);
 
-      // Kaldığı saniyeden akıcı devam etme (engelleyici confirm olmadan)
+      // Kaldığı saniyeden akıcı devam etme (loadedmetadata güvenliği ile)
       const prog = APP_DATA.ilerleme && APP_DATA.ilerleme[unit.id];
-      if (prog && prog.sonSaniye > 10 && prog.sonSaniye < (videoEl.duration || 600) - 20) {
-        videoEl.currentTime = prog.sonSaniye;
-        showToast(`⏱️ Kaldığın yerden (${formatTime(prog.sonSaniye)}) devam ediliyor...`);
+      if (prog && prog.sonSaniye > 10) {
+        const seekHandler = () => {
+          if (prog.sonSaniye < (videoEl.duration || 600) - 20) {
+            videoEl.currentTime = prog.sonSaniye;
+            showToast(`⏱️ Kaldığın yerden (${formatTime(prog.sonSaniye)}) devam ediliyor...`);
+          }
+        };
+        if (videoEl.readyState >= 1) {
+          seekHandler();
+        } else {
+          videoEl.addEventListener('loadedmetadata', seekHandler, { once: true });
+        }
       }
 
       // Güvenli otomatik oynatma
@@ -1004,6 +1022,8 @@ function openSinemaModal(unitId) {
       if (playPromise !== undefined) {
         playPromise.catch((e) => {
           console.log("Tarayıcı kullanıcı dokunuşu bekliyor:", e);
+          const btn = document.getElementById('btnVideoPlayPause');
+          if (btn) btn.textContent = '▶';
         });
       }
     }
@@ -2039,10 +2059,13 @@ function selectSubjectBanner(subjectKey) {
   document.body.setAttribute('data-ders', subjectKey);
   renderSubjectChips();
   toggleMapCardsView('kartlar');
-  setTimeout(() => {
-    const el = document.getElementById('derslerBolumu');
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 50);
+
+  // Derse tıklandığında ilgili dersin ilk veya devam eden ünitesinin videosunu hemen aç!
+  const subjectUnits = window.UNITELER.filter(u => u.ders === subjectKey);
+  const targetUnit = subjectUnits.find(u => !APP_DATA.ilerleme[u.id] || !APP_DATA.ilerleme[u.id].izlendi) || subjectUnits[0];
+  if (targetUnit) {
+    openSinemaModal(targetUnit.id);
+  }
 }
 
 function playSubjectBannerVideo(event, subjectKey) {
