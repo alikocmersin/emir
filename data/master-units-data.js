@@ -12,7 +12,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 1,
     "title": "1. Ünite : Birey ve Toplum",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 5,
     "topics": [
       "Ben Kimim ve Biz Kimiz? (1. Ünite Tam Özet)",
@@ -36,7 +36,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 2,
     "title": "2. Ünite : Kültür ve Miras",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Geçmişten Gelen Hazine Sandığı (2. Ünite Tam Özet)",
@@ -59,7 +59,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 3,
     "title": "3. Ünite : İnsanlar, Yerler ve Çevreler",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Yön Bulma Yöntemleri ve Kroki Çizimi",
@@ -82,7 +82,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 4,
     "title": "4. Ünite : Bilim, Teknoloji ve Toplum",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Teknolojik Ürünler ve Günlük Hayatımız",
@@ -105,7 +105,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 5,
     "title": "5. Ünite : Üretim, Dağıtım ve Tüketim",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "İsteklerimiz ve Zorunlu İhtiyaçlarımız",
@@ -128,7 +128,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 6,
     "title": "6. Ünite : Etkin Vatandaşlık",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Ben Çocuğum, Haklarımla Varım",
@@ -151,7 +151,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 7,
     "title": "7. Ünite : Küresel Bağlantılar",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 3,
     "topics": [
       "Türkiye'nin Komşuları ve Sınır Kapılarımız",
@@ -173,7 +173,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 1,
     "title": "1. Ünite : Sözcük Bilgisi",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 6,
     "topics": [
       "Sözcüğün Yapısı: Kök ve Ek",
@@ -198,7 +198,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 2,
     "title": "2. Ünite : Cümle ve Anlam",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Cümlenin Ögeleri: Özne ve Yüklem",
@@ -221,7 +221,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 3,
     "title": "3. Ünite : Yazım Kuralları",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 3,
     "topics": [
       "Büyük Harf Kullanımı",
@@ -243,7 +243,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 4,
     "title": "4. Ünite : Metin Türleri",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 3,
     "topics": [
       "Hikâye",
@@ -265,7 +265,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 5,
     "title": "5. Ünite : Okuma ve Anlama",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 2,
     "topics": [
       "Gerçek ve Mecaz Anlam",
@@ -286,7 +286,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 1,
     "title": "1. Ünite : Doğal Sayılar ve Doğal Sayılarla Toplama - Çıkarma",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 5,
     "topics": [
       "4, 5 ve 6 Basamaklı Doğal Sayılar",
@@ -310,7 +310,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 2,
     "title": "2. Ünite : Doğal Sayılarla Çarpma ve Bölme İşlemi",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 5,
     "topics": [
       "Doğal Sayılarla Çarpma İşlemi",
@@ -334,7 +334,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 3,
     "title": "3. Ünite : Kesirler ve Kesirlerle İşlemler",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 5,
     "topics": [
       "Basit, Bileşik ve Tam Sayılı Kesirler",
@@ -358,7 +358,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 4,
     "title": "4. Ünite : Zaman Ölçme ve Veri İşleme",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Zaman Ölçme Birimleri ve Dönüşümler",
@@ -381,7 +381,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 5,
     "title": "5. Ünite : Geometrik Cisimler, Şekiller ve Açılar",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 5,
     "topics": [
       "Üçgen, Kare ve Dikdörtgenin Özellikleri",
@@ -405,7 +405,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 6,
     "title": "6. Ünite : Uzunluk, Çevre, Alan, Tartma ve Sıvı Ölçüleri",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 5,
     "topics": [
       "Uzunluk Ölçme Birimleri",
@@ -429,7 +429,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 1,
     "title": "1. Ünite : Yer Kabuğu ve Dünyamızın Hareketleri",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Yer Kabuğunun Yapısı: Kayaçlar ve Madenler",
@@ -452,7 +452,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 2,
     "title": "2. Ünite : Besinlerimiz",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Besin İçerikleri ve Görevleri",
@@ -475,7 +475,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 3,
     "title": "3. Ünite : Kuvvetin Etkileri",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Kuvvetin Cisimlerin Hareketine Etkisi",
@@ -498,7 +498,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 4,
     "title": "4. Ünite : Maddenin Özellikleri",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 5,
     "topics": [
       "Maddeyi Niteleyen Özellikler",
@@ -522,7 +522,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 5,
     "title": "5. Ünite : Aydınlatma ve Ses Teknolojileri",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Geçmişten Günümüze Aydınlatma Teknolojileri",
@@ -545,7 +545,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 6,
     "title": "6. Ünite : İnsan ve Çevre",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 3,
     "topics": [
       "Bilinçli Tüketici ve Kaynakların Tasarrufu",
@@ -567,7 +567,7 @@ window.MASTER_UNITS_DATA = [
     "unitNumber": 7,
     "title": "7. Ünite : Basit Elektrik Devreleri",
     "duration": "12-13 Dk",
-    "durationDetail": "12-13 Dakika Kapsamlı Master Video Anlatımı",
+    "durationDetail": "12-13 Dakika Kapsamlı Konu Anlatımı",
     "topicCount": 4,
     "topics": [
       "Basit Elektrik Devresi Elemanları",

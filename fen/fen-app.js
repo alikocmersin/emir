@@ -1,6 +1,6 @@
 /* ============================================================
    fen-app.js — EmirLearn Fen Bilimleri Orkestratörü
-   "Ünite Adı ve Video" Standartı — 12-13 Dk Kapsamlı Master Videolar
+   "Ünite Adı ve Video" Standartı — 12-13 Dk Kapsamlı Konu Anlatımı Videoları
    ============================================================ */
 
 let currentUnit = null;
@@ -99,7 +99,7 @@ function renderUnits(units) {
                onerror="this.src='../assets/thumbnails/fen/topic_2101.jpg'" />
 
           ${hasVideo 
-            ? '<span class="video-ready-badge" style="position:absolute; top:12px; left:12px; z-index:2; background:#10B981; color:#fff; padding:4px 10px; border-radius:8px; font-weight:900; font-size:12px;">🎬 Master Video Hazır</span>' 
+            ? '<span class="video-ready-badge" style="position:absolute; top:12px; left:12px; z-index:2; background:#10B981; color:#fff; padding:4px 10px; border-radius:8px; font-weight:900; font-size:12px;">🎬 Konu Anlatımı Hazır</span>' 
             : '<span class="video-ready-badge" style="position:absolute; top:12px; left:12px; z-index:2; background:rgba(15,23,42,0.85); color:#FBBF24; padding:4px 10px; border-radius:8px; font-weight:900; font-size:12px; border:1px solid rgba(251,191,36,0.4);">⏳ 12-13 Dk Hazırlanıyor</span>'}
 
           <div class="topic-play-overlay">
@@ -185,7 +185,7 @@ function openUnitVideoModal(unitInfo) {
     pendingBox.style.display = 'flex';
     if (pendingText) {
       pendingText.innerHTML = `
-        <strong>${unitInfo.title}</strong> için 12-13 dakikalık kapsamlı master video anlatımı hazırlanıyor.<br/>
+        <strong>${unitInfo.title}</strong> için Konu anlatım videosu hazırlanıyor.<br/>
         Bu video ünitedeki ${unitInfo.topicCount} konunun tamamını kapsayacak şekilde tek parça halinde oluşturulacaktır.
       `;
     }

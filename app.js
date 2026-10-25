@@ -617,7 +617,7 @@ function createMasterUnitCard(unit, idx) {
     <div class="kart-kapak">
       ${unit.kapak ? `<img src="${unit.kapak}" alt="${unit.tamBaslik}" class="kart-kapak-gorseli" loading="lazy" />` : ''}
       <div class="kart-filigran-no">${unit.no}</div>
-      <div class="kart-rozet-sol-ust">🎬 Master Video</div>
+      <div class="kart-rozet-sol-ust">🎬 Konu Anlatımı</div>
       <div class="kart-sure-sag-alt">⏱ ${unit.sure}</div>
 
       <!-- Ortada 64px Oynat Butonu -->
@@ -665,7 +665,7 @@ function createMasterUnitCard(unit, idx) {
       <!-- d) ALT BUTONLAR -->
       <div class="kart-alt-butonlar">
         <button class="btn btn-birincil" onclick="event.stopPropagation(); openSinemaModal('${unit.id}')">
-          <span>${isWatched ? '↻' : '▶'}</span> <span>${isWatched ? 'Tekrar İzle' : 'İzle'}</span>
+          <span>${isWatched ? '↻' : '▶'}</span> <span>${isWatched ? 'Tekrar İzle' : 'Dersi İzle'}</span>
         </button>
         <button class="btn btn-ikincil" onclick="event.stopPropagation(); startUnitQuizDirectly('${unit.id}')">
           <span>📝</span> <span>Testi Çöz</span>
@@ -971,7 +971,7 @@ function openSinemaModal(unitId) {
   const videoControls = document.getElementById('ozelVideoKontrolleri');
 
   if (titleEl) titleEl.textContent = `${unit.tamBaslik}`;
-  if (tagEl) tagEl.textContent = `${unit.dersAdi} • 12-13 Dk Master Video`;
+  if (tagEl) tagEl.textContent = `${unit.dersAdi} • Konu Anlatımı (${unit.sure})`;
 
   if (modal) {
     modal.setAttribute('data-ders', unit.ders);
@@ -1016,14 +1016,26 @@ function openSinemaModal(unitId) {
         }
       }
 
-      // Güvenli otomatik oynatma
-      const playPromise = videoEl.play();
-      if (playPromise !== undefined) {
-        playPromise.catch((e) => {
-          console.log("Tarayıcı kullanıcı dokunuşu bekliyor:", e);
-          const btn = document.getElementById('btnVideoPlayPause');
-          if (btn) btn.textContent = '▶';
-        });
+      // Güvenli ve doğrudan oynatma
+      const startPlayback = () => {
+        const p = videoEl.play();
+        if (p !== undefined) {
+          p.then(() => {
+            const btn = document.getElementById('btnVideoPlayPause');
+            if (btn) btn.textContent = '⏸';
+          }).catch((err) => {
+            console.log("Tarayıcı kullanıcı dokunuşu bekliyor:", err);
+            const btn = document.getElementById('btnVideoPlayPause');
+            if (btn) btn.textContent = '▶';
+          });
+        }
+      };
+
+      if (videoEl.readyState >= 2) {
+        startPlayback();
+      } else {
+        videoEl.addEventListener('canplay', startPlayback, { once: true });
+        startPlayback();
       }
     }
   } else {
