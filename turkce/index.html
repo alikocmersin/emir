@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Türkçe — 4. Sınıf | EmirLearn</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="turkce.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body class="clean-subject-page turkce-theme">
+
+  <!-- 1. SADE VE ŞIK ÜST HEADER (KALABALIKSIZ) -->
+  <header class="clean-nav-header">
+    <div class="clean-nav-inner">
+      <a href="../index.html" class="clean-back-link" title="Ana Sayfaya Dön">
+        <span class="back-icon">←</span>
+        <span class="back-text">Ana Sayfa</span>
+      </a>
+
+      <div class="clean-title-center">
+        <span class="subject-emoji">📖</span>
+        <div class="title-wrap">
+          <h1 class="subject-main-heading">Türkçe</h1>
+          <span class="grade-pill">4. Sınıf MEB Müfredatı</span>
+        </div>
+      </div>
+
+      <div class="clean-stats-pill">
+        <span class="stat-item">⭐ <strong id="headerStarCount">0</strong> Yıldız</span>
+        <span class="stat-divider">•</span>
+        <span class="stat-item">🎬 <strong>5</strong> Video Hazır</span>
+        <span class="stat-divider">•</span>
+        <span class="stat-item">📚 <strong>5</strong> Ünite (12-13 Dk Master)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. ÜNİTELER VE KONULAR (1. ÜNİTE : KONUSU -> KONU İSMİ VE RESMİ) -->
+  <main class="clean-content-wrapper">
+    <div class="clean-container">
+      <div id="unitsContainer" class="units-flow-container">
+        <div class="clean-loading-box">
+          <div class="spinner"></div>
+          <p>Türkçe konuları yükleniyor...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 3. DİREKT VİDEO MODAL (TIKLAYINCA DİREKT AÇILIR & SAĞ ÜSTTE KIRMIZI ÇARPI) -->
+  <div id="directVideoModal" class="video-cinema-backdrop" style="display:none;" onclick="handleModalBackdropClick(event)">
+    <div class="video-cinema-container">
+      <button class="red-cross-close-btn" onclick="closeDirectVideoModal()" title="Videoyu Kapat (ESC)" aria-label="Videoyu Kapat">
+        ✕
+      </button>
+
+      <div class="cinema-header">
+        <span class="cinema-unit-tag" id="cinemaUnitTag">1. Ünite</span>
+        <h2 class="cinema-lesson-title" id="cinemaLessonTitle">Ders Videosu</h2>
+      </div>
+
+      <div class="cinema-player-area">
+        <div class="video-aspect-box" id="cinemaVideoBox">
+          <video id="modalVideoElement" controls playsinline preload="auto">
+            <source id="modalVideoSource" src="" type="video/mp4" />
+            Tarayıcınız video oynatmayı desteklemiyor.
+          </video>
+        </div>
+
+        <div id="cinemaPendingBox" class="pending-notice-box" style="display:none;">
+          <div class="pending-emoji">🎬</div>
+          <h3>Bu konunun videosu hazırlanıyor!</h3>
+          <p id="pendingText">Şimdilik bu konunun test sorularını çözebilir ya da hazır olan konu videolarını izleyebilirsin.</p>
+        </div>
+      </div>
+
+      <div class="cinema-footer">
+        <div class="cinema-footer-left">
+          <span class="duration-badge" id="cinemaDurationBadge">⏱ — dk</span>
+          <span class="desc-text" id="cinemaDescText">Videoyu izledikten sonra 5 soruluk test ile kendini dene!</span>
+        </div>
+        <div class="cinema-footer-right">
+          <button class="go-test-button" id="cinemaGoTestBtn" onclick="goToCurrentQuiz()">
+            <span>📝 Konu Testini Çöz (5 Soru)</span>
+            <span class="arrow-icon">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="clean-footer">
+    <p>🌟 EmirLearn — 4. Sınıf Türkçe 🚀</p>
+  </footer>
+
+  <script src="../data/turkce-lessons-data.js"></script>
+  <script src="turkce-app.js"></script>
+</body>
+</html>

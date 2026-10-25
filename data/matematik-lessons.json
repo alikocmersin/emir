@@ -1,0 +1,1919 @@
+{
+  "subject": "Matematik",
+  "grade": "4. Sınıf",
+  "icon": "📐",
+  "color": "#4361EE",
+  "description": "MEB 4. Sınıf Matematik Müfredatı — 6 Ünite, 29 Konu, İnteraktif Testler ve Video Anlatımlar",
+  "units": [
+    {
+      "id": "mat_unite1",
+      "title": "1. Ünite: Doğal Sayılar ve Doğal Sayılarla Toplama - Çıkarma",
+      "icon": "🔢",
+      "color": "#4361EE",
+      "description": "4, 5 ve 6 basamaklı sayılar, basamak ve bölük kavramı, yuvarlama, örüntüler ve eldeli toplama-çıkarma.",
+      "lessons": [
+        {
+          "id": 1101,
+          "unitId": "mat_unite1",
+          "title": "4, 5 ve 6 Basamaklı Doğal Sayılar",
+          "subject": "Matematik",
+          "unit": "Doğal Sayılar",
+          "icon": "🔢",
+          "color": "#4361EE",
+          "description": "Basamak ve bölük kavramı (birler ve binler bölüğü), sayı ve basamak değeri, sayıların okunuşu ve yazılışı.",
+          "videoFile": "assets/videos/matematik/dogal-sayilar-basamaklar.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "345.678 sayısının binler bölüğündeki sayı kaçtır?",
+              "options": [
+                "678",
+                "345",
+                "34",
+                "78"
+              ],
+              "correct": 1,
+              "explanation": "345.678 sayısında sol taraf binler bölüğüdür (345), sağ taraf birler bölüğüdür (678)! 🎯"
+            },
+            {
+              "type": "multiple",
+              "question": "'Dört yüz bin seksen beş' sayısı rakamla nasıl yazılır?",
+              "options": [
+                "400.850",
+                "40.085",
+                "400.085",
+                "408.005"
+              ],
+              "correct": 2,
+              "explanation": "Binler bölüğünde 400, birler bölüğünde 085 vardır → 400.085! ✍️"
+            },
+            {
+              "type": "truefalse",
+              "question": "52.841 sayısında 2 rakamının basamak değeri 2.000'dir.",
+              "correct": true,
+              "explanation": "Doğru! 2 rakamı binler basamağındadır: 2 x 1.000 = 2.000! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "784.321 sayısında basamak değeri en büyük olan rakam hangisidir?",
+              "options": [
+                "8",
+                "7",
+                "4",
+                "9"
+              ],
+              "correct": 1,
+              "explanation": "7 rakamı yüz binler basamağındadır ve basamak değeri 700.000'dir! ⭐"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bir doğal sayının birler basamağındaki rakamın basamak değeri her zaman kendisine eşittir.",
+              "correct": true,
+              "explanation": "Doğru! Birler basamağında sayı 1 ile çarpıldığı için basamak değeri sayının kendisidir. 🌟"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1101.jpg"
+        },
+        {
+          "id": 1102,
+          "unitId": "mat_unite1",
+          "title": "Doğal Sayıları Yuvarlama ve Sıralama",
+          "subject": "Matematik",
+          "unit": "Doğal Sayılar",
+          "icon": "🔄",
+          "color": "#4361EE",
+          "description": "En yakın onluğa ve en yakın yüzlüğe yuvarlama kuralları, büyükten küçüğe ve küçükten büyüğe sıralama.",
+          "videoFile": "assets/videos/matematik/yuvarlama-ve-siralama.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "2.478 sayısı en yakın onluğa yuvarlandığında hangi sayı elde edilir?",
+              "options": [
+                "2.470",
+                "2.480",
+                "2.500",
+                "2.400"
+              ],
+              "correct": 1,
+              "explanation": "Birler basamağında 8 var (5 veya daha büyük). Bu yüzden onlar basamağı bir artar: 2.480! 🎯"
+            },
+            {
+              "type": "multiple",
+              "question": "6.845 sayısı en yakın yüzlüğe yuvarlandığında kaç olur?",
+              "options": [
+                "6.800",
+                "6.850",
+                "6.900",
+                "7.000"
+              ],
+              "correct": 0,
+              "explanation": "Yüzlüğe yuvarlarken son iki basamağa (45) bakarız. 45 < 50 olduğu için kendi yüzlüğünde kalır: 6.800! 💡"
+            },
+            {
+              "type": "truefalse",
+              "question": "14.560 > 14.650 ifadesi doğrudur.",
+              "correct": false,
+              "explanation": "Yanlış! Yüzler basamağında 6 olan 14.650, 14.560'tan daha büyüktür. ❌"
+            },
+            {
+              "type": "multiple",
+              "question": "En yakın onluğa yuvarlandığında 350 olan en küçük doğal sayı kaçtır?",
+              "options": [
+                "344",
+                "345",
+                "349",
+                "354"
+              ],
+              "correct": 1,
+              "explanation": "345, birler basamağı 5 olduğu için yukarıya (350'ye) yuvarlanan en küçük sayıdır! 🌟"
+            },
+            {
+              "type": "truefalse",
+              "question": "Sayıları sıralarken basamak sayısı fazla olan sayı her zaman daha büyüktür.",
+              "correct": true,
+              "explanation": "Doğru! Örneğin 5 basamaklı bir sayı, 4 basamaklı herhangi bir sayıdan daima büyüktür. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1102.jpg"
+        },
+        {
+          "id": 1103,
+          "unitId": "mat_unite1",
+          "title": "Sayı Örüntüleri",
+          "subject": "Matematik",
+          "unit": "Doğal Sayılar",
+          "icon": "🧩",
+          "color": "#4361EE",
+          "description": "Belli bir kurala göre artan veya azalan sayı örüntülerini keşfetme ve verilmeyen adımları bulma.",
+          "videoFile": "assets/videos/matematik/sayi-oruntuleri.mp4",
+          "duration": "6 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "14, 21, 28, 35, ? örüntüsünde soru işareti yerine hangi sayı gelmelidir?",
+              "options": [
+                "40",
+                "42",
+                "45",
+                "49"
+              ],
+              "correct": 1,
+              "explanation": "Örüntünün kuralı: 7'şer artıyor! 35 + 7 = 42 olur. 🧩"
+            },
+            {
+              "type": "multiple",
+              "question": "85, 77, 69, 61, ? örüntüsünün kuralı nedir?",
+              "options": [
+                "8 artarak devam eder",
+                "8 azalarak devam eder",
+                "7 azalarak devam eder",
+                "6 azalarak devam eder"
+              ],
+              "correct": 1,
+              "explanation": "Her adımda sayı 8 eksilmektedir: 85 - 8 = 77, 77 - 8 = 69... 📉"
+            },
+            {
+              "type": "truefalse",
+              "question": "4, 8, 16, 32 örüntüsünün kuralı 'önceki sayının 2 katını almak'tır.",
+              "correct": true,
+              "explanation": "Doğru! 4 x 2 = 8, 8 x 2 = 16, 16 x 2 = 32... Harika bir kural! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "5, 11, 17, A, 29, B örüntüsünde A + B toplamı kaçtır?",
+              "options": [
+                "56",
+                "58",
+                "60",
+                "62"
+              ],
+              "correct": 1,
+              "explanation": "Kural 6'şar artış: A = 23, B = 35. Toplamları: 23 + 35 = 58! ⭐"
+            },
+            {
+              "type": "truefalse",
+              "question": "Örüntüler sadece artan sayılarla yapılabilir, azalan örüntü olamaz.",
+              "correct": false,
+              "explanation": "Yanlış! Sayı örüntüleri hem artan hem de azalan kurallarla oluşturulabilir. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1103.jpg"
+        },
+        {
+          "id": 1104,
+          "unitId": "mat_unite1",
+          "title": "Doğal Sayılarla Toplama İşlemi",
+          "subject": "Matematik",
+          "unit": "Doğal Sayılar",
+          "icon": "➕",
+          "color": "#4361EE",
+          "description": "En çok dört basamaklı doğal sayılarla eldeli ve eldesiz toplama işlemi, zihinden toplama ve tahmin stratejileri.",
+          "videoFile": "assets/videos/matematik/toplama-islemi.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "4.658 + 2.784 işleminin sonucu kaçtır?",
+              "options": [
+                "7.342",
+                "7.442",
+                "7.432",
+                "7.542"
+              ],
+              "correct": 1,
+              "explanation": "Basamakları alt alta toplayıp eldeleri eklediğimizde sonuç 7.442 çıkar! ➕"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir okul kütüphanesinde 2.450 hikaye, 1.825 masal kitabı vardır. Kütüphanede toplam kaç kitap vardır?",
+              "options": [
+                "4.175",
+                "4.275",
+                "4.300",
+                "4.250"
+              ],
+              "correct": 1,
+              "explanation": "2.450 + 1.825 = 4.275 kitap! 📚"
+            },
+            {
+              "type": "truefalse",
+              "question": "Toplama işleminde toplananların yerleri değişse de toplam değişmez.",
+              "correct": true,
+              "explanation": "Doğru! Buna toplama işleminin değişme özelliği denir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "3.500 + 4.800 işlemini zihinden yaparken en pratik yol hangisidir?",
+              "options": [
+                "35 ile 48'i toplayıp sonuna iki sıfır eklemek",
+                "Sayıları tek tek parmakla saymak",
+                "Sadece birler basamağını toplamak",
+                "Sayıları çarpmak"
+              ],
+              "correct": 0,
+              "explanation": "35 + 48 = 83, yanına 00 ekleriz: 8.300! Zihinden toplamanın altın kuralı! ⚡"
+            },
+            {
+              "type": "truefalse",
+              "question": "Toplama işleminde etkisiz eleman 1'dir.",
+              "correct": false,
+              "explanation": "Yanlış! Toplama işleminde etkisiz eleman 0'dır (sıfır). 1 çarpmanın etkisiz elemanıdır. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1104.jpg"
+        },
+        {
+          "id": 1105,
+          "unitId": "mat_unite1",
+          "title": "Doğal Sayılarla Çıkarma İşlemi",
+          "subject": "Matematik",
+          "unit": "Doğal Sayılar",
+          "icon": "➖",
+          "color": "#4361EE",
+          "description": "Onluk ve yüzlük bozmayı gerektiren çıkarma işlemleri, çıkarma işleminde verilmeyen eksilen veya çıkanı bulma.",
+          "videoFile": "assets/videos/matematik/cikarma-islemi.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "8.000 - 3.456 işleminin sonucu kaçtır?",
+              "options": [
+                "4.544",
+                "4.644",
+                "5.544",
+                "4.554"
+              ],
+              "correct": 0,
+              "explanation": "Sıfırlardan onluk bozarak ilerlediğimizde: 8.000 - 3.456 = 4.544 buluruz! ➖"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir çıkarma işleminde çıkan 1.250, fark 2.750 olduğuna göre eksilen kaçtır?",
+              "options": [
+                "1.500",
+                "3.900",
+                "4.000",
+                "4.100"
+              ],
+              "correct": 2,
+              "explanation": "Eksilen = Çıkan + Fark! 1.250 + 2.750 = 4.000! 💡"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bir çıkarma işleminde eksileni bulmak için çıkan ile fark toplanır.",
+              "correct": true,
+              "explanation": "Doğru! Eksilen = Çıkan + Fark formülü her zaman geçerlidir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "5.420 metre uzunluğundaki bir koşu parkurunun 3.180 metresini koşan Emir'in geriye kaç metresi kalmıştır?",
+              "options": [
+                "2.240",
+                "2.340",
+                "2.140",
+                "2.260"
+              ],
+              "correct": 0,
+              "explanation": "5.420 - 3.180 = 2.240 metre yolu kalmıştır! 🏃‍♂️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Çıkarma işleminde çıkan sayı her zaman eksilen sayıdan büyük olmalıdır.",
+              "correct": false,
+              "explanation": "Yanlış! Doğal sayılarda eksilen sayı çıkan sayıdan büyük veya eşit olmalıdır. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1105.jpg"
+        }
+      ]
+    },
+    {
+      "id": "mat_unite2",
+      "title": "2. Ünite: Doğal Sayılarla Çarpma ve Bölme İşlemi",
+      "icon": "✖️",
+      "color": "#3A86FF",
+      "description": "3 basamaklı sayılarla çarpma, kısa yoldan çarpma ve bölme, kalanlı-kalansız bölme ve dört işlem problemleri.",
+      "lessons": [
+        {
+          "id": 1201,
+          "unitId": "mat_unite2",
+          "title": "Doğal Sayılarla Çarpma İşlemi",
+          "subject": "Matematik",
+          "unit": "Çarpma ve Bölme",
+          "icon": "✖️",
+          "color": "#3A86FF",
+          "description": "En çok üç basamaklı doğal sayılarla iki basamaklı doğal sayıları çarpma, basamak kaydırma kuralı.",
+          "videoFile": "assets/videos/matematik/carpma-islemi.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "245 x 18 işleminin sonucu kaçtır?",
+              "options": [
+                "4.310",
+                "4.410",
+                "4.510",
+                "4.210"
+              ],
+              "correct": 1,
+              "explanation": "245 x 8 = 1.960 ve 245 x 10 = 2.450. Toplarsak: 1.960 + 2.450 = 4.410! ✖️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Çarpma işleminde ikinci çarpanın onlar basamağı ile çarparken sonuç bir basamak sola kaydırılır.",
+              "correct": true,
+              "explanation": "Doğru! Çünkü onlar basamağındaki sayının gerçek değeri onluktur. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Günde 125 sayfa kitap okuyan bir öğrenci 14 günde toplam kaç sayfa kitap okur?",
+              "options": [
+                "1.650",
+                "1.700",
+                "1.750",
+                "1.800"
+              ],
+              "correct": 2,
+              "explanation": "125 x 14 = 1.750 sayfa! Harika bir okuma performansı! 📖"
+            },
+            {
+              "type": "multiple",
+              "question": "Herhangi bir sayının 0 (sıfır) ile çarpımı daima kaça eşittir?",
+              "options": [
+                "Sayının kendisine",
+                "1'e",
+                "0'a",
+                "10'a"
+              ],
+              "correct": 2,
+              "explanation": "Sıfır çarpmada yutan elemandır! Her sayıyı sıfır yapar: 0! 🕳️"
+            },
+            {
+              "type": "truefalse",
+              "question": "15 x 6 işlemi ile 6 x 15 işleminin sonuçları birbirine eşittir.",
+              "correct": true,
+              "explanation": "Doğru! Çarpma işleminde çarpanların yer değiştirmesi sonucu değiştirmez (değişme özelliği). ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1201.jpg"
+        },
+        {
+          "id": 1202,
+          "unitId": "mat_unite2",
+          "title": "Kısa Yoldan ve Zihinden Çarpma",
+          "subject": "Matematik",
+          "unit": "Çarpma ve Bölme",
+          "icon": "⚡",
+          "color": "#3A86FF",
+          "description": "10, 100 ve 1000 ile kısa yoldan çarpma, 5, 25 ve 50 ile zihinden pratik çarpma taktikleri.",
+          "videoFile": "assets/videos/matematik/kisa-yoldan-carpma.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "74 sayısını 100 ile kısa yoldan çarptığımızda sonuç kaç olur?",
+              "options": [
+                "740",
+                "7.400",
+                "74.000",
+                "70.400"
+              ],
+              "correct": 1,
+              "explanation": "100 ile çarparken sayının sağına iki adet sıfır eklenir: 7.400! ⚡"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir sayıyı 5 ile zihinden çarpmak için pratik olarak ne yapabiliriz?",
+              "options": [
+                "Sayının sağına sıfır ekleyip 2'ye böleriz",
+                "Sayıyı 2 ile çarpıp 5 ekleriz",
+                "Sayının sağına iki sıfır ekleriz",
+                "Sayıdan 5 çıkarırız"
+              ],
+              "correct": 0,
+              "explanation": "Örn: 24 x 5 için 24 x 10 = 240, yarısı 120! Çok hızlı ve zekice! 💡"
+            },
+            {
+              "type": "truefalse",
+              "question": "38 x 1.000 işleminin sonucu 38.000'dir.",
+              "correct": true,
+              "explanation": "Doğru! 1000 ile çarparken sayının sağına 3 tane sıfır ekleriz. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "48 x 50 işlemini zihinden yaparken 48'in yarısını alıp sağına iki sıfır eklersek sonuç kaç çıkar?",
+              "options": [
+                "2.200",
+                "2.400",
+                "2.500",
+                "2.800"
+              ],
+              "correct": 1,
+              "explanation": "48 / 2 = 24, yanına iki sıfır: 2.400! 🎯"
+            },
+            {
+              "type": "truefalse",
+              "question": "10 ile çarparken sayının sağına bir sıfır eklenir.",
+              "correct": true,
+              "explanation": "Doğru! Örneğin: 65 x 10 = 650. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1202.jpg"
+        },
+        {
+          "id": 1203,
+          "unitId": "mat_unite2",
+          "title": "Doğal Sayılarla Bölme İşlemi",
+          "subject": "Matematik",
+          "unit": "Çarpma ve Bölme",
+          "icon": "➗",
+          "color": "#3A86FF",
+          "description": "En çok dört basamaklı sayıları iki basamaklı sayılara bölme, bölünen-bölen-bölüm-kalan ilişkisi.",
+          "videoFile": "assets/videos/matematik/bolme-islemi.mp4",
+          "duration": "9 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "864 ÷ 24 işleminin sonucu kaçtır?",
+              "options": [
+                "34",
+                "36",
+                "38",
+                "42"
+              ],
+              "correct": 1,
+              "explanation": "864'ü 24'e böldüğümüzde tam olarak 36 çıkar (kalan 0)! ➗"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir bölme işleminde bölen 15 ise kalan en fazla kaç olabilir?",
+              "options": [
+                "14",
+                "15",
+                "16",
+                "0"
+              ],
+              "correct": 0,
+              "explanation": "Altın Kural: Kalan daima bölenden küçük olmalıdır! 15'ten küçük en büyük sayı 14'tür! 🏆"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bölünen sayıyı bulmak için bölen ile bölüm çarpılır ve varsa kalan eklenir.",
+              "correct": true,
+              "explanation": "Doğru! Bölünen = (Bölen x Bölüm) + Kalan! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Böleni 8, bölümü 12 ve kalanı 5 olan bir bölme işleminde bölünen sayı kaçtır?",
+              "options": [
+                "96",
+                "100",
+                "101",
+                "105"
+              ],
+              "correct": 2,
+              "explanation": "(8 x 12) + 5 = 96 + 5 = 101! 🌟"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kalanı sıfır (0) olan bölme işlemlerine 'kalanlı bölme' denir.",
+              "correct": false,
+              "explanation": "Yanlış! Kalanı sıfır olan bölme işlemlerine 'kalansız bölme' denir. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1203.jpg"
+        },
+        {
+          "id": 1204,
+          "unitId": "mat_unite2",
+          "title": "Kısa Yoldan Bölme ve Tahmin",
+          "subject": "Matematik",
+          "unit": "Çarpma ve Bölme",
+          "icon": "🎯",
+          "color": "#3A86FF",
+          "description": "10, 100 ve 1000'e kısa yoldan bölme (sıfır silme), bölümün basamak sayısını işlem yapmadan tahmin etme.",
+          "videoFile": "assets/videos/matematik/kisa-yoldan-bolme.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "4.500 ÷ 100 işleminin sonucu kısa yoldan kaçtır?",
+              "options": [
+                "45",
+                "450",
+                "4,5",
+                "4500"
+              ],
+              "correct": 0,
+              "explanation": "100'e bölerken iki sıfır silinir: 4500 ÷ 100 = 45! 🎯"
+            },
+            {
+              "type": "multiple",
+              "question": "8.000 ÷ 1.000 işleminin sonucu kaçtır?",
+              "options": [
+                "8",
+                "80",
+                "800",
+                "8000"
+              ],
+              "correct": 0,
+              "explanation": "1.000'e bölerken üç sıfır birden silinir: 8.000 ÷ 1.000 = 8! ⚡"
+            },
+            {
+              "type": "truefalse",
+              "question": "745 ÷ 8 işleminde, 7 sayısı 8'den küçük olduğu için bölüm 2 basamaklıdır.",
+              "correct": true,
+              "explanation": "Doğru! Yüzler basamağındaki sayı bölenden küçükse bölüm basamak sayısı bir eksilir (3 - 1 = 2 basamaklı). ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "920 ÷ 10 işleminin sonucu kaçtır?",
+              "options": [
+                "9",
+                "92",
+                "920",
+                "90"
+              ],
+              "correct": 1,
+              "explanation": "Bir sıfır sildiğimizde sonuç 92 olur! 💡"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kısa yoldan bölme yaparken her iki sayıdan da eşit sayıda sıfır silinir.",
+              "correct": true,
+              "explanation": "Doğru! Bölünen ve bölenden aynı sayıda sıfır atılarak işlem sadeleştirilir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1204.jpg"
+        },
+        {
+          "id": 1205,
+          "unitId": "mat_unite2",
+          "title": "Çarpma ve Bölme Problemleri",
+          "subject": "Matematik",
+          "unit": "Çarpma ve Bölme",
+          "icon": "💡",
+          "color": "#3A86FF",
+          "description": "Dört işlem gerektiren aşamalı problemler, parantezli işlemler ve işlem önceliği kuralları.",
+          "videoFile": "assets/videos/matematik/carpma-bolme-problemleri.mp4",
+          "duration": "9 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Tanesi 15 TL olan defterlerden 8 tane, tanesi 5 TL olan kalemlerden 12 tane alan Ali kaç TL öder?",
+              "options": [
+                "160",
+                "170",
+                "180",
+                "190"
+              ],
+              "correct": 2,
+              "explanation": "(15 x 8) + (5 x 12) = 120 + 60 = 180 TL! 💰"
+            },
+            {
+              "type": "multiple",
+              "question": "360 fındık 12 çocuğa eşit şekilde paylaştırılırsa her birine kaç fındık düşer?",
+              "options": [
+                "25",
+                "30",
+                "35",
+                "40"
+              ],
+              "correct": 1,
+              "explanation": "360 ÷ 12 = 30 fındık düşer! 🌰"
+            },
+            {
+              "type": "truefalse",
+              "question": "Matematikte parantez içindeki işlem her zaman en önce yapılır.",
+              "correct": true,
+              "explanation": "Doğru! Parantez işlemi önceliklidir: (4 + 6) x 2 = 10 x 2 = 20! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "(20 - 5) x 4 işleminin sonucu kaçtır?",
+              "options": [
+                "40",
+                "50",
+                "60",
+                "80"
+              ],
+              "correct": 2,
+              "explanation": "Önce parantez: 20 - 5 = 15. Sonra çarpma: 15 x 4 = 60! ⭐"
+            },
+            {
+              "type": "truefalse",
+              "question": "Problem çözerken önce problemi dikkatle okuyup plan yapmak başarıyı artırır.",
+              "correct": true,
+              "explanation": "Doğru! Anlamak, planlamak, çözmek ve kontrol etmek problem çözmenin 4 altın adımıdır. 🎯"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1205.jpg"
+        }
+      ]
+    },
+    {
+      "id": "mat_unite3",
+      "title": "3. Ünite: Kesirler ve Kesirlerle İşlemler",
+      "icon": "🍰",
+      "color": "#7209B7",
+      "description": "Basit, bileşik ve tam sayılı kesirler, kesirleri sıralama, çokluğun kesir kadarını bulma ve kesir problemleri.",
+      "lessons": [
+        {
+          "id": 1301,
+          "unitId": "mat_unite3",
+          "title": "Basit, Bileşik ve Tam Sayılı Kesirler",
+          "subject": "Matematik",
+          "unit": "Kesirler",
+          "icon": "🍰",
+          "color": "#7209B7",
+          "description": "Payı paydasından küçük olan basit kesirler, bileşik kesirler ve tam sayılı kesirlerin anlamı ve modelleri.",
+          "videoFile": "assets/videos/matematik/kesir-turleri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Aşağıdakilerden hangisi bir 'basit kesir'dir?",
+              "options": [
+                "5/3",
+                "4/4",
+                "3/7",
+                "7/2"
+              ],
+              "correct": 2,
+              "explanation": "Payı paydasından küçük olan kesirlere basit kesir denir: 3 < 7 olduğu için 3/7 basit kesirdir! 🍰"
+            },
+            {
+              "type": "multiple",
+              "question": "Payı paydasına eşit veya payı paydasından büyük olan kesirlere ne ad verilir?",
+              "options": [
+                "Basit kesir",
+                "Bileşik kesir",
+                "Ondalık kesir",
+                "Birim kesir"
+              ],
+              "correct": 1,
+              "explanation": "Payı paydasına eşit ya da büyükse o bir 'bileşik kesir'dir (Örn: 4/4 veya 5/3)! 🍕"
+            },
+            {
+              "type": "truefalse",
+              "question": "1 tam 2/5 bir 'tam sayılı kesir'dir.",
+              "correct": true,
+              "explanation": "Doğru! Bir tam sayı ve bir basit kesirden oluşan kesirlere tam sayılı kesir denir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdaki kesirlerden hangisi 1 tamdan büyüktür?",
+              "options": [
+                "2/5",
+                "7/8",
+                "9/4",
+                "6/6"
+              ],
+              "correct": 2,
+              "explanation": "9/4 bileşik kesirdir ve 2 tam 1/4'e eşittir; 1'den büyüktür! 🌟"
+            },
+            {
+              "type": "truefalse",
+              "question": "Payı 1 olan basit kesirlere 'birim kesir' denir.",
+              "correct": true,
+              "explanation": "Doğru! Örneğin 1/2, 1/4, 1/8 gibi kesirler birim kesirdir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1301.jpg"
+        },
+        {
+          "id": 1302,
+          "unitId": "mat_unite3",
+          "title": "Bir Çokluğun Kesir Kadarını Bulma",
+          "subject": "Matematik",
+          "unit": "Kesirler",
+          "icon": "🔍",
+          "color": "#7209B7",
+          "description": "Bir sayının belirtilen basit kesir kadarını hesaplama ve kesir kadarı verilen sayının tamamını bulma.",
+          "videoFile": "assets/videos/matematik/coklugun-kesir-kadari.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "60 sayısının 3/4'ü kaçtır?",
+              "options": [
+                "40",
+                "45",
+                "50",
+                "35"
+              ],
+              "correct": 1,
+              "explanation": "Önce paydaya böl: 60 ÷ 4 = 15. Sonra payla çarp: 15 x 3 = 45! 🎯"
+            },
+            {
+              "type": "multiple",
+              "question": "80 TL parasının 2/5'ini harcayan Emir'in geriye kaç TL'si kalmıştır?",
+              "options": [
+                "32",
+                "48",
+                "50",
+                "42"
+              ],
+              "correct": 1,
+              "explanation": "80 ÷ 5 = 16, 16 x 2 = 32 TL harcadı. Kalan: 80 - 32 = 48 TL! 💰"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bir sayının kesir kadarını bulurken sayı önce paydaya bölünür, çıkan sonuç pay ile çarpılır.",
+              "correct": true,
+              "explanation": "Doğru! Altın kural: Paydaya böl, payla çarp! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "1/3'ü 15 olan sayının tamamı kaçtır?",
+              "options": [
+                "30",
+                "45",
+                "60",
+                "25"
+              ],
+              "correct": 1,
+              "explanation": "1 parçası 15 ise, 3 parçanın tamamı: 15 x 3 = 45 olur! 💡"
+            },
+            {
+              "type": "truefalse",
+              "question": "100 sayısının 1/2'si ile 50 sayısı birbirine eşittir.",
+              "correct": true,
+              "explanation": "Doğru! 100 ÷ 2 = 50 (yarısı). ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1302.jpg"
+        },
+        {
+          "id": 1303,
+          "unitId": "mat_unite3",
+          "title": "Kesirleri Karşılaştırma ve Sıralama",
+          "subject": "Matematik",
+          "unit": "Kesirler",
+          "icon": "📊",
+          "color": "#7209B7",
+          "description": "Paydaları eşit olan kesirleri ve payları eşit olan kesirleri büyükten küçüğe veya küçükten büyüğe sıralama.",
+          "videoFile": "assets/videos/matematik/kesirleri-siralama.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Paydaları eşit olan kesirlerden hangisi daha büyüktür?",
+              "options": [
+                "Payı küçük olan",
+                "Payı büyük olan",
+                "Paydası küçük olan",
+                "Hepsi eşittir"
+              ],
+              "correct": 1,
+              "explanation": "Paydalar eşitse payı büyük olan daha büyüktür! Örn: 5/8 > 3/8. 🍕"
+            },
+            {
+              "type": "multiple",
+              "question": "1/2, 1/4, 1/8 birim kesirlerinin büyükten küçüğe doğru sıralanışı hangisidir?",
+              "options": [
+                "1/8 > 1/4 > 1/2",
+                "1/2 > 1/4 > 1/8",
+                "1/4 > 1/2 > 1/8",
+                "1/2 > 1/8 > 1/4"
+              ],
+              "correct": 1,
+              "explanation": "Pastayı 2'ye bölersen dilim büyüktür, 8'e bölersen dilim küçülür! 1/2 > 1/4 > 1/8! 🎂"
+            },
+            {
+              "type": "truefalse",
+              "question": "7/10 kesri 3/10 kesrinden daha büyüktür.",
+              "correct": true,
+              "explanation": "Doğru! Paydalar eşit (10), 7 > 3 olduğu için 7/10 > 3/10! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdaki sıralamalardan hangisi doğrudur?",
+              "options": [
+                "2/7 < 4/7 < 6/7",
+                "6/7 < 4/7 < 2/7",
+                "4/7 < 2/7 < 6/7",
+                "2/7 > 4/7 > 6/7"
+              ],
+              "correct": 0,
+              "explanation": "Paydalar eşit olduğunda paylar küçükten büyüğe sıralanır: 2 < 4 < 6! ⭐"
+            },
+            {
+              "type": "truefalse",
+              "question": "Payları eşit kesirlerde paydası küçük olan kesir daha küçüktür.",
+              "correct": false,
+              "explanation": "Yanlış! Paylar eşitse paydası küçük olan daha BÜYÜKTÜR (daha az parçaya bölünmüştür). ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1303.jpg"
+        },
+        {
+          "id": 1304,
+          "unitId": "mat_unite3",
+          "title": "Kesirlerle Toplama ve Çıkarma İşlemi",
+          "subject": "Matematik",
+          "unit": "Kesirler",
+          "icon": "➕",
+          "color": "#7209B7",
+          "description": "Paydaları eşit kesirlerle toplama ve çıkarma işlemleri, tam sayılı kesirlerle pratik işlemler.",
+          "videoFile": "assets/videos/matematik/kesirlerle-toplama-cikarma.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "3/8 + 4/8 işleminin sonucu kaçtır?",
+              "options": [
+                "7/16",
+                "7/8",
+                "1/8",
+                "7/64"
+              ],
+              "correct": 1,
+              "explanation": "Paylar toplanır (3 + 4 = 7), payda aynen kalır (8) → 7/8! 🥧"
+            },
+            {
+              "type": "multiple",
+              "question": "9/11 - 4/11 işleminin sonucu kaçtır?",
+              "options": [
+                "5/11",
+                "5/0",
+                "13/11",
+                "5/22"
+              ],
+              "correct": 0,
+              "explanation": "Paylar çıkarılır: 9 - 4 = 5. Payda aynen yazılır: 5/11! ➖"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kesirleri toplarken veya çıkarırken paydalar da birbiriyle toplanır veya çıkarılır.",
+              "correct": false,
+              "explanation": "Kesinlikle YANLIŞ! Paydalar toplanmaz veya çıkarılmaz, ortak payda aynen yazılır! ❌"
+            },
+            {
+              "type": "multiple",
+              "question": "1 tam - 3/5 işleminin sonucu kaçtır?",
+              "options": [
+                "2/5",
+                "1/5",
+                "3/5",
+                "5/5"
+              ],
+              "correct": 0,
+              "explanation": "1 tam = 5/5'tir. 5/5 - 3/5 = 2/5 olur! 💡"
+            },
+            {
+              "type": "truefalse",
+              "question": "2/7 + 5/7 = 7/7 = 1 tam eder.",
+              "correct": true,
+              "explanation": "Doğru! 2 + 5 = 7/7, yani tam bir bütün elde edilir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1304.jpg"
+        },
+        {
+          "id": 1305,
+          "unitId": "mat_unite3",
+          "title": "Kesir Problemleri",
+          "subject": "Matematik",
+          "unit": "Kesirler",
+          "icon": "🧠",
+          "color": "#7209B7",
+          "description": "Harçlık, pasta, yol ve zaman paylaştırma gibi gerçek yaşam kesir problemleri ve çözümleri.",
+          "videoFile": "assets/videos/matematik/kesir-problemleri.mp4",
+          "duration": "9 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Bir çiftçi 120 çuval buğdayın 2/6'sını sattı. Geriye kaç çuval buğdayı kaldı?",
+              "options": [
+                "40",
+                "60",
+                "80",
+                "100"
+              ],
+              "correct": 2,
+              "explanation": "120 ÷ 6 = 20, 20 x 2 = 40 çuval sattı. Kalan: 120 - 40 = 80 çuval! 🌾"
+            },
+            {
+              "type": "multiple",
+              "question": "Ayşe 240 sayfalık kitabın 1. gün 1/4'ünü, 2. gün 2/4'ünü okudu. Okumadığı kaç sayfa kaldı?",
+              "options": [
+                "60",
+                "120",
+                "180",
+                "90"
+              ],
+              "correct": 0,
+              "explanation": "Toplam okunan: 1/4 + 2/4 = 3/4. Kalan 1/4'tür: 240 ÷ 4 = 60 sayfa! 📖"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bir yolun 5/9'unu giden bir aracın yolun tamamını bitirmesi için 4/9'luk yolu kalmıştır.",
+              "correct": true,
+              "explanation": "Doğru! 9/9 - 5/9 = 4/9 yolu kalmıştır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Emir 50 lirasının 3/5'i ile futbol topu aldı. Topun fiyatı kaç liradır?",
+              "options": [
+                "20",
+                "25",
+                "30",
+                "35"
+              ],
+              "correct": 2,
+              "explanation": "50 ÷ 5 = 10, 10 x 3 = 30 TL! ⚽"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kesir problemlerinde şekil çizerek veya modelleyerek çözmek çözümü kolaylaştırır.",
+              "correct": true,
+              "explanation": "Doğru! Şekil çizmek problemi görselleştirir ve hatayı önler. 🌟"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1305.jpg"
+        }
+      ]
+    },
+    {
+      "id": "mat_unite4",
+      "title": "4. Ünite: Zaman Ölçme ve Veri İşleme",
+      "icon": "⏰",
+      "color": "#F72585",
+      "description": "Saat-dakika-saniye dönüşümleri, zaman problemleri, sütun grafiği oluşturma ve çetele-sıklık tabloları.",
+      "lessons": [
+        {
+          "id": 1401,
+          "unitId": "mat_unite4",
+          "title": "Zaman Ölçme Birimleri ve Dönüşümler",
+          "subject": "Matematik",
+          "unit": "Zaman ve Veri",
+          "icon": "⏰",
+          "color": "#F72585",
+          "description": "Saat, dakika, saniye, yıl, ay, hafta ve gün arasındaki matematiksel dönüşümler.",
+          "videoFile": "assets/videos/matematik/zaman-olculeri.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "3 saat kaç dakikaya eşittir?",
+              "options": [
+                "120",
+                "150",
+                "180",
+                "200"
+              ],
+              "correct": 2,
+              "explanation": "1 saat = 60 dakikadır. 3 x 60 = 180 dakika eder! ⏰"
+            },
+            {
+              "type": "multiple",
+              "question": "180 saniye kaç dakikadır?",
+              "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+              ],
+              "correct": 1,
+              "explanation": "1 dakika = 60 saniye. 180 ÷ 60 = 3 dakika! ⏱️"
+            },
+            {
+              "type": "truefalse",
+              "question": "1 yıl 52 haftadır.",
+              "correct": true,
+              "explanation": "Doğru! Bir takvim yılı yaklaşık 52 haftadır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "2 gün kaç saattir?",
+              "options": [
+                "24",
+                "36",
+                "48",
+                "60"
+              ],
+              "correct": 2,
+              "explanation": "1 gün = 24 saat. 2 x 24 = 48 saat! ☀️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Artık yıllarda Şubat ayı 29 gün çeker.",
+              "correct": true,
+              "explanation": "Doğru! 4 yılda bir gelen artık yılda Şubat 29 gündür ve yıl 366 gün sürer. 📅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1401.jpg"
+        },
+        {
+          "id": 1402,
+          "unitId": "mat_unite4",
+          "title": "Zaman Problemleri",
+          "subject": "Matematik",
+          "unit": "Zaman ve Veri",
+          "icon": "⏳",
+          "color": "#F72585",
+          "description": "Başlangıç, bitiş ve geçen süreyi hesaplama, saat ve dakika toplama-çıkarma problemleri.",
+          "videoFile": "assets/videos/matematik/zaman-problemleri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Saat 14.15'te başlayan bir sinema filmi 1 saat 45 dakika sürmüştür. Film saat kaçta biter?",
+              "options": [
+                "15.45",
+                "16.00",
+                "16.15",
+                "16.30"
+              ],
+              "correct": 1,
+              "explanation": "14.15 + 1.45: 15 + 45 = 60 dk (1 saat). 14 + 1 + 1 = 16.00'da biter! 🎬"
+            },
+            {
+              "type": "multiple",
+              "question": "Her gün 40 dakika ders çalışan Emir, 5 günde toplam kaç saat ders çalışmış olur?",
+              "options": [
+                "3 saat",
+                "3 saat 20 dakika",
+                "3 saat 40 dakika",
+                "4 saat"
+              ],
+              "correct": 1,
+              "explanation": "40 x 5 = 200 dakika. 200 ÷ 60 = 3 saat 20 dakika eder! 📚"
+            },
+            {
+              "type": "truefalse",
+              "question": "21.30'da uyuyup sabah 07.30'da uyanan bir çocuk 10 saat uyumuştur.",
+              "correct": true,
+              "explanation": "Doğru! 21.30'dan 24.00'e 2 saat 30 dk + sabah 7 saat 30 dk = tam 10 saat! 💤"
+            },
+            {
+              "type": "multiple",
+              "question": "Saat 08.40'ta okula giden ve 15.20'de okuldan çıkan Zeynep okulda ne kadar süre kalmıştır?",
+              "options": [
+                "6 saat 20 dakika",
+                "6 saat 40 dakika",
+                "7 saat",
+                "7 saat 20 dakika"
+              ],
+              "correct": 1,
+              "explanation": "15.20 - 08.40 = 6 saat 40 dakika okulda kalmıştır! 🎒"
+            },
+            {
+              "type": "truefalse",
+              "question": "Saat ve dakikaları çıkarırken dakika yetmezse 1 saat alınıp 60 dakika olarak eklenir.",
+              "correct": true,
+              "explanation": "Doğru! 1 saat = 60 dakika olduğu için onluk değil, 60'lık bozulur. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1402.jpg"
+        },
+        {
+          "id": 1403,
+          "unitId": "mat_unite4",
+          "title": "Sütun Grafiği ve Yorumlama",
+          "subject": "Matematik",
+          "unit": "Zaman ve Veri",
+          "icon": "📈",
+          "color": "#F72585",
+          "description": "Sütun grafiği oluşturma, yatay ve dikey eksenleri inceleme ve grafik verilerini yorumlama.",
+          "videoFile": "assets/videos/matematik/sutun-grafigi.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Sütun grafiğinde verilerin gösterildiği dikdörtgen şeklindeki çubuklara ne denir?",
+              "options": [
+                "Çetele",
+                "Sütun",
+                "Sıklık",
+                "Nokta"
+              ],
+              "correct": 1,
+              "explanation": "Bu grafik türünde veriler 'sütun' adı verilen renkli çubuklarla gösterilir! 📊"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir sütun grafiğinde dikey eksende sayılar 5'er 5'er artıyorsa, 4. çizgi hangi sayıyı gösterir?",
+              "options": [
+                "15",
+                "20",
+                "25",
+                "30"
+              ],
+              "correct": 1,
+              "explanation": "4 x 5 = 20 sayısını gösterir! 📈"
+            },
+            {
+              "type": "truefalse",
+              "question": "Her sütun grafiğinin mutlaka bir başlığı olmalıdır.",
+              "correct": true,
+              "explanation": "Doğru! Başlık grafiğin neyi anlattığını anlamamızı sağlar. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Sütun grafiğinde en yüksek sütun bize hangi bilgiyi verir?",
+              "options": [
+                "En az olan veriyi",
+                "En fazla olan veriyi",
+                "Ortalama veriyi",
+                "Toplam veriyi"
+              ],
+              "correct": 1,
+              "explanation": "En yüksek sütun miktarı en çok olan seçeneği gösterir! 🏆"
+            },
+            {
+              "type": "truefalse",
+              "question": "Sütun grafikleri sadece dikey çizilebilir, yatay sütun grafiği çizilemez.",
+              "correct": false,
+              "explanation": "Yanlış! Sütun grafikleri hem dikey hem de yatay olarak çizilebilir. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1403.jpg"
+        },
+        {
+          "id": 1404,
+          "unitId": "mat_unite4",
+          "title": "Çetele ve Sıklık Tablosu",
+          "subject": "Matematik",
+          "unit": "Zaman ve Veri",
+          "icon": "📋",
+          "color": "#F72585",
+          "description": "Veri toplama, çetele çizgileri (5'li gruplar) ve sıklık sayıları ile tablo okuma ve problem çözme.",
+          "videoFile": "assets/videos/matematik/cetele-siklik-tablosu.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Çetele tablosunda 4 dikey çizgi ve üzerini kesen 1 yatay çizgi toplam kaçı gösterir?",
+              "options": [
+                "4",
+                "5",
+                "6",
+                "10"
+              ],
+              "correct": 1,
+              "explanation": "Çetele çizgileri saymayı kolaylaştırmak için 5'erli demetler halinde çizilir: 5! ✋"
+            },
+            {
+              "type": "multiple",
+              "question": "Sayılarla gösterilen tabloya ne ad verilir?",
+              "options": [
+                "Çetele tablosu",
+                "Sıklık tablosu",
+                "Sütun grafiği",
+                "Kroki"
+              ],
+              "correct": 1,
+              "explanation": "Çizgilerle yapılan çetele tablosu, doğrudan sayılarla yazılan ise 'sıklık tablosu'dur! 📋"
+            },
+            {
+              "type": "truefalse",
+              "question": "Çetele tablosundaki çizgiler sıklık tablosuna sayı olarak aktarılabilir.",
+              "correct": true,
+              "explanation": "Doğru! Çetele çizgileri sayılarak sıklık tablosu oluşturulur. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir sınıfta 3 demet çetele çizgisi ve yanında 2 tek çizgi varsa sınıfta kaç kişi vardır?",
+              "options": [
+                "15",
+                "16",
+                "17",
+                "18"
+              ],
+              "correct": 2,
+              "explanation": "(3 x 5) + 2 = 15 + 2 = 17 kişi! 🌟"
+            },
+            {
+              "type": "truefalse",
+              "question": "Sıklık tablosunda verilerin toplamı bulunamaz.",
+              "correct": false,
+              "explanation": "Yanlış! Sıklık tablosundaki sayıları toplayarak toplam veri miktarını kolayca bulabiliriz. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1404.jpg"
+        }
+      ]
+    },
+    {
+      "id": "mat_unite5",
+      "title": "5. Ünite: Geometrik Cisimler, Şekiller ve Açılar",
+      "icon": "📐",
+      "color": "#4CC9F0",
+      "description": "Üçgen, kare, dikdörtgen özellikleri, üçgen çeşitleri, dar-dik-geniş-doğru açılar, iletki kullanımı ve simetri.",
+      "lessons": [
+        {
+          "id": 1501,
+          "unitId": "mat_unite5",
+          "title": "Üçgen, Kare ve Dikdörtgenin Özellikleri",
+          "subject": "Matematik",
+          "unit": "Geometri",
+          "icon": "📐",
+          "color": "#4CC9F0",
+          "description": "Kenar, köşe, köşegen özellikleri, harflerle isimlendirme (ABCD karesi) ve temel geometrik kurallar.",
+          "videoFile": "assets/videos/matematik/geometrik-sekiller.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Bir karenin tüm kenarları hakkında ne söylenebilir?",
+              "options": [
+                "Hepsi farklı uzunluktadır",
+                "Karşılıklı kenarları eşittir",
+                "Tüm 4 kenarı birbirine eşittir",
+                "3 kenarı eşittir"
+              ],
+              "correct": 2,
+              "explanation": "Karenin en önemli özelliği 4 kenar uzunluğunun da birbirine eşit olmasıdır! 🔲"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdaki şekillerden hangisinin 'köşegeni' YOKTUR?",
+              "options": [
+                "Kare",
+                "Dikdörtgen",
+                "Üçgen",
+                "Beşgen"
+              ],
+              "correct": 2,
+              "explanation": "Üçgenin komşu olmayan köşesi bulunmadığı için köşegeni yoktur! 🔺"
+            },
+            {
+              "type": "truefalse",
+              "question": "Dikdörtgenin 4 açısı da dik açıdır (90°).",
+              "correct": true,
+              "explanation": "Doğru! Hem karenin hem de dikdörtgenin tüm iç açıları 90 derecedir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir karenin kaç tane köşegeni vardır?",
+              "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "correct": 1,
+              "explanation": "Karenin karşılıklı köşelerini birleştiren 2 adet eşit uzunlukta köşegeni vardır! ✂️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Geometrik şekiller adlandırılırken köşelerdeki harfler sırayla (saat yönünde veya tersinde) okunur.",
+              "correct": true,
+              "explanation": "Doğru! Örneğin ABCD karesi veya KLM üçgeni gibi sırayla adlandırılır. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1501.jpg"
+        },
+        {
+          "id": 1502,
+          "unitId": "mat_unite5",
+          "title": "Kenarlarına Göre Üçgen Çeşitleri",
+          "subject": "Matematik",
+          "unit": "Geometri",
+          "icon": "🔺",
+          "color": "#4CC9F0",
+          "description": "Eşkenar üçgen, ikizkenar üçgen ve çeşitkenar üçgenlerin kenar uzunlukları ve açı özellikleri.",
+          "videoFile": "assets/videos/matematik/ucgen-cesitleri.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Tüm kenar uzunlukları birbirine eşit olan üçgene ne ad verilir?",
+              "options": [
+                "Çeşitkenar üçgen",
+                "İkizkenar üçgen",
+                "Eşkenar üçgen",
+                "Dik üçgen"
+              ],
+              "correct": 2,
+              "explanation": "Üç kenarı da eşitse adı üstünde: 'Eşkenar üçgen'dir! 🔺"
+            },
+            {
+              "type": "multiple",
+              "question": "Sadece iki kenar uzunluğu birbirine eşit olan üçgene ne denir?",
+              "options": [
+                "Eşkenar üçgen",
+                "İkizkenar üçgen",
+                "Çeşitkenar üçgen",
+                "Geniş açılı üçgen"
+              ],
+              "correct": 1,
+              "explanation": "İki kenarı ikiz gibi eşit olduğu için 'İkizkenar üçgen' denir! 👥"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kenar uzunlukları 5 cm, 6 cm ve 7 cm olan bir üçgen 'çeşitkenar üçgen'dir.",
+              "correct": true,
+              "explanation": "Doğru! Üç kenarı da farklı uzunlukta olduğu için çeşitkenardır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir eşkenar üçgenin bir kenarı 8 cm ise çevresi kaç cm'dir?",
+              "options": [
+                "16",
+                "20",
+                "24",
+                "32"
+              ],
+              "correct": 2,
+              "explanation": "3 eşit kenar: 8 x 3 = 24 cm! 📏"
+            },
+            {
+              "type": "truefalse",
+              "question": "Eşkenar bir üçgenin tüm iç açıları birbirine eşittir ve 60 derecedir.",
+              "correct": true,
+              "explanation": "Doğru! 180 ÷ 3 = 60°! Her açısı 60 derecedir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1502.jpg"
+        },
+        {
+          "id": 1503,
+          "unitId": "mat_unite5",
+          "title": "Açılar ve Açı Çeşitleri",
+          "subject": "Matematik",
+          "unit": "Geometri",
+          "icon": "🧭",
+          "color": "#4CC9F0",
+          "description": "Dar açı (90°'den küçük), dik açı (90°), geniş açı (90°-180° arası) ve doğru açı (180°) kavramları.",
+          "videoFile": "assets/videos/matematik/aci-cesitleri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Ölçüsü tam 90° olan açıya ne ad verilir?",
+              "options": [
+                "Dar açı",
+                "Dik açı",
+                "Geniş açı",
+                "Doğru açı"
+              ],
+              "correct": 1,
+              "explanation": "Ölçüsü tam 90 derece olan açı 'Dik açı'dır (L harfi gibi)! 📐"
+            },
+            {
+              "type": "multiple",
+              "question": "Ölçüsü 45° olan bir açı hangi açı türüne girer?",
+              "options": [
+                "Dar açı",
+                "Dik açı",
+                "Geniş açı",
+                "Doğru açı"
+              ],
+              "correct": 0,
+              "explanation": "90 dereceden küçük açılara 'Dar açı' denir (45° < 90°)! 🎯"
+            },
+            {
+              "type": "truefalse",
+              "question": "Ölçüsü 120° olan bir açı geniş açıdır.",
+              "correct": true,
+              "explanation": "Doğru! 90° ile 180° arasındaki açılar geniş açıdır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Ölçüsü 180° olan ve düz bir çizgi oluşturan açıya ne denir?",
+              "options": [
+                "Geniş açı",
+                "Dik açı",
+                "Doğru açı",
+                "Tam açı"
+              ],
+              "correct": 2,
+              "explanation": "Düz bir doğru oluşturan 180 derecelik açıya 'Doğru açı' denir! 📏"
+            },
+            {
+              "type": "truefalse",
+              "question": "Dik açı, dar açıdan daha küçüktür.",
+              "correct": false,
+              "explanation": "Yanlış! Dik açı (90°), dar açıdan (0°-89°) daima daha büyüktür. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1503.jpg"
+        },
+        {
+          "id": 1504,
+          "unitId": "mat_unite5",
+          "title": "İletki ile Açı Ölçme ve Çizme",
+          "subject": "Matematik",
+          "unit": "Geometri",
+          "icon": "📏",
+          "color": "#4CC9F0",
+          "description": "Açıölçer (iletki) kullanımı, verilen açıları derece cinsinden ölçme ve istenen açıyı hatasız çizme.",
+          "videoFile": "assets/videos/matematik/iletki-aci-olcme.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Açıları ölçmek ve çizmek için kullanılan yarım daire şeklindeki araca ne denir?",
+              "options": [
+                "Pergel",
+                "İletki (Açıölçer)",
+                "Metre",
+                "Gönye"
+              ],
+              "correct": 1,
+              "explanation": "Açı ölçmek için 'iletki' (diğer adıyla açıölçer) kullanılır! 📐"
+            },
+            {
+              "type": "multiple",
+              "question": "Açı ölçü birimi aşağıdakilerden hangisidir?",
+              "options": [
+                "Metre",
+                "Gram",
+                "Derece (°)",
+                "Litre"
+              ],
+              "correct": 2,
+              "explanation": "Açı ölçü birimi 'derece'dir ve küçük yuvarlak sembolü ile gösterilir (°)! 🎯"
+            },
+            {
+              "type": "truefalse",
+              "question": "İletki ile ölçüm yaparken iletkinin merkez noktası açının köşesine yerleştirilir.",
+              "correct": true,
+              "explanation": "Doğru! Merkez nokta köşeye, taban çizgisi açının bir koluna hizalanır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Saat tam 03.00'ü gösterdiğinde akrep ile yelkovan arasındaki açı kaç derecedir?",
+              "options": [
+                "45°",
+                "60°",
+                "90°",
+                "120°"
+              ],
+              "correct": 2,
+              "explanation": "Saat 3'te akrep ve yelkovan birbirine dik durur: tam 90° (dik açı)! 🕒"
+            },
+            {
+              "type": "truefalse",
+              "question": "İletkinin üzerinde 0'dan 180'e kadar derece çizgileri bulunur.",
+              "correct": true,
+              "explanation": "Doğru! Standart yarım daire iletkiler 0° ile 180° arasını gösterir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1504.jpg"
+        },
+        {
+          "id": 1505,
+          "unitId": "mat_unite5",
+          "title": "Simetri ve Simetri Doğrusu",
+          "subject": "Matematik",
+          "unit": "Geometri",
+          "icon": "🦋",
+          "color": "#4CC9F0",
+          "description": "Şekillerin simetri doğrusunu bulma, ayna simetrisi ve kareli kağıtta şeklin simetriğini çizme.",
+          "videoFile": "assets/videos/matematik/simetri.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Bir şekli iki eş parçaya bölen ve katlandığında üst üste gelmesini sağlayan çizgiye ne denir?",
+              "options": [
+                "Köşegen",
+                "Simetri doğrusu",
+                "Kenar",
+                "Açıortay"
+              ],
+              "correct": 1,
+              "explanation": "Şekli ayna gibi iki eşit parçaya ayıran doğruya 'simetri doğrusu' denir! 🦋"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir karenin kaç tane simetri doğrusu vardır?",
+              "options": [
+                "1",
+                "2",
+                "4",
+                "Sonsuz"
+              ],
+              "correct": 2,
+              "explanation": "Karenin 2 dikey/yatay ve 2 köşegen olmak üzere toplam 4 simetri doğrusu vardır! 🔲"
+            },
+            {
+              "type": "truefalse",
+              "question": "Dikdörtgenin köşegenleri aynı zamanda birer simetri doğrusudur.",
+              "correct": false,
+              "explanation": "Yanlış! Dikdörtgen köşegeninden katlandığında kenarlar üst üste gelmez. Dikdörtgenin sadece 2 simetri doğrusu vardır (ortadan dikey ve yatay). ❌"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdaki harflerden hangisinin dikey simetri doğrusu vardır?",
+              "options": [
+                "F",
+                "A",
+                "P",
+                "G"
+              ],
+              "correct": 1,
+              "explanation": "A harfi tam ortadan dikey çizildiğinde iki tarafı birbirinin ayna görüntüsüdür! 🅰️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kelebek, insan yüzü ve kalp simetrik şekillere güzel örneklerdir.",
+              "correct": true,
+              "explanation": "Doğru! Doğada ve çevremizde pek çok simetrik varlık bulunur. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1505.jpg"
+        }
+      ]
+    },
+    {
+      "id": "mat_unite6",
+      "title": "6. Ünite: Uzunluk, Çevre, Alan, Tartma ve Sıvı Ölçüleri",
+      "icon": "📏",
+      "color": "#06D6A0",
+      "description": "Uzunluk ölçüleri, çevre uzunluğu hesaplama, alan ve birimkareler, tartma ve sıvı ölçme birimleri.",
+      "lessons": [
+        {
+          "id": 1601,
+          "unitId": "mat_unite6",
+          "title": "Uzunluk Ölçme Birimleri",
+          "subject": "Matematik",
+          "unit": "Ölçme",
+          "icon": "📏",
+          "color": "#06D6A0",
+          "description": "Milimetre (mm), santimetre (cm), metre (m) ve kilometre (km) arasındaki dönüşümler ve problemler.",
+          "videoFile": "assets/videos/matematik/uzunluk-olculeri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "4 metre kaç santimetredir?",
+              "options": [
+                "40",
+                "400",
+                "4.000",
+                "40.000"
+              ],
+              "correct": 1,
+              "explanation": "1 metre = 100 cm'dir. 4 x 100 = 400 cm! 📏"
+            },
+            {
+              "type": "multiple",
+              "question": "3 kilometre kaç metredir?",
+              "options": [
+                "300",
+                "3.000",
+                "30.000",
+                "30"
+              ],
+              "correct": 1,
+              "explanation": "1 km = 1.000 m'dir. 3 x 1.000 = 3.000 m! 🛣️"
+            },
+            {
+              "type": "truefalse",
+              "question": "1 santimetre 10 milimetredir (1 cm = 10 mm).",
+              "correct": true,
+              "explanation": "Doğru! Cetvelimizdeki her 1 cm arası 10 küçük milimetre çizgisine bölünmüştür. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Şehirler arasındaki mesafeyi ölçerken hangi birim kullanılır?",
+              "options": [
+                "Milimetre",
+                "Santimetre",
+                "Metre",
+                "Kilometre"
+              ],
+              "correct": 3,
+              "explanation": "Büyük mesafeler kilometre (km) ile ölçülür (Örn: Ankara-İstanbul arası 450 km)! 🚗"
+            },
+            {
+              "type": "truefalse",
+              "question": "250 cm uzunluk, 2 metre 50 santimetreye eşittir.",
+              "correct": true,
+              "explanation": "Doğru! 200 cm = 2 m + 50 cm. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1601.jpg"
+        },
+        {
+          "id": 1602,
+          "unitId": "mat_unite6",
+          "title": "Çevre Uzunluğu Hesaplama",
+          "subject": "Matematik",
+          "unit": "Ölçme",
+          "icon": "🔲",
+          "color": "#06D6A0",
+          "description": "Kare, dikdörtgen ve çokgenlerin çevre uzunluğunu kenar uzunluklarını toplayarak ve formülle hesaplama.",
+          "videoFile": "assets/videos/matematik/cevre-uzunlugu.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Bir kenarı 9 cm olan karenin çevre uzunluğu kaç cm'dir?",
+              "options": [
+                "18",
+                "27",
+                "36",
+                "81"
+              ],
+              "correct": 2,
+              "explanation": "Karenin 4 eşit kenarı vardır: 9 x 4 = 36 cm! 🔲"
+            },
+            {
+              "type": "multiple",
+              "question": "Kısa kenarı 6 cm, uzun kenarı 10 cm olan dikdörtgenin çevresi kaç cm'dir?",
+              "options": [
+                "16",
+                "32",
+                "60",
+                "26"
+              ],
+              "correct": 1,
+              "explanation": "Çevre = 2 x (Kısa + Uzun) = 2 x (6 + 10) = 2 x 16 = 32 cm! 📐"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bir şeklin çevre uzunluğu, onu çevreleyen tüm kenar uzunluklarının toplamıdır.",
+              "correct": true,
+              "explanation": "Doğru! Çevre bir şeklin etrafında bir tam tur atmaktır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Çevresi 48 cm olan bir karenin bir kenar uzunluğu kaç cm'dir?",
+              "options": [
+                "10",
+                "12",
+                "14",
+                "16"
+              ],
+              "correct": 1,
+              "explanation": "48 ÷ 4 = 12 cm! Karenin kenarını bulmak için çevreyi 4'e böleriz. 💡"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kenarları 3 cm, 4 cm ve 5 cm olan üçgenin çevresi 12 cm'dir.",
+              "correct": true,
+              "explanation": "Doğru! 3 + 4 + 5 = 12 cm! ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1602.jpg"
+        },
+        {
+          "id": 1603,
+          "unitId": "mat_unite6",
+          "title": "Alan Ölçme ve Birimkareler",
+          "subject": "Matematik",
+          "unit": "Ölçme",
+          "icon": "🟩",
+          "color": "#06D6A0",
+          "description": "Şekillerin kapladığı alanı birimkareleri sayarak bulma, dikdörtgen ve karenin alanını hesaplama.",
+          "videoFile": "assets/videos/matematik/alan-olcme.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Kenar uzunluğu 5 birim olan karenin alanı kaç birimkaredir?",
+              "options": [
+                "10",
+                "20",
+                "25",
+                "30"
+              ],
+              "correct": 2,
+              "explanation": "Karenin alanı = Kenar x Kenar = 5 x 5 = 25 birimkare! 🟩"
+            },
+            {
+              "type": "multiple",
+              "question": "Kısa kenarı 4 birim, uzun kenarı 7 birim olan dikdörtgenin alanı kaç birimkaredir?",
+              "options": [
+                "11",
+                "22",
+                "28",
+                "32"
+              ],
+              "correct": 2,
+              "explanation": "Dikdörtgenin alanı = Kısa kenar x Uzun kenar = 4 x 7 = 28 birimkare! 🎯"
+            },
+            {
+              "type": "truefalse",
+              "question": "Alan, bir şeklin yüzeyde kapladığı yer miktarıdır ve birimkare ile ölçülür.",
+              "correct": true,
+              "explanation": "Doğru! Çevre kenar çizgisi, alan ise içini kaplayan yüzeydir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir satranç tahtasında her sırada 8 kare olduğuna ve 8 sıra bulunduğuna göre tahtanın alanı kaç birimkaredir?",
+              "options": [
+                "16",
+                "32",
+                "64",
+                "72"
+              ],
+              "correct": 2,
+              "explanation": "8 x 8 = 64 birimkare! ♟️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Aynı alana sahip şekillerin çevre uzunlukları da her zaman birbirine eşit olmak zorundadır.",
+              "correct": false,
+              "explanation": "Yanlış! Alanları aynı olan şekillerin çevreleri birbirinden farklı olabilir. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1603.jpg"
+        },
+        {
+          "id": 1604,
+          "unitId": "mat_unite6",
+          "title": "Tartma Birimleri ve Problemleri",
+          "subject": "Matematik",
+          "unit": "Ölçme",
+          "icon": "⚖️",
+          "color": "#06D6A0",
+          "description": "Ton (t), kilogram (kg), gram (g) ve miligram (mg) arasındaki dönüşümler ve tartma problemleri.",
+          "videoFile": "assets/videos/matematik/tartma-olculeri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "1 kilogram kaç grama eşittir?",
+              "options": [
+                "10",
+                "100",
+                "1.000",
+                "10.000"
+              ],
+              "correct": 2,
+              "explanation": "1 kg = 1.000 gramdır! ⚖️"
+            },
+            {
+              "type": "multiple",
+              "question": "1 ton kaç kilograma eşittir?",
+              "options": [
+                "100",
+                "1.000",
+                "5.000",
+                "10.000"
+              ],
+              "correct": 1,
+              "explanation": "1 ton = 1.000 kg'dır (Kamyonlar, filler ton ile tartılır)! 🐘"
+            },
+            {
+              "type": "truefalse",
+              "question": "İlaç hapları veya altın gibi çok hafif ve hassas maddeler miligram (mg) ile tartılır.",
+              "correct": true,
+              "explanation": "Doğru! 1 gram = 1.000 miligramdır ve çok hassas ölçümlerde kullanılır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Yarım kilogram kaç gramdır?",
+              "options": [
+                "250 g",
+                "500 g",
+                "750 g",
+                "100 g"
+              ],
+              "correct": 1,
+              "explanation": "1.000 ÷ 2 = 500 gram! Çeyrek kilogram ise 250 gramdır. 🍎"
+            },
+            {
+              "type": "truefalse",
+              "question": "Brüt ağırlık, dara ile net ağırlığın toplamıdır.",
+              "correct": true,
+              "explanation": "Doğru! Brüt = Net (içindeki madde) + Dara (boş kap). ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1604.jpg"
+        },
+        {
+          "id": 1605,
+          "unitId": "mat_unite6",
+          "title": "Sıvı Ölçme (Litre ve Mililitre)",
+          "subject": "Matematik",
+          "unit": "Ölçme",
+          "icon": "💧",
+          "color": "#06D6A0",
+          "description": "Litre (L) ve mililitre (mL) ilişkisi, yarım ve çeyrek litre hesapları, günlük yaşam sıvı problemleri.",
+          "videoFile": "assets/videos/matematik/sivi-olculeri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "1 litre kaç mililitredir?",
+              "options": [
+                "10 mL",
+                "100 mL",
+                "1.000 mL",
+                "10.000 mL"
+              ],
+              "correct": 2,
+              "explanation": "1 L = 1.000 mL'dir! 💧"
+            },
+            {
+              "type": "multiple",
+              "question": "250 mL'lik bardaklardan kaç tanesi 1 litre su doldurur?",
+              "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+              ],
+              "correct": 2,
+              "explanation": "1.000 ÷ 250 = 4 bardak! Yani 250 mL çeyrek litredir. 🥛"
+            },
+            {
+              "type": "truefalse",
+              "question": "Yarım litre sıvı 500 mililitredir.",
+              "correct": true,
+              "explanation": "Doğru! 1.000 ÷ 2 = 500 mL! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Bir günde 2 litre su içen Emir, 1 haftada toplam kaç litre su içer?",
+              "options": [
+                "10 L",
+                "12 L",
+                "14 L",
+                "16 L"
+              ],
+              "correct": 2,
+              "explanation": "1 hafta = 7 gündür. 2 x 7 = 14 litre su içer! 🚰"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bir su damlası veya kaşıktaki şurup litre ile ölçülür.",
+              "correct": false,
+              "explanation": "Yanlış! Küçük miktardaki sıvılar mililitre (mL) ile ölçülür. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/matematik/topic_1605.jpg"
+        }
+      ]
+    }
+  ]
+}

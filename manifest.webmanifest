@@ -1,0 +1,25 @@
+{
+  "name": "EmirLearn — 4. Sınıf Eğitim Dünyası",
+  "short_name": "EmirLearn",
+  "description": "4. Sınıf MEB Müfredatına Uygun Sosyal Bilgiler, Türkçe, Matematik ve Fen Bilimleri Kapsamlı Eğitim Portalı",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F3F5FF",
+  "theme_color": "#7C3AED",
+  "lang": "tr-TR",
+  "icons": [
+    {
+      "src": "assets/thumbnails/sosyal/birey-ve-toplum-ozet.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/thumbnails/fen/basit-elektrik-devreleri-ozet.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

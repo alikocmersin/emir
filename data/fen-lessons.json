@@ -1,0 +1,1864 @@
+{
+  "subject": "Fen Bilimleri",
+  "grade": "4. Sınıf",
+  "icon": "🔬",
+  "color": "#10B981",
+  "description": "MEB 4. Sınıf Fen Bilimleri Müfredatı — 7 Ünite, 28 Konu, İnteraktif Deneyler ve Testler",
+  "units": [
+    {
+      "id": "fen_unite1",
+      "title": "1. Ünite: Yer Kabuğu ve Dünyamızın Hareketleri",
+      "icon": "🌍",
+      "color": "#10B981",
+      "description": "Kayaçlar, madenler, mineraller, fosil oluşumu, Dünyanın dönme ve dolanma hareketleri.",
+      "lessons": [
+        {
+          "id": 2101,
+          "unitId": "fen_unite1",
+          "title": "Yer Kabuğunun Yapısı: Kayaçlar ve Madenler",
+          "subject": "Fen Bilimleri",
+          "unit": "Yer Kabuğu",
+          "icon": "🪨",
+          "color": "#10B981",
+          "description": "Yer kabuğunu oluşturan kayaçlar, mineraller ve ekonomik değere sahip madenler (altın, bor, demir, bakır).",
+          "videoFile": "assets/videos/fen/kayaclar-ve-madenler.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Ekonomik değeri olan kayaç ve minerallere ne ad verilir?",
+              "options": [
+                "Fosil",
+                "Maden",
+                "Toprak",
+                "Magma"
+              ],
+              "correct": 1,
+              "explanation": "Ekonomik değeri olan (altın, gümüş, bor, kömür gibi) kayaçlara 'maden' denir! 💎"
+            },
+            {
+              "type": "multiple",
+              "question": "Dünya rezervlerinin yaklaşık %73'ü ülkemizde bulunan ve roket yakıtı, deterjan, cam yapımında kullanılan maden hangisidir?",
+              "options": [
+                "Bakır",
+                "Bor",
+                "Demir",
+                "Taş kömürü"
+              ],
+              "correct": 1,
+              "explanation": "Türkiye dünyada en fazla Bor madeni rezervine sahip ülkedir! 🇹🇷"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kayaçların birbirinden farklı renkte ve sertlikte olmasını sağlayan maddelere 'mineral' denir.",
+              "correct": true,
+              "explanation": "Doğru! Kayaçların yapısını ve özelliklerini içerdikleri mineraller belirler. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Rüzgar, yağmur, sıcaklık farkı gibi etkilerle kayaçların ufalanması sonucu sırasıyla hangileri oluşur?",
+              "options": [
+                "Kayaç → Taş → Çakıl → Kum → Toprak",
+                "Toprak → Kum → Çakıl → Kayaç",
+                "Maden → Fosil → Toprak",
+                "Magma → Maden → Taş"
+              ],
+              "correct": 0,
+              "explanation": "Kayaçlar parçalanarak taş, çakıl, kum ve en sonunda verimli toprağı oluşturur! 🌱"
+            },
+            {
+              "type": "truefalse",
+              "question": "Elektrik kablolarının içinde iletken olarak en çok demir madeni kullanılır.",
+              "correct": false,
+              "explanation": "Yanlış! Elektrik kablolarında elektriği çok iyi ilettiği için 'bakır' madeni kullanılır. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2101.jpg"
+        },
+        {
+          "id": 2102,
+          "unitId": "fen_unite1",
+          "title": "Fosiller ve Fosillerin Oluşumu",
+          "subject": "Fen Bilimleri",
+          "unit": "Yer Kabuğu",
+          "icon": "🦖",
+          "color": "#10B981",
+          "description": "Milyonlarca yıl önceki canlı kalıntıları, fosilleşme şartları, kayaç tabakaları ve paleontoloji.",
+          "videoFile": "assets/videos/fen/fosiller.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Geçmişte yaşamış canlıların kayaç tabakaları arasında taşlaşmış kalıntılarına ne ad verilir?",
+              "options": [
+                "Mineral",
+                "Fosil",
+                "Maden",
+                "Lav"
+              ],
+              "correct": 1,
+              "explanation": "Eski canlı kalıntı veya izlerine 'fosil' denir! 🦖"
+            },
+            {
+              "type": "multiple",
+              "question": "Fosilleri inceleyen bilim dalına ne ad verilir?",
+              "options": [
+                "Astronomi",
+                "Paleontoloji",
+                "Biyoloji",
+                "Meteoroloji"
+              ],
+              "correct": 1,
+              "explanation": "Fosil biliminin adı 'paleontoloji', bu alanda çalışan bilim insanlarına ise 'paleontolog' denir! 🔍"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bir canlının fosilleşebilmesi için havayla temasının aniden kesilmesi (tortul altında kalması) gerekir.",
+              "correct": true,
+              "explanation": "Doğru! Hava almayan ortamda çürüme durur ve canlı kalıntısı taşlaşarak korunur. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Fosiller canlıların en çok hangi kısımlarından oluşur?",
+              "options": [
+                "Kas ve deri",
+                "Kemik, diş ve kabuk gibi sert kısımlar",
+                "Göz ve kulak",
+                "Yaprak ve çiçek"
+              ],
+              "correct": 1,
+              "explanation": "Yumuşak dokular hızla çürürken kemik, diş, boynuz ve kabuk gibi sert yapılar fosilleşir! 🦴"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kömür, petrol ve doğalgaz fosil yakıtlardır.",
+              "correct": true,
+              "explanation": "Doğru! Milyonlarca yıl önce yaşamış bitki ve hayvan kalıntılarından oluşmuşlardır. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2102.jpg"
+        },
+        {
+          "id": 2103,
+          "unitId": "fen_unite1",
+          "title": "Dünyamızın Dönme Hareketi",
+          "subject": "Fen Bilimleri",
+          "unit": "Dünyanın Hareketleri",
+          "icon": "🔄",
+          "color": "#10B981",
+          "description": "Dünya'nın kendi ekseni etrafındaki dönme hareketi, gece-gündüz oluşumu, 24 saatlik süre ve yönler.",
+          "videoFile": "assets/videos/fen/dunyanin-donme-hareketi.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Dünya'nın kendi ekseni etrafında bir tam tur dönmesi ne kadar sürer?",
+              "options": [
+                "12 saat",
+                "24 saat (1 gün)",
+                "30 gün (1 ay)",
+                "365 gün 6 saat"
+              ],
+              "correct": 1,
+              "explanation": "Dünya kendi etrafında 24 saatte (1 günde) döner! ⏰"
+            },
+            {
+              "type": "multiple",
+              "question": "Dünya'nın kendi ekseni etrafında dönmesi sonucunda aşağıdakilerden hangisi oluşur?",
+              "options": [
+                "Mevsimler",
+                "Gece ve gündüz",
+                "Yıllar",
+                "Tutulmalar"
+              ],
+              "correct": 1,
+              "explanation": "Güneş'e bakan taraf gündüzü, arkada kalan taraf geceyi yaşar: Gece ve gündüz oluşur! ☀️🌙"
+            },
+            {
+              "type": "truefalse",
+              "question": "Dünya kendi ekseni etrafında batıdan doğuya doğru döner.",
+              "correct": true,
+              "explanation": "Doğru! Bu yüzden Güneş doğudan doğar, batıdan batar! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Gün içinde gölge boylarımızın uzayıp kısalmasının sebebi nedir?",
+              "options": [
+                "Dünya'nın dolanma hareketi",
+                "Dünya'nın kendi etrafında dönmesi",
+                "Ay'ın evreleri",
+                "Hava olayları"
+              ],
+              "correct": 1,
+              "explanation": "Dünya döndükçe Güneş ışınlarının geliş açısı değişir, gölge boyu değişir! 👤"
+            },
+            {
+              "type": "truefalse",
+              "question": "Öğle vakti Güneş en tepedeyken gölge boyumuz günün en uzun halindedir.",
+              "correct": false,
+              "explanation": "Yanlış! Öğle vakti ışınlar dik geldiği için gölge boyu günün en KISA halindedir. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2103.jpg"
+        },
+        {
+          "id": 2104,
+          "unitId": "fen_unite1",
+          "title": "Dünyamızın Dolanma Hareketi ve Mevsimler",
+          "subject": "Fen Bilimleri",
+          "unit": "Dünyanın Hareketleri",
+          "icon": "☀️",
+          "color": "#10B981",
+          "description": "Dünya'nın Güneş etrafındaki dolanma hareketi, 365 gün 6 saatlik süre, 1 yıl ve mevsimlerin oluşumu.",
+          "videoFile": "assets/videos/fen/dunyanin-dolanma-hareketi.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Dünya'nın Güneş etrafında bir tam tur dolanması ne kadar sürede tamamlanır?",
+              "options": [
+                "24 saat",
+                "1 ay",
+                "365 gün 6 saat (1 yıl)",
+                "100 gün"
+              ],
+              "correct": 2,
+              "explanation": "Güneş etrafındaki dolanma tam 1 yılda (365 gün 6 saat) biter! 📅"
+            },
+            {
+              "type": "multiple",
+              "question": "Dünya'nın Güneş etrafında dolanması ve eksen eğikliği sonucu aşağıdakilerden hangisi meydana gelir?",
+              "options": [
+                "Gece ve gündüz",
+                "Mevsimler (Sonbahar, Kış, İlkbahar, Yaz)",
+                "Gelgit olayı",
+                "Günlük sıcaklık farkı"
+              ],
+              "correct": 1,
+              "explanation": "Dolanma hareketi 4 mevsimi (Sonbahar, Kış, İlkbahar, Yaz) meydana getirir! 🍂❄️🌸☀️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Dünya Güneş'in etrafında elips şeklinde bir yörüngede dolanır.",
+              "correct": true,
+              "explanation": "Doğru! Gezegenler Güneş çevresinde eliptik yörüngelerde dolanır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Artan 6 saatler 4 yılda bir birikerek (6 x 4 = 24 saat) 1 gün eder. Bu 1 gün hangi aya eklenir?",
+              "options": [
+                "Ocak",
+                "Şubat (29 çeker)",
+                "Temmuz",
+                "Aralık"
+              ],
+              "correct": 1,
+              "explanation": "4 yılda bir Şubat ayı 29 çeker ve artık yıl adını alır! 🌟"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kendi etrafında dönme ile Güneş etrafında dolanma aynı hareketlerdir.",
+              "correct": false,
+              "explanation": "Yanlış! Kendi etrafında fırıldak gibi DÖNER (gün olur), Güneş çevresinde DOLANIR (yıl olur). ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2104.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fen_unite2",
+      "title": "2. Ünite: Besinlerimiz",
+      "icon": "🍎",
+      "color": "#10B981",
+      "description": "Karbonhidratlar, proteinler, yağlar, vitaminler, dengeli beslenme, gıda saklama ve zararlı alışkanlıklar.",
+      "lessons": [
+        {
+          "id": 2201,
+          "unitId": "fen_unite2",
+          "title": "Besin İçerikleri ve Görevleri",
+          "subject": "Fen Bilimleri",
+          "unit": "Besinlerimiz",
+          "icon": "🥖",
+          "color": "#10B981",
+          "description": "Enerji vericiler (karbonhidrat, yağ), yapıcı-onarıcılar (protein), düzenleyiciler (vitamin, su, mineral).",
+          "videoFile": "assets/videos/fen/besin-icerikleri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Koşmak, oynamak ve ders çalışmak için vücudumuzun öncelikli ENERJİ kaynağı hangi besin grubudur?",
+              "options": [
+                "Proteinler",
+                "Karbonhidratlar",
+                "Mineraller",
+                "Su"
+              ],
+              "correct": 1,
+              "explanation": "Ekmek, makarna, pilav, patates gibi karbonhidratlar 1. dereceden enerji kaynağımızdır! ⚡"
+            },
+            {
+              "type": "multiple",
+              "question": "Büyümemizi, boyumuzun uzamasını ve yaralarımızın iyileşmesini sağlayan 'yapıcı ve onarıcı' besin hangisidir?",
+              "options": [
+                "Protein (Et, süt, yumurta, balık)",
+                "Yağ",
+                "Karbonhidrat",
+                "Şeker"
+              ],
+              "correct": 0,
+              "explanation": "Proteinler vücudun inşaat ustalarıdır; kaslarımızı büyütür, yaraları onarır! 🥩🥛🥚"
+            },
+            {
+              "type": "truefalse",
+              "question": "Vitaminler, su ve mineraller vücudumuzda 'düzenleyici' olarak görev yapar ve bizi hastalıklara karşı korur.",
+              "correct": true,
+              "explanation": "Doğru! Meyve ve sebzelerdeki vitaminler bağışıklık sistemimizi kalkan gibi korur. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Soğuk bölgelerde yaşayan kutup ayılarını soğuktan koruyan ve fazla enerjiyi depolayan besin türü hangisidir?",
+              "options": [
+                "Vitamin",
+                "Su",
+                "Yağ",
+                "Mineral"
+              ],
+              "correct": 2,
+              "explanation": "Yağlar vücudu darbelerden ve soğuktan korur, yedek enerji depolar! 🥑🧈"
+            },
+            {
+              "type": "truefalse",
+              "question": "Tüm besinlerin içinde az ya da çok miktarda su ve mineral bulunur.",
+              "correct": true,
+              "explanation": "Doğru! Kuru gibi görünen fındık veya ekmekte bile su ve mineral vardır. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2201.jpg"
+        },
+        {
+          "id": 2202,
+          "unitId": "fen_unite2",
+          "title": "Dengeli ve Sağlıklı Beslenme",
+          "subject": "Fen Bilimleri",
+          "unit": "Besinlerimiz",
+          "icon": "🥗",
+          "color": "#10B981",
+          "description": "Besin piramidi, dengeli beslenme (öğünler), obezite tehlikesi ve besin israfını önleme.",
+          "videoFile": "assets/videos/fen/dengeli-beslenme.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Vücudumuzun ihtiyacı olan besin maddelerinin her birinden yeterli ve düzenli miktarda tüketilmesine ne ad verilir?",
+              "options": [
+                "Aşırı beslenme",
+                "Dengeli (Diyet) Beslenme",
+                "Tek tip beslenme",
+                "Hızlı beslenme"
+              ],
+              "correct": 1,
+              "explanation": "Her besinden yeteri kadar almaya 'dengeli ve sağlıklı beslenme' denir! 🥗"
+            },
+            {
+              "type": "multiple",
+              "question": "Besin piramidinin en tepesinde yer alan ve EN AZ tüketilmesi gereken besinler hangileridir?",
+              "options": [
+                "Ekmek ve tahıllar",
+                "Meyve ve sebzeler",
+                "Yağlar ve tatlılar",
+                "Süt ve et"
+              ],
+              "correct": 2,
+              "explanation": "Yağlar ve aşırı şekerli tatlılar piramidin en tepesindedir ve çok az tüketilmelidir! 🍰"
+            },
+            {
+              "type": "truefalse",
+              "question": "Gereğinden fazla kalori alıp hareketsiz kalınca ortaya çıkan aşırı kilo hastalığına 'obezite' denir.",
+              "correct": true,
+              "explanation": "Doğru! Obezite sağlığımızı tehdit eden bir hastalıktır; spor ve dengeli beslenme ile önlenir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdakilerden hangisi günün en önemli öğünü kabul edilir?",
+              "options": [
+                "Gece atıştırması",
+                "Kahvaltı",
+                "Öğle yemeği",
+                "İkindi çayı"
+              ],
+              "correct": 1,
+              "explanation": "Güne zinde başlamak ve derste başarılı olmak için kahvaltı en kritik öğündür! 🍳"
+            },
+            {
+              "type": "truefalse",
+              "question": "Fast-food (hamburger, cips, asitli içecekler) sağlığımız için çok faydalıdır.",
+              "correct": false,
+              "explanation": "Kesinlikle YANLIŞ! Aşırı tuz, şeker ve zararlı yağ içerir, sağlığa zararlıdır. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2202.jpg"
+        },
+        {
+          "id": 2203,
+          "unitId": "fen_unite2",
+          "title": "Besinlerin Tazeliği ve Saklama Koşulları",
+          "subject": "Fen Bilimleri",
+          "unit": "Besinlerimiz",
+          "icon": "🥫",
+          "color": "#10B981",
+          "description": "Taze ve doğal besinler, paketli gıdalarda Son Tüketim Tarihi (STT) ve TSE damgası, saklama yöntemleri.",
+          "videoFile": "assets/videos/fen/besin-saklama.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Paketlenmiş bir gıda satın alırken üzerinde mutlaka ilk bakmamız gereken tarih hangisidir?",
+              "options": [
+                "Fabrika kuruluş tarihi",
+                "Son Tüketim Tarihi (STT)",
+                "Satın alma saati",
+                "Barkod numarası"
+              ],
+              "correct": 1,
+              "explanation": "Son Tüketim Tarihi geçmiş ürünler bozulmuş olabilir ve zehirlenmeye yol açabilir! ⚠️"
+            },
+            {
+              "type": "multiple",
+              "question": "Ülkemizde satılan ürünlerin kaliteli ve güvenilir olduğunu gösteren standart damga hangisidir?",
+              "options": [
+                "TSE (Türk Standardları Enstitüsü)",
+                "TRT",
+                "MEB",
+                "DSİ"
+              ],
+              "correct": 0,
+              "explanation": "TSE damgası ürünün Türk Standardlarına uygun ve güvenli olduğunu onaylar! 🇹🇷"
+            },
+            {
+              "type": "truefalse",
+              "question": "Meyve ve sebzeleri yemeden önce bol suyla yıkamak üzerindeki toz ve ilaç kalıntılarını temizler.",
+              "correct": true,
+              "explanation": "Doğru! Taze sebze ve meyveler sirkeli bol suyla yıkanmalıdır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdakilerden hangisi eski zamanlardan beri kullanılan geleneksel bir besin saklama yöntemi DEĞİLDİR?",
+              "options": [
+                "Kurutma",
+                "Tuzlama",
+                "Dondurucuda şoklama",
+                "Reçel / Turşu yapma"
+              ],
+              "correct": 2,
+              "explanation": "Derin dondurucular modern elektrikli aletlerdir; tuzlama, kurutma ve turşu gelenekseldir! ❄️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Paketi delinmiş, kapağı şişmiş konserve kutularını satın almakta sakınca yoktur.",
+              "correct": false,
+              "explanation": "Yanlış! Şişmiş veya delinmiş kutularda ölümcül bakteriler üremiş olabilir, asla tüketilmemelidir. ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2203.jpg"
+        },
+        {
+          "id": 2204,
+          "unitId": "fen_unite2",
+          "title": "Sigara ve Alkolün Zararları",
+          "subject": "Fen Bilimleri",
+          "unit": "Besinlerimiz",
+          "icon": "🚭",
+          "color": "#10B981",
+          "description": "Sigaranın akciğer ve kalbe zararları, pasif içicilik, alkolün beyin ve karaciğere etkisi, Yeşilay kuruluşu.",
+          "videoFile": "assets/videos/fen/sigara-alkol-zararlari.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Sigara dumanı en çok hangi hayati organımıza geri dönülmez zararlar verir?",
+              "options": [
+                "Mide",
+                "Akciğerler",
+                "Kemikler",
+                "Gözler"
+              ],
+              "correct": 1,
+              "explanation": "Sigara katran ve zehirli gazlarıyla akciğerleri karartır ve solunumu bitirir! 🫁"
+            },
+            {
+              "type": "multiple",
+              "question": "Kendisi sigara içmediği halde sigara içilen ortamda bulunarak dumanı soluyan kişiye ne ad verilir?",
+              "options": [
+                "Aktif içici",
+                "Pasif içici",
+                "Sağlıklı insan",
+                "Tiryakilik"
+              ],
+              "correct": 1,
+              "explanation": "Pasif içiciler de tıpkı içenler gibi dumandan büyük zarar görür! 🚭"
+            },
+            {
+              "type": "truefalse",
+              "question": "Alkol kullanımı beyin fonksiyonlarını yavaşlatır, denge kaybına ve reflekslerin zayıflamasına neden olur.",
+              "correct": true,
+              "explanation": "Doğru! Alkol beyne, karaciğere ve sinir sistemine büyük zarar verir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Ülkemizde sigara, alkol ve madde bağımlılığı ile mücadele eden yardım kuruluşu hangisidir?",
+              "options": [
+                "Kızılay",
+                "Yeşilay",
+                "AFAD",
+                "TEMA"
+              ],
+              "correct": 1,
+              "explanation": "Bağımlılıklarla mücadele eden ve sağlıklı nesiller yetiştiren kurumumuz Yeşilay'dır! 💚"
+            },
+            {
+              "type": "truefalse",
+              "question": "Sigaranın içinde bağımlılık yapan zararlı kimyasal maddenin adı 'nikotin'dir.",
+              "correct": true,
+              "explanation": "Doğru! Nikotin insanı hızla sigara bağımlısı yapar. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2204.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fen_unite3",
+      "title": "3. Ünite: Kuvvetin Etkileri",
+      "icon": "🧲",
+      "color": "#10B981",
+      "description": "Kuvvetin cisimlere etkisi (hareket ve şekil değişikliği), esnek cisimler, mıknatıslar ve manyetik alan.",
+      "lessons": [
+        {
+          "id": 2301,
+          "unitId": "fen_unite3",
+          "title": "Kuvvetin Cisimlerin Hareketine Etkisi",
+          "subject": "Fen Bilimleri",
+          "unit": "Kuvvet",
+          "icon": "⚽",
+          "color": "#10B981",
+          "description": "Kuvvetin duran cisimleri hareket ettirme, hızlandırma, yavaşlatma, durdurma ve yön değiştirme etkileri.",
+          "videoFile": "assets/videos/fen/kuvvetin-harekete-etkisi.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Hareket halindeki bir bisikletin frenine bastığımızda bisiklet hangi hareketi yapar?",
+              "options": [
+                "Hızlanma",
+                "Yavaşlama ve durma",
+                "Dönme",
+                "Yükselme"
+              ],
+              "correct": 1,
+              "explanation": "Fren sürtünme kuvveti uygulayarak bisikleti yavaşlatır ve durdurur! 🚲"
+            },
+            {
+              "type": "multiple",
+              "question": "Havada gelen bir vole topuna kafayla vurup kaleye gönderen futbolcu topa hangi etkiyi yaptırmıştır?",
+              "options": [
+                "Sadece durdurma",
+                "Yön değiştirme ve hızlandırma",
+                "Şeklini bozma",
+                "Eritme"
+              ],
+              "correct": 1,
+              "explanation": "Topun geldiği yönü kaleye doğru çevirmiş ve hız kazandırmıştır! ⚽"
+            },
+            {
+              "type": "truefalse",
+              "question": "Durağa yaklaşan bir otobüs hızlanan hareket yapar.",
+              "correct": false,
+              "explanation": "Yanlış! Durağa yaklaşan otobüs yavaşlayan hareket yapar. ❌"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdakilerden hangisi sallanma hareketine örnektir?",
+              "options": [
+                "Salıncakta sallanan çocuk",
+                "Yokuş aşağı yuvarlanan top",
+                "Pisti terk eden uçak",
+                "Saatin yelkovanı"
+              ],
+              "correct": 0,
+              "explanation": "Salıncak, duvar saati sarkacı ileri-geri sallanma hareketi yapar! 🎪"
+            },
+            {
+              "type": "truefalse",
+              "question": "Hareket eden bir cisme hareket yönünde kuvvet uygularsak cisim daha da hızlanır.",
+              "correct": true,
+              "explanation": "Doğru! Gaza basılan bir araba gibi yönüyle aynı kuvvet hızı artırır. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2301.jpg"
+        },
+        {
+          "id": 2302,
+          "unitId": "fen_unite3",
+          "title": "Kuvvetin Cisimlerin Şekline Etkisi",
+          "subject": "Fen Bilimleri",
+          "unit": "Kuvvet",
+          "icon": "🧽",
+          "color": "#10B981",
+          "description": "Kuvvet uygulandığında şekli değişen, kuvvet kalkınca eski haline dönen esnek cisimler ve kalıcı şekil değişimi.",
+          "videoFile": "assets/videos/fen/kuvvetin-sekle-etkisi.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Kuvvet uygulandığında şekli değişen, kuvvet kaldırıldığında tekrar eski haline dönen cisimlere ne denir?",
+              "options": [
+                "Kırılgan cisim",
+                "Esnek cisim",
+                "Katı cisim",
+                "Plastik cisim"
+              ],
+              "correct": 1,
+              "explanation": "Sünger, lastik, yay gibi cisimler eski haline döndüğü için 'esnek cisim'dir! 🧽"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdakilerden hangisi esnek bir cisim DEĞİLDİR?",
+              "options": [
+                "Paket lastiği",
+                "Bulaşık süngeri",
+                "Oyun hamuru",
+                "Tükenmez kalem yayı"
+              ],
+              "correct": 2,
+              "explanation": "Oyun hamuruna bastırdığımızda şekli değişir ama kuvvet kalkınca kendiliğinden eski haline dönmez! 🧸"
+            },
+            {
+              "type": "truefalse",
+              "question": "Cam bardağın yere düşüp kırılması kuvvetin şekil değiştirici etkisine örnektir.",
+              "correct": true,
+              "explanation": "Doğru! Kırılma, bükülme, ezilme kuvvetin şekil değiştirme etkisidir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Teneke içecek kutusuna ayağımızla bastığımızda kutuda hangi etki oluşur?",
+              "options": [
+                "Esnek hareket",
+                "Kalıcı şekil değişikliği",
+                "Erime",
+                "Buharlaşma"
+              ],
+              "correct": 1,
+              "explanation": "Kutu ezilir ve eski haline dönemez, kalıcı şekil değişikliği olur! 🥫"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bir süngeri sıktıktan sonra bıraktığımızda eski şeklini geri alır.",
+              "correct": true,
+              "explanation": "Doğru! Sünger esnek bir maddedir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2302.jpg"
+        },
+        {
+          "id": 2303,
+          "unitId": "fen_unite3",
+          "title": "Mıknatıslar ve Kutupları",
+          "subject": "Fen Bilimleri",
+          "unit": "Kuvvet",
+          "icon": "🧲",
+          "color": "#10B981",
+          "description": "Mıknatıs çeşitleri (çubuk, U, halka), Kuzey (N) ve Güney (S) kutupları, itme ve çekme kuvveti.",
+          "videoFile": "assets/videos/fen/miknatislar.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Bir mıknatısın kaç tane kutbu vardır ve bunlar hangileridir?",
+              "options": [
+                "1 kutbu vardır (N)",
+                "2 kutbu vardır: Kuzey (N) ve Güney (S)",
+                "3 kutbu vardır",
+                "Kutbu yoktur"
+              ],
+              "correct": 1,
+              "explanation": "Her mıknatısın iki kutbu vardır: N (Kuzey) ve S (Güney)! 🧭"
+            },
+            {
+              "type": "multiple",
+              "question": "İki mıknatısın aynı kutupları (N-N veya S-S) birbirine yaklaştırılırsa ne olur?",
+              "options": [
+                "Birbirini çeker",
+                "Birbirini iter",
+                "Hiçbir şey olmaz",
+                "Mıknatıs kırılır"
+              ],
+              "correct": 1,
+              "explanation": "Aynı kutuplar birbirini İTER, zıt kutuplar (N-S) birbirini ÇEKER! ⚡"
+            },
+            {
+              "type": "truefalse",
+              "question": "Mıknatıs demir, nikel ve kobalt gibi maddeleri çeker.",
+              "correct": true,
+              "explanation": "Doğru! Mıknatıs toplu iğne, çivi gibi demir içeren maddeleri kuvvetle çeker. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdaki maddelerden hangisini mıknatıs ÇEKMEZ?",
+              "options": [
+                "Demir çivi",
+                "Toplu iğne",
+                "Plastik cetvel",
+                "Nikel ataş"
+              ],
+              "correct": 2,
+              "explanation": "Mıknatıs plastik, tahta, cam, kumaş ve altını çekmez! 📏"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bir mıknatıs ortadan ikiye kırılırsa kutupları yok olur.",
+              "correct": false,
+              "explanation": "Yanlış! Kırılan her küçük parça yine N ve S kutuplu yeni bir mıknatıs olur! ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2303.jpg"
+        },
+        {
+          "id": 2304,
+          "unitId": "fen_unite3",
+          "title": "Mıknatısların Kullanım Alanları",
+          "subject": "Fen Bilimleri",
+          "unit": "Kuvvet",
+          "icon": "🧭",
+          "color": "#10B981",
+          "description": "Pusula, buzdolabı kapağı, hızlı trenler (Maglev), hoparlör ve hurdalıklarda mıknatıs teknolojisi.",
+          "videoFile": "assets/videos/fen/miknatis-kullanim-alanlari.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Yön bulmak için kullanılan ve içinde mıknatıslı ibre bulunan tarihi araç hangisidir?",
+              "options": [
+                "Termometre",
+                "Pusula",
+                "Dürbün",
+                "Barometre"
+              ],
+              "correct": 1,
+              "explanation": "Pusulanın renkli ucu Dünya'nın manyetik alanı sayesinde daima Kuzey'i gösterir! 🧭"
+            },
+            {
+              "type": "multiple",
+              "question": "Raylara değmeden mıknatısların itme gücüyle havada süzülerek giden çok hızlı trenlere ne denir?",
+              "options": [
+                "Buharlı tren",
+                "Maglev treni",
+                "Kara tren",
+                "Tramvay"
+              ],
+              "correct": 1,
+              "explanation": "Manyetik kaldırma (Maglev) trenleri sürtünmesiz şekilde saatte 500 km'den hızlı gidebilir! 🚅"
+            },
+            {
+              "type": "truefalse",
+              "question": "Buzdolabı kapaklarının sıkıca kapanmasını sağlayan lastiklerin içinde mıknatıs şeritler bulunur.",
+              "correct": true,
+              "explanation": "Doğru! Kapak mıknatıs sayesinde hava sızdırmaz şekilde yapışır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Mıknatıslar aşağıdaki elektronik eşyalardan hangisinin yakınında tutulursa o cihaza ZARAR VEREBİLİR?",
+              "options": [
+                "Banka kartı ve bilgisayar diski",
+                "Ahşap masa",
+                "Cam sürahi",
+                "Porselen tabak"
+              ],
+              "correct": 0,
+              "explanation": "Mıknatıs banka kartı manyetik şeridini, cep telefonunu ve bilgisayar hafızasını bozabilir! 💳"
+            },
+            {
+              "type": "truefalse",
+              "question": "Hurdalıklarda büyük vinçlerin ucundaki dev elektromıknatıslar hurda arabaları kaldırmak için kullanılır.",
+              "correct": true,
+              "explanation": "Doğru! Elektrikle çalışan güçlü mıknatıslar tonlarca metali tek seferde kaldırır. 🏗️"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2304.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fen_unite4",
+      "title": "4. Ünite: Maddenin Özellikleri",
+      "icon": "🧊",
+      "color": "#10B981",
+      "description": "Maddenin halleri, kütle ve hacim ölçümü, erime-donma-buharlaşma ve karışımları ayırma yöntemleri.",
+      "lessons": [
+        {
+          "id": 2401,
+          "unitId": "fen_unite4",
+          "title": "Maddeyi Niteleyen Özellikler",
+          "subject": "Fen Bilimleri",
+          "unit": "Maddenin Özellikleri",
+          "icon": "💧",
+          "color": "#10B981",
+          "description": "Suda yüzen ve batan maddeler, suyu çeken ve çekmeyen maddeler, mıknatısla çekilen ve çekilmeyen maddeler.",
+          "videoFile": "assets/videos/fen/maddeyi-niteleyen-ozellikler.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Aşağıdaki cisimlerden hangisi suya atıldığında SUDA YÜZER?",
+              "options": [
+                "Demir anahtar",
+                "Taş",
+                "Tahta mantar tıpa",
+                "Mermer bilye"
+              ],
+              "correct": 2,
+              "explanation": "Tahta, plastik top, mantar tıpa suda yüzer; ağır metaller ve taş batar! ⛵"
+            },
+            {
+              "type": "multiple",
+              "question": "Yağmurlu günlerde giydiğimiz yağmurluk ve şemsiyelerin kumaşı hangi özelliğe sahiptir?",
+              "options": [
+                "Suyu çeken",
+                "Suyu çekmeyen (geçirmeyen)",
+                "Suda eriyen",
+                "Mıknatısla çekilen"
+              ],
+              "correct": 1,
+              "explanation": "Yağmurluklar suyu çekmeyen su geçirmez kumaşlardan yapılır! ☔"
+            },
+            {
+              "type": "truefalse",
+              "question": "Pamuklu havlu ve sünger suyu çeken maddelerdir.",
+              "correct": true,
+              "explanation": "Doğru! Yüzümüzü kurularken pamuklu havlu suyu hızla emer. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Gemiler tonlarca ağırlıkta demirden yapıldığı halde içindeki hava boşlukları sayesinde suda yüzer. Bu neyi gösterir?",
+              "options": [
+                "Şeklin yüzmeye etkisini",
+                "Demirin eridiğini",
+                "Suyun katılaştığını",
+                "Mıknatıs etkisini"
+              ],
+              "correct": 0,
+              "explanation": "Gemi şekli ve içindeki hava haznesi yoğunluğu düşürerek yüzmeyi sağlar! 🚢"
+            },
+            {
+              "type": "truefalse",
+              "question": "Maddeleri nitelemek için bazen koklama ve tatma duyusu kullanılır ancak bilinmeyen maddeleri tatmak çok tehlikelidir.",
+              "correct": true,
+              "explanation": "Doğru! Laboratuvarda veya evde bilinmeyen kimyasal maddeler asla koklanmamalı ve tadılmamalıdır! ⚠️"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2401.jpg"
+        },
+        {
+          "id": 2402,
+          "unitId": "fen_unite4",
+          "title": "Maddenin Ölçülebilir Özellikleri: Kütle ve Hacim",
+          "subject": "Fen Bilimleri",
+          "unit": "Maddenin Özellikleri",
+          "icon": "⚖️",
+          "color": "#10B981",
+          "description": "Kütle (eşit kollu terazi, gram, kilogram), hacim (dereceli silindir, litre, mililitre) ve net-brüt-dara hesabı.",
+          "videoFile": "assets/videos/fen/kutle-ve-hacim.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Madde miktarının ölçüsüne ne ad verilir ve hangi araçla ölçülür?",
+              "options": [
+                "Hacim - Dereceli silindir",
+                "Kütle - Eşit kollu terazi / Baskül",
+                "Sıcaklık - Termometre",
+                "Uzunluk - Metre"
+              ],
+              "correct": 1,
+              "explanation": "Madde miktarı 'kütle'dir; terazi veya baskülle tartılır! ⚖️"
+            },
+            {
+              "type": "multiple",
+              "question": "Maddenin boşlukta kapladığı yere ne ad verilir?",
+              "options": [
+                "Kütle",
+                "Ağırlık",
+                "Hacim",
+                "Dara"
+              ],
+              "correct": 2,
+              "explanation": "Maddenin kapladığı yere 'hacim' denir; birimi litre (L) veya mililitredir (mL)! 🧊"
+            },
+            {
+              "type": "truefalse",
+              "question": "Düzgün şekli olmayan bir taşın hacmini bulmak için dereceli silindirdeki suya atıp suyun yükselme miktarını ölçebiliriz.",
+              "correct": true,
+              "explanation": "Doğru! Taş atılınca su ne kadar yükselirse taşın hacmi o kadardır! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "İçi zeytinyağı dolu şişenin toplam kütlesine ne denir?",
+              "options": [
+                "Net kütle",
+                "Dara (boş şişe)",
+                "Brüt kütle",
+                "Saf madde"
+              ],
+              "correct": 2,
+              "explanation": "Şişe + Yağ = Brüt Kütle! Sadece boş şişe Dara, sadece yağ ise Net kütledir! 🍶"
+            },
+            {
+              "type": "truefalse",
+              "question": "1 kilogram tam 1.000 grama eşittir.",
+              "correct": true,
+              "explanation": "Doğru! 1 kg = 1.000 g'dır. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2402.jpg"
+        },
+        {
+          "id": 2403,
+          "unitId": "fen_unite4",
+          "title": "Maddenin Hâlleri: Katı, Sıvı ve Gaz",
+          "subject": "Fen Bilimleri",
+          "unit": "Maddenin Özellikleri",
+          "icon": "💨",
+          "color": "#10B981",
+          "description": "Katıların belirli şekil ve hacmi, sıvıların akışkanlığı, gazların ortama yayılması ve özellikleri.",
+          "videoFile": "assets/videos/fen/maddenin-halleri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Belirli bir şekli ve hacmi olan, dışarıdan kuvvet uygulanmadıkça şeklini koruyan maddelere ne denir?",
+              "options": [
+                "Katı",
+                "Sıvı",
+                "Gaz",
+                "Buhar"
+              ],
+              "correct": 0,
+              "explanation": "Taş, tahta, demir bilye gibi maddeler 'katı' maddelerdir! 🪨"
+            },
+            {
+              "type": "multiple",
+              "question": "Belirli bir hacmi olan ancak belirli bir şekli olmayıp içine konulduğu kabın şeklini alan maddeler hangisidir?",
+              "options": [
+                "Katı",
+                "Sıvı (Su, süt, zeytinyağı)",
+                "Gaz",
+                "Buz"
+              ],
+              "correct": 1,
+              "explanation": "Sıvılar akışkandır ve bulundukları kabın şeklini alırlar! 🥛"
+            },
+            {
+              "type": "truefalse",
+              "question": "Gazlar bulundukları odanın veya kabın tamamına yayılırlar ve sıkıştırılabilirler.",
+              "correct": true,
+              "explanation": "Doğru! Balonun içindeki hava veya parfüm kokusu her yere yayılır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Toz şeker, un ve tuz katı oldukları halde konuldukları bardağın şeklini alırlar. Bunun sebebi nedir?",
+              "options": [
+                "Sıvı olmaları",
+                "Küçük taneli katı olmaları",
+                "Gaz olmaları",
+                "Erimiş olmaları"
+              ],
+              "correct": 1,
+              "explanation": "Küçük taneli katılar tıpkı sıvı gibi akabilir ancak her tanecik aslında sert bir katıdır! 🧂"
+            },
+            {
+              "type": "truefalse",
+              "question": "Hava madde değildir çünkü gözümüzle göremiyoruz.",
+              "correct": false,
+              "explanation": "Yanlış! Hava kütlesi ve hacmi olan gaz bir maddedir (balonu şişirir ve tartarız). ❌"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2403.jpg"
+        },
+        {
+          "id": 2404,
+          "unitId": "fen_unite4",
+          "title": "Maddenin Isı ile Değişimi",
+          "subject": "Fen Bilimleri",
+          "unit": "Maddenin Özellikleri",
+          "icon": "🔥",
+          "color": "#10B981",
+          "description": "Isınma ve soğuma, erime (katıdan sıvıya), donma (sıvıdan katıya), buharlaşma (sıvıdan gaza) olayları.",
+          "videoFile": "assets/videos/fen/isi-ile-degisim.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Katı bir maddenin ısı alarak sıvı hâle geçmesine ne ad verilir?",
+              "options": [
+                "Donma",
+                "Erime",
+                "Buharlaşma",
+                "Yoğuşma"
+              ],
+              "correct": 1,
+              "explanation": "Dondurmanın güneşte erimesi veya buzun suya dönüşmesi 'erime'dir! 🍦"
+            },
+            {
+              "type": "multiple",
+              "question": "Sıvı bir maddenin ısı verip soğuyarak katı hâle geçmesine ne ad verilir?",
+              "options": [
+                "Erime",
+                "Donma",
+                "Kaynama",
+                "Buharlaşma"
+              ],
+              "correct": 1,
+              "explanation": "Suyun buzluğa konup buz olması 'donma' olayıdır! ❄️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Güneşin altına serilen ıslak çamaşırların kuruması 'buharlaşma' sayesindedir.",
+              "correct": true,
+              "explanation": "Doğru! Çamaşırdaki su ısı alarak gaz (buhar) haline geçer ve uçar! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Çaydanlık kaynarken ağzından çıkan duman hangi hâl değişiminin göstergesidir?",
+              "options": [
+                "Erime",
+                "Donma",
+                "Buharlaşma",
+                "Katılaşma"
+              ],
+              "correct": 2,
+              "explanation": "Su 100°C'de hızla buharlaşarak gaz fazına geçer! ♨️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Erime ve donma birbirinin tam tersi olaylardır.",
+              "correct": true,
+              "explanation": "Doğru! Isı alırken erir, ısı verirken donar. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2404.jpg"
+        },
+        {
+          "id": 2405,
+          "unitId": "fen_unite4",
+          "title": "Saf Madde, Karışımlar ve Ayırma Yöntemleri",
+          "subject": "Fen Bilimleri",
+          "unit": "Maddenin Özellikleri",
+          "icon": "🧪",
+          "color": "#10B981",
+          "description": "Saf madde (su, tuz, altın), karışımlar (salata, ayran) ve karışımları eleme, süzme, mıknatısla ayırma yöntemleri.",
+          "videoFile": "assets/videos/fen/saf-madde-ve-karisimlar.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "İçinde kendinden başka hiçbir madde bulunmayan tertemiz maddelere ne denir?",
+              "options": [
+                "Karışım",
+                "Saf madde (Saf su, tuz, demir)",
+                "Çözelti",
+                "Fosil"
+              ],
+              "correct": 1,
+              "explanation": "Yapısında tek cins madde olan maddelere 'saf madde' denir! 💎"
+            },
+            {
+              "type": "multiple",
+              "question": "Makarna piştikten sonra tenceredeki suyu makarnadan ayırmak için hangi yöntem kullanılır?",
+              "options": [
+                "Eleme",
+                "Mıknatısla ayırma",
+                "Süzme",
+                "Buharlaştırma"
+              ],
+              "correct": 2,
+              "explanation": "Sıvı ile katıyı ayırmak için süzgeç ile 'süzme' yöntemi kullanılır! 🍝"
+            },
+            {
+              "type": "truefalse",
+              "question": "Demir tozu ile kumu birbirinden ayırmak için mıknatıs kullanılabilir.",
+              "correct": true,
+              "explanation": "Doğru! Mıknatıs demir tozlarını çeker, kum kapta kalır! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Farklı büyüklükteki iki katı maddeyi (örneğin un ile kepeği veya çakıl ile kumu) ayırmak için hangi yöntem kullanılır?",
+              "options": [
+                "Süzme",
+                "Eleme (Elek)",
+                "Mıknatıs",
+                "Donma"
+              ],
+              "correct": 1,
+              "explanation": "Tanecik boyutları farklı katılar elekle elenerek birbirinden ayrılır! 🌾"
+            },
+            {
+              "type": "truefalse",
+              "question": "Limonata, salata ve hava birer karışımdır.",
+              "correct": true,
+              "explanation": "Doğru! Birden fazla maddenin kendi özelliğini kaybetmeden bir araya gelmesiyle oluşurlar. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2405.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fen_unite5",
+      "title": "5. Ünite: Aydınlatma ve Ses Teknolojileri",
+      "icon": "💡",
+      "color": "#10B981",
+      "description": "Geçmişten günümüze aydınlatma ve ses teknolojileri, tasarruf, ışık ve ses kirliliğinin olumsuz etkileri.",
+      "lessons": [
+        {
+          "id": 2501,
+          "unitId": "fen_unite5",
+          "title": "Geçmişten Günümüze Aydınlatma Teknolojileri",
+          "subject": "Fen Bilimleri",
+          "unit": "Aydınlatma ve Ses",
+          "icon": "🕯️",
+          "color": "#10B981",
+          "description": "Ateş, meşale, kandil, mum, gaz lambası, akkor ampul (Edison), floresan ve modern tasarruflu LED ampuller.",
+          "videoFile": "assets/videos/fen/aydinlatma-teknolojileri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Elektrikle çalışan ilk akkor ampulü icat ederek aydınlatmada devrim yapan ünlü bilim insanı kimdir?",
+              "options": [
+                "Alexander Graham Bell",
+                "Thomas Edison",
+                "Isaac Newton",
+                "Albert Einstein"
+              ],
+              "correct": 1,
+              "explanation": "Thomas Edison 1879'da pratik elektrik ampulünü icat etmiştir! 💡"
+            },
+            {
+              "type": "multiple",
+              "question": "Aydınlatma araçlarının geçmişten günümüze doğru kronolojik sıralaması hangisidir?",
+              "options": [
+                "Meşale → Mum → Gaz lambası → Ampul → LED",
+                "Ampul → Meşale → LED → Mum",
+                "LED → Floresan → Kandil → Meşale",
+                "Mum → LED → Meşale → Ampul"
+              ],
+              "correct": 0,
+              "explanation": "İnsanlar önce ateşi/meşaleyi, sonra mumu, gaz lambasını ve en son elektrikli ampul ve LED'i keşfetti! 🔥"
+            },
+            {
+              "type": "truefalse",
+              "question": "Günümüzde en az elektrik harcayan ve en uzun ömürlü ampuller LED lambalardır.",
+              "correct": true,
+              "explanation": "Doğru! LED lambalar yüksek enerji tasarrufu sağlar. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Eski çağlarda hayvan yağlarının yakılmasıyla aydınlatma sağlayan killi kaplara ne ad verilirdi?",
+              "options": [
+                "LED",
+                "Kandil",
+                "Floresan",
+                "El feneri"
+              ],
+              "correct": 1,
+              "explanation": "Kandiller içine yağ ve fitil konularak yakılan antik aydınlatma araçlarıdır! 🏺"
+            },
+            {
+              "type": "truefalse",
+              "question": "Ders çalışırken masa lambası ışığının doğrudan gözümüze değil, masaya gelmesi gerekir.",
+              "correct": true,
+              "explanation": "Doğru! Göz sağlığı için ışık sol üstten gelmeli, doğrudan göze vurmamalıdır. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2501.jpg"
+        },
+        {
+          "id": 2502,
+          "unitId": "fen_unite5",
+          "title": "Uygun Aydınlatma ve Işık Kirliliği",
+          "subject": "Fen Bilimleri",
+          "unit": "Aydınlatma ve Ses",
+          "icon": "🌃",
+          "color": "#10B981",
+          "description": "Göz sağlığına uygun aydınlatma, yanlış ve aşırı aydınlatmanın yol açtığı ışık kirliliği ve gökyüzü gözlemleri.",
+          "videoFile": "assets/videos/fen/isik-kirliligi.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Işığın yanlış yerde, yanlış miktarda, yanlış yönde ve yanlış zamanda kullanılmasına ne ad verilir?",
+              "options": [
+                "Ses kirliliği",
+                "Işık kirliliği",
+                "Hava kirliliği",
+                "Su kirliliği"
+              ],
+              "correct": 1,
+              "explanation": "Gereksiz ve aşırı aydınlatmaya 'ışık kirliliği' denir! 🌃"
+            },
+            {
+              "type": "multiple",
+              "question": "Işık kirliliği aşağıdaki canlılardan en çok hangilerinin yön bulmasını engelleyerek ölümlerine yol açar?",
+              "options": [
+                "Deniz kaplumbağaları (Caretta Caretta)",
+                "Balıklar",
+                "Köpekler",
+                "Aslanlar"
+              ],
+              "correct": 0,
+              "explanation": "Yumurtadan çıkan Caretta caretta yavruları otel ışıklarını ay ışığı sanıp ters yöne giderler! 🐢"
+            },
+            {
+              "type": "truefalse",
+              "question": "Sokak lambalarının gökyüzüne doğru değil, sadece yere doğru aydınlatacak şekilde siperlikli yapılması ışık kirliliğini azaltır.",
+              "correct": true,
+              "explanation": "Doğru! Işık sadece aydınlatılacak bölgeye yönlendirilmelidir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Şehirlerdeki yoğun ışık kirliliği bilim insanlarının hangi alandaki çalışmalarını engeller?",
+              "options": [
+                "Gökbilim (Astronomi ve Rasathane gözlemleri)",
+                "Tarih",
+                "Tıp",
+                "Arkeoloji"
+              ],
+              "correct": 0,
+              "explanation": "Gökyüzü aydınlandığı için yıldızlar ve gezegenler teleskopla net gözlenemez! 🔭"
+            },
+            {
+              "type": "truefalse",
+              "question": "Gereksiz yanan lambaları kapatmak hem aile bütçesine hem ülke ekonomisine katkı sağlar.",
+              "correct": true,
+              "explanation": "Doğru! Enerji tasarrufu en önemli vatandaşlık görevidir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2502.jpg"
+        },
+        {
+          "id": 2503,
+          "unitId": "fen_unite5",
+          "title": "Geçmişten Günümüze Ses Teknolojileri",
+          "subject": "Fen Bilimleri",
+          "unit": "Aydınlatma ve Ses",
+          "icon": "📻",
+          "color": "#10B981",
+          "description": "Sesin kaydedilmesi ve iletilmesi: Fonograf, gramofon, kasetçalar, CD, mikrofon, megafon ve hoparlörler.",
+          "videoFile": "assets/videos/fen/ses-teknolojileri.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Tarihte sesi ilk kaydeden ve geri dinleten cihaz olan 'Fonograf'ı kim icat etmiştir?",
+              "options": [
+                "Thomas Edison",
+                "Graham Bell",
+                "Galileo",
+                "Pasteur"
+              ],
+              "correct": 0,
+              "explanation": "Thomas Edison 1877'de fonografı icat ederek sesi ilk kez kaydetmiştir! 🎙️"
+            },
+            {
+              "type": "multiple",
+              "question": "Sesimizin şiddetini artırarak kalabalıklara sesimizi duyurmak için kullandığımız alet hangisidir?",
+              "options": [
+                "Stetoskop",
+                "Megafon / Hoparlör",
+                "Mikroskop",
+                "Kulak tıkacı"
+              ],
+              "correct": 1,
+              "explanation": "Megafon ve hoparlörler ses dalgalarını yükseltir ve sesi uzağa iletir! 📢"
+            },
+            {
+              "type": "truefalse",
+              "question": "Telefonu icat ederek sesin teller üzerinden uzaklara iletilmesini sağlayan kişi Alexander Graham Bell'dir.",
+              "correct": true,
+              "explanation": "Doğru! Graham Bell 1876'da telefonu icat etmiştir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Doktorların kalbimizin ve ciğerlerimizin sesini dinlemek için kullandığı tıbbi araç hangisidir?",
+              "options": [
+                "Stetoskop",
+                "Termometre",
+                "Tansiyon aleti",
+                "Röntgen"
+              ],
+              "correct": 0,
+              "explanation": "Stetoskop vücut içindeki sesleri kuvvetlendirerek doktorun duymasını sağlar! 🩺"
+            },
+            {
+              "type": "truefalse",
+              "question": "İşitme güçlüğü çeken insanlar sesin şiddetini artıran işitme cihazları kullanırlar.",
+              "correct": true,
+              "explanation": "Doğru! İşitme cihazları mikrofon ve küçük hoparlörle sesi kulağa yükselterek verir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2503.jpg"
+        },
+        {
+          "id": 2504,
+          "unitId": "fen_unite5",
+          "title": "Ses Kirliliği ve Olumsuz Etkileri",
+          "subject": "Fen Bilimleri",
+          "unit": "Aydınlatma ve Ses",
+          "icon": "🔊",
+          "color": "#10B981",
+          "description": "Gürültü (ses kirliliği), işitme sağlığı, stres ve dikkat dağınıklığı, ses yalıtımı yöntemleri.",
+          "videoFile": "assets/videos/fen/ses-kirliligi.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "İnsanları rahatsız eden, sağlığa zarar veren ve huzuru bozan düzensiz yüksek seslere ne denir?",
+              "options": [
+                "Müzik",
+                "Gürültü (Ses Kirliliği)",
+                "Fısıltı",
+                "Melodi"
+              ],
+              "correct": 1,
+              "explanation": "Şiddetli, karmaşık ve rahatsız edici seslere 'gürültü' veya 'ses kirliliği' denir! 📢"
+            },
+            {
+              "type": "multiple",
+              "question": "Sürekli gürültülü ortamlarda bulunmak insan sağlığında en çok hangi probleme yol açar?",
+              "options": [
+                "İşitme kaybı, stres ve dikkat bozukluğu",
+                "Göz bozukluğu",
+                "Kemik erimesi",
+                "Diş çürümesi"
+              ],
+              "correct": 0,
+              "explanation": "Yüksek ses kulak zarına zarar verir, kalıcı işitme kaybı ve baş ağrısı yapar! 👂"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kulaklıkla çok yüksek sesle müzik dinlemek kulak sağlığı için tehlikelidir.",
+              "correct": true,
+              "explanation": "Doğru! Kulaklıkla yüksek seste müzik dinlemek genç yaşta işitme kaybına yol açar. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Evlerde gürültüyü engellemek için pencerelerde çift cam kullanılması ne tür bir uygulamadır?",
+              "options": [
+                "Aydınlatma",
+                "Ses yalıtımı",
+                "Isınma",
+                "Havalandırma"
+              ],
+              "correct": 1,
+              "explanation": "Çift cam ve yalıtım malzemeleri dışarıdaki gürültünün içeri girmesini engeller! 🪟"
+            },
+            {
+              "type": "truefalse",
+              "question": "Hastanelerin ve okulların yakınında korna çalmak yasaktır.",
+              "correct": true,
+              "explanation": "Doğru! Hastaların ve öğrencilerin dinlenme ve odaklanma haklarına saygı gösterilmelidir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2504.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fen_unite6",
+      "title": "6. Ünite: İnsan ve Çevre",
+      "icon": "🌱",
+      "color": "#10B981",
+      "description": "Bilinçli tüketici, kaynakların tasarruflu kullanımı, geri dönüşüm ve çevre kirliliğine karşı önlemler.",
+      "lessons": [
+        {
+          "id": 2601,
+          "unitId": "fen_unite6",
+          "title": "Bilinçli Tüketici ve Kaynakların Tasarrufu",
+          "subject": "Fen Bilimleri",
+          "unit": "İnsan ve Çevre",
+          "icon": "🚰",
+          "color": "#10B981",
+          "description": "Su, elektrik ve besin kaynaklarının tasarruflu kullanımı, israfın önlenmesi ve gelecek nesillere aktarılması.",
+          "videoFile": "assets/videos/fen/kaynaklarin-tasarrufu.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Dişlerimizi fırçalarken musluğu açık bırakmamak hangi kaynağımızın tasarrufunu sağlar?",
+              "options": [
+                "Elektrik",
+                "Tatlı Su",
+                "Kömür",
+                "Rüzgar"
+              ],
+              "correct": 1,
+              "explanation": "Musluğu kapatmak her fırçalamada litrelerce temiz içme suyunu kurtarır! 💧"
+            },
+            {
+              "type": "multiple",
+              "question": "İhtiyacından fazlasını almayan, enerji tasarruflu aletler kullanan ve doğayı koruyan kişiye ne denir?",
+              "options": [
+                "Savurgan tüketici",
+                "Bilinçli tüketici",
+                "Hızlı tüketici",
+                "Tembel tüketici"
+              ],
+              "correct": 1,
+              "explanation": "Bilinçli tüketici hem parasını hem Dünya'nın sınırlı kaynaklarını korur! 🌍"
+            },
+            {
+              "type": "truefalse",
+              "question": "Evden çıkarken boş odadaki lambaları kapatmak bir tasarruf davranışıdır.",
+              "correct": true,
+              "explanation": "Doğru! Gereksiz yanan her ışık enerji israfıdır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Dünyadaki su kaynaklarının sadece yaklaşık yüzde kaçı içilebilir tatlı sudur?",
+              "options": [
+                "%70",
+                "%50",
+                "%25",
+                "%3'ten daha azı"
+              ],
+              "correct": 3,
+              "explanation": "Dünyadaki suların %97'si tuzlu deniz suyudur; içilebilir tatlı su %3'ten bile azdır! 🚰"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bayat ekmekleri çöpe atmak yerine tatlı veya köfte harcı yaparak değerlendirmek israfı önler.",
+              "correct": true,
+              "explanation": "Doğru! Besin israfını önlemek hem bütçemizi hem emeği korur. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2601.jpg"
+        },
+        {
+          "id": 2602,
+          "unitId": "fen_unite6",
+          "title": "Geri Dönüşüm ve Önemi",
+          "subject": "Fen Bilimleri",
+          "unit": "İnsan ve Çevre",
+          "icon": "♻️",
+          "color": "#10B981",
+          "description": "Kağıt, cam, plastik, metal ve atık pillerin geri dönüşümü, doğanın korunması ve çöp miktarının azaltılması.",
+          "videoFile": "assets/videos/fen/geri-donusum.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Atıkların çeşitli işlemlerden geçirilerek tekrar kullanılabilir ham maddeye dönüştürülmesine ne ad verilir?",
+              "options": [
+                "Çöp",
+                "Geri Dönüşüm",
+                "İsraf",
+                "Yakma"
+              ],
+              "correct": 1,
+              "explanation": "Geri dönüşüm sayesinde ağaçlar kesilmez, madenler korunur ve çevre kirlenmez! ♻️"
+            },
+            {
+              "type": "multiple",
+              "question": "1 ton kullanılmış kağıdın geri dönüştürülmesi yaklaşık kaç adet ağacın kesilmesini önler?",
+              "options": [
+                "2",
+                "5",
+                "17",
+                "100"
+              ],
+              "correct": 2,
+              "explanation": "1 ton kağıt geri dönüştüğünde tam 17 yetişkin çam ağacı kurtulur! 🌲"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kullanılmış bitmiş piller çöpe veya toprağa atılmamalı, atık pil kutularına bırakılmalıdır.",
+              "correct": true,
+              "explanation": "Doğru! Piller içindeki cıva ve zehirli maddelerle yeraltı sularını zehirler. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdakilerden hangisi geri dönüştürülebilir bir atık DEĞİLDİR?",
+              "options": [
+                "Cam şişe",
+                "Alüminyum içecek kutusu",
+                "Muz kabuğu",
+                "Plastik kapak"
+              ],
+              "correct": 2,
+              "explanation": "Muz kabuğu organik atıktır; geri dönüştürülmez (ancak kompost gübre yapılabilir). 🍌"
+            },
+            {
+              "type": "truefalse",
+              "question": "Plastik atıklar doğada yüzlerce yıl boyunca kaybolmadan kirlilik oluşturur.",
+              "correct": true,
+              "explanation": "Doğru! Plastikler 400-500 yıl boyunca doğada çözünmez. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2602.jpg"
+        },
+        {
+          "id": 2603,
+          "unitId": "fen_unite6",
+          "title": "Çevre Kirliliği ve Doğayı Koruma",
+          "subject": "Fen Bilimleri",
+          "unit": "İnsan ve Çevre",
+          "icon": "🌳",
+          "color": "#10B981",
+          "description": "Hava, su ve toprak kirliliği, ormanların önemi, fidan dikimi ve çevre kirliliğini önleme yolları.",
+          "videoFile": "assets/videos/fen/cevre-kirliligi.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Fabrika bacalarına filtre takılması en çok hangi kirlilik türünü önler?",
+              "options": [
+                "Hava kirliliği",
+                "Toprak kirliliği",
+                "Gürültü kirliliği",
+                "Işık kirliliği"
+              ],
+              "correct": 0,
+              "explanation": "Filtreler zararlı zehirli gazları ve külleri tutarak soluduğumuz havayı korur! 🏭"
+            },
+            {
+              "type": "multiple",
+              "question": "Ülkemizde erozyonla mücadele eden ve ağaçlandırma çalışmaları yapan vakıf hangisidir?",
+              "options": [
+                "TEMA Vakfı",
+                "TÜBİTAK",
+                "Kızılay",
+                "Yeşilay"
+              ],
+              "correct": 0,
+              "explanation": "TEMA Vakfı 'Türkiye Çöl Olmasın' diyerek milyonlarca fidan dikmektedir! 🌳"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kullanılmış kızartma yağlarını lavaboya dökmek 1 milyon litre temiz içme suyunu kirletebilir.",
+              "correct": true,
+              "explanation": "Doğru! Atık yağlar lavaboya değil, atık yağ toplama kutularına verilmelidir! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdakilerden hangisi çevre kirliliğini azaltmak için bireysel olarak yapabileceğimiz en doğru davranıştır?",
+              "options": [
+                "Plastik poşet yerine bez çanta ve file kullanmak",
+                "Piknikte çöpleri ormanda bırakmak",
+                "Her yere şahsi arabayla gitmek",
+                "Suyu boşa akıtmak"
+              ],
+              "correct": 0,
+              "explanation": "Bez çanta ve matara kullanmak plastik atık miktarını büyük oranda azaltır! 🛍️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Ormanlar Dünya'nın akciğerleridir; fotosentez yaparak oksijen üretirler.",
+              "correct": true,
+              "explanation": "Doğru! Ağaçlar havadaki karbondioksiti temizleyip bize oksijen verir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2603.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fen_unite7",
+      "title": "7. Ünite: Basit Elektrik Devreleri",
+      "icon": "⚡",
+      "color": "#10B981",
+      "description": "Pil, ampul, anahtar, bağlantı kablosu, duy, devre şeması ve ampulün ışık vermeme sebepleri.",
+      "lessons": [
+        {
+          "id": 2701,
+          "unitId": "fen_unite7",
+          "title": "Basit Elektrik Devresi Elemanları",
+          "subject": "Fen Bilimleri",
+          "unit": "Elektrik Devreleri",
+          "icon": "🔋",
+          "color": "#10B981",
+          "description": "Devre elemanları ve görevleri: Pil (enerji kaynağı), ampul (ışık), anahtar (kontrol), kablo (iletim).",
+          "videoFile": "assets/videos/fen/devre-elemanlari.mp4",
+          "duration": "8 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Basit bir elektrik devresinde elektrik enerjisini üreten kaynak hangisidir?",
+              "options": [
+                "Ampul",
+                "Pil",
+                "Anahtar",
+                "Duy"
+              ],
+              "correct": 1,
+              "explanation": "Pil devrenin elektrik enerjisi kaynağıdır (+ ve - kutupları vardır)! 🔋"
+            },
+            {
+              "type": "multiple",
+              "question": "Devrede elektriğin geçişini kontrol eden, devreyi açıp kapatmaya yarayan eleman hangisidir?",
+              "options": [
+                "Bağlantı kablosu",
+                "Anahtar (Düğme)",
+                "Pil yatağı",
+                "Duy"
+              ],
+              "correct": 1,
+              "explanation": "Anahtar evimizdeki elektrik düğmeleri gibidir; devreyi açıp kapatır! 🔘"
+            },
+            {
+              "type": "truefalse",
+              "question": "Ampul elektrik enerjisini ışık enerjisine dönüştüren devre elemanıdır.",
+              "correct": true,
+              "explanation": "Doğru! Ampul ışık vererek devrenin çalıştığını gösterir. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Ampulün vidalanarak takıldığı yuvanın adı nedir?",
+              "options": [
+                "Duy",
+                "Pil yatağı",
+                "Kablo",
+                "Şalter"
+              ],
+              "correct": 0,
+              "explanation": "Ampulün takıldığı yuvaya 'duy' denir! 💡"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bağlantı kabloları elektriği iletmek için içte bakır tel, dışta yalıtkan plastik kaplamadan oluşur.",
+              "correct": true,
+              "explanation": "Doğru! Dıştaki plastik elektrik çarpmasını engeller. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2701.jpg"
+        },
+        {
+          "id": 2702,
+          "unitId": "fen_unite7",
+          "title": "Devrede Ampulün Işık Verme Koşulları",
+          "subject": "Fen Bilimleri",
+          "unit": "Elektrik Devreleri",
+          "icon": "💡",
+          "color": "#10B981",
+          "description": "Kapalı devre kavramı, anahtarın kapalı olması, kablo bağlantılarının tamlığı ve kesintisiz akım yolu.",
+          "videoFile": "assets/videos/fen/ampulun-isik-vermesi.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Bir devrede ampulün ışık verebilmesi için anahtarın hangi konumda olması gerekir?",
+              "options": [
+                "Açık konumda",
+                "Kapalı konumda (Devre tamamlanmış)",
+                "Kırık konumda",
+                "Pilsiz"
+              ],
+              "correct": 1,
+              "explanation": "Anahtar KAPALI olduğunda elektrik yolu tamamlanır ve ampul ışık verir! 💡"
+            },
+            {
+              "type": "multiple",
+              "question": "Elektrik akımı pilin hangi kutbundan hangi kutbuna doğru hareket eder?",
+              "options": [
+                "Artı (+) kutuptan Eksi (-) kutba",
+                "Eksi kutuptan duya",
+                "Ampulden pile",
+                "Sadece ortada durur"
+              ],
+              "correct": 0,
+              "explanation": "Akım pilin artı (+) kutbundan çıkar, devreyi dolaşıp eksi (-) kutbuna döner! ⚡"
+            },
+            {
+              "type": "truefalse",
+              "question": "Bağlantı kablosunda kopukluk varsa devre tamamlanmaz ve ampul ışık vermez.",
+              "correct": true,
+              "explanation": "Doğru! Elektrik akımı kopuk kablodan karşıya geçemez. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Aşağıdaki durumlardan hangisinde ampul kesinlikle IŞIK VERİR?",
+              "options": [
+                "Pil bitmişse",
+                "Anahtar açık bırakılmışsa",
+                "Tüm bağlantılar doğru ve anahtar kapalıysa",
+                "Ampul patlaksa"
+              ],
+              "correct": 2,
+              "explanation": "Tüm bağlantılar sağlam, pil dolu ve anahtar kapalıyken ampul parlar! 🌟"
+            },
+            {
+              "type": "truefalse",
+              "question": "Duy ve pil yatağı olmadan da kabloları doğrudan pile ve ampule değdirerek ampulü yakabiliriz.",
+              "correct": true,
+              "explanation": "Doğru! Duy ve pil yatağı kolaylık sağlar ama devrenin zorunlu elemanı değildir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2702.jpg"
+        },
+        {
+          "id": 2703,
+          "unitId": "fen_unite7",
+          "title": "Ampul Neden Işık Vermez? (Arıza Arama)",
+          "subject": "Fen Bilimleri",
+          "unit": "Elektrik Devreleri",
+          "icon": "⚠️",
+          "color": "#10B981",
+          "description": "Kopuk kablo, ters takılmış pil, patlak ampul, gevşek vida ve bitmiş pil gibi devre arızalarını tespit etme.",
+          "videoFile": "assets/videos/fen/devre-arizalari.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Bir devrede her şey doğru bağlandığı halde ampul ışık vermiyorsa ilk kontrol edilmesi gereken ne olabilir?",
+              "options": [
+                "Pilin bitmiş veya ters takılmış olması",
+                "Odanın aydınlık olması",
+                "Masanın tahta olması",
+                "Duvardaki boya"
+              ],
+              "correct": 0,
+              "explanation": "Pil bitmiş olabilir, ters takılmış olabilir ya da ampulün teli kopmuş (patlamış) olabilir! 🔋"
+            },
+            {
+              "type": "multiple",
+              "question": "Ampulün içindeki çok ince kıvrımlı parlak tele ne ad verilir?",
+              "options": [
+                "Filaman (Tungsten tel)",
+                "Duy",
+                "Cam hazne",
+                "Anahtar"
+              ],
+              "correct": 0,
+              "explanation": "Ampulün içinde ışık saçan ince tele 'filaman' denir; bu tel koparsa ampul patlamış olur! 💡"
+            },
+            {
+              "type": "truefalse",
+              "question": "Ampul duya tam sıkıca oturtulmazsa (gevşek kalırsa) elektrik temas etmez ve yanmaz.",
+              "correct": true,
+              "explanation": "Doğru! Ampul duya tam vidalanmalıdır. ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "İki pilli bir devrede pillerin ikisinin de artı (+) kutbu birbirine bağlanırsa ne olur?",
+              "options": [
+                "Daha parlak yanar",
+                "Ampul ışık vermez (ters bağlantı)",
+                "Pil patlar",
+                "Işık rengi değişir"
+              ],
+              "correct": 1,
+              "explanation": "Piller seri bağlanırken birinin artısı (+) diğerinin eksisine (-) bağlanmalıdır! ⚡"
+            },
+            {
+              "type": "truefalse",
+              "question": "Kablo uçlarındaki plastik sıyrılmadan pile bağlanırsa plastik yalıtkan olduğu için elektrik iletilmez.",
+              "correct": true,
+              "explanation": "Doğru! Kablonun uçlarındaki bakır tel doğrudan metale temas etmelidir. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2703.jpg"
+        },
+        {
+          "id": 2704,
+          "unitId": "fen_unite7",
+          "title": "Evimizdeki Elektrik ve Basit Devre İlişkisi",
+          "subject": "Fen Bilimleri",
+          "unit": "Elektrik Devreleri",
+          "icon": "🏠",
+          "color": "#10B981",
+          "description": "Evdeki prizler, duvar anahtarları, tavan lambaları, sigortalar ve elektrik güvenliği kuralları.",
+          "videoFile": "assets/videos/fen/evdeki-elektrik.mp4",
+          "duration": "7 dakika",
+          "inVideoQuestions": [],
+          "quizQuestions": [
+            {
+              "type": "multiple",
+              "question": "Evimizin duvarındaki ışık açma-kapama düğmeleri basit elektrik devresindeki hangi elemanın karşılığıdır?",
+              "options": [
+                "Pil",
+                "Ampul",
+                "Anahtar",
+                "Kablo"
+              ],
+              "correct": 2,
+              "explanation": "Duvardaki elektrik anahtarları devredeki anahtarın aynısıdır! 🔘"
+            },
+            {
+              "type": "multiple",
+              "question": "Evlerimizde kullandığımız elektrik şehir şebekesinden (220 Volt) gelir. Bu elektriğin pilden farkı nedir?",
+              "options": [
+                "Çok daha yüksek enerjili ve tehlikelidir",
+                "Hiç tehlikesi yoktur",
+                "Pilden daha zayıftır",
+                "Işık vermez"
+              ],
+              "correct": 0,
+              "explanation": "Şehir elektriği (220V) ölümcül tehlikeye sahiptir; prizlerle asla oyun oynanmamalıdır! ⚠️"
+            },
+            {
+              "type": "truefalse",
+              "question": "Islak elle elektrik prizlerine ve anahtarlarına dokunmak elektrik çarpmasına yol açar.",
+              "correct": true,
+              "explanation": "Doğru! Su elektriği ilettiği için ıslak elle asla elektrikli aletlere dokunulmamalıdır! ✅"
+            },
+            {
+              "type": "multiple",
+              "question": "Evdeki elektrik kabloları genellikle nerede gizlidir?",
+              "options": [
+                "Duvarların ve tavanın içinde",
+                "Bahçede",
+                "Çatıda",
+                "Havada"
+              ],
+              "correct": 0,
+              "explanation": "Güvenlik ve düzen için kablolar sıva altında boruların içinden geçer! 🧱"
+            },
+            {
+              "type": "truefalse",
+              "question": "Prizlere yabancı cisimler sokulmamalı ve çocuk korumalı priz kapakları kullanılmalıdır.",
+              "correct": true,
+              "explanation": "Doğru! Elektrik güvenliği hayati önem taşır. ✅"
+            }
+          ],
+          "thumbnail": "assets/thumbnails/fen/topic_2704.jpg"
+        }
+      ]
+    }
+  ]
+}

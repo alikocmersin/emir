@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="EmirLearn — 4. Sınıf Türkçe Çocuk Eğitim Platformu. Sosyal Bilgiler, Türkçe, Matematik, Fen Bilimleri kapsamlı MEB ünite videoları, mini testler ve macera haritası." />
+  <title>EmirLearn 🚀 — Emir'in Eğitim Dünyası</title>
+
+  <!-- PWA Manifest & Renk -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#7C3AED" />
+
+  <!-- Google Fonts: Baloo 2 (Başlıklar) & Nunito (Gövde) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tasarım Sistemi Stili -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-ders="sosyal">
+
+  <!-- ======================================================================
+       1. ÜST BAŞLIK (HEADER) & GAMIFICATION BAR
+       ====================================================================== -->
+  <header class="ana-header">
+    <div class="header-govde">
+      <!-- Logo -->
+      <div class="logo-alani" onclick="window.scrollTo({top:0, behavior:'smooth'})" role="button" tabindex="0" aria-label="EmirLearn Ana Sayfa">
+        <span class="logo-ikon">🚀</span>
+        <div>
+          <span class="logo-baslik">EmirLearn</span>
+          <span class="logo-alt">4. Sınıf Öğrenme Dünyası</span>
+        </div>
+      </div>
+
+      <!-- Gamification Durum Rozetleri -->
+      <div class="header-istatistikler">
+        <!-- Seviye & XP Çubuğu -->
+        <div class="seviye-bar-kapsul" id="seviyeBarKapsul" title="Seviye İlerlemen">
+          <div class="seviye-metin-satiri">
+            <span id="seviyeUnvan">1. Seviye Kaşif</span>
+            <span id="xpGosterge">0 / 100 XP</span>
+          </div>
+          <div class="seviye-bar-iz">
+            <div class="seviye-bar-dolgu" id="seviyeBarDolgu" style="width: 10%;"></div>
+          </div>
+        </div>
+
+        <!-- Yıldız Sayacı -->
+        <div class="stat-kapsul" title="Kazanılan Toplam Yıldızlar">
+          <span style="color:var(--altin);">⭐</span>
+          <span id="toplamYildizSayisi">0</span>
+          <span>Yıldız</span>
+        </div>
+
+        <!-- Elmas Sayacı -->
+        <div class="stat-kapsul" title="Harcanabilir Elmaslar">
+          <span>💎</span>
+          <span id="toplamElmasSayisi">0</span>
+          <span>Elmas</span>
+        </div>
+
+        <!-- Günlük Seri -->
+        <div class="stat-kapsul" title="Günlük Çalışma Serisi">
+          <span>🔥</span>
+          <span id="gunlukSeriSayisi">1</span>
+          <span>Gün Seri</span>
+        </div>
+
+        <!-- Ebeveyn Paneli Giriş Butonu -->
+        <button class="ebeveyn-giris-btn" onclick="openParentModal()" title="Ebeveyn Kontrol Paneli" aria-label="Ebeveyn Paneli">
+          <span>🔒</span>
+          <span>Ebeveyn</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       2. HERO BÖLÜMÜ & GÜNLÜK HEDEF SANDIĞI
+       ====================================================================== -->
+  <section class="hero-alani">
+    <div class="hero-govde">
+      <div class="hero-metinler">
+        <h1>Merhaba, <span id="cocukSelamAdi">Emir</span>! 👋</h1>
+        <p>Aşağıdan istediğin dersi seç, ünite videosunu izle, 10 soruluk mini testle yıldızları topla ve macera haritasında kupaya doğru ilerle!</p>
+        <div class="hero-aksiyonlar">
+          <button class="btn btn-birincil" onclick="scollToUnitsSection()">
+            <span>🚀</span> <span>Dersleri Keşfet</span>
+          </button>
+          <button class="btn btn-ikincil" onclick="toggleMapCardsView('harita')">
+            <span>🗺️</span> <span>Macera Haritasına Git</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Günlük Hedef Sandığı -->
+      <div class="gunluk-sandik-karti" onclick="claimDailyChest()" title="Günlük Hedef: 2 Ünite Tamamla!">
+        <div class="sandik-ikon" id="sandikIkonu">🎁</div>
+        <div class="sandik-bilgi">
+          <h4>Günün Hedef Sandığı</h4>
+          <p id="sandikDurumMetni">Bugün 2 ünite izle veya test çöz!</p>
+          <div class="rozet rozet-altin" style="margin-top:6px;">
+            <span>💎 +25 Elmas Ödül</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       3. DERSLER VE ÜNİTELER BÖLÜMÜ (KARTLAR & MACERA HARİTASI)
+       ====================================================================== -->
+  <main class="dersler-bolumu" id="derslerBolumu">
+    <!-- Başlık ve Görünüm Değiştirici (Segmented Control) -->
+    <div class="bolum-baslik-satiri">
+      <div class="baslik-sol">
+        <h2>📚 Dersler ve Üniteler</h2>
+        <span class="rozet rozet-marka">4. Sınıf MEB Müfredatı</span>
+      </div>
+
+      <!-- Görünüm Değiştirici: 🃏 Kartlar | 🗺️ Harita -->
+      <div class="segment-kontrol" role="tablist" aria-label="Görünüm Seçici">
+        <button class="segment-btn aktif" id="viewBtnKartlar" onclick="toggleMapCardsView('kartlar')" role="tab" aria-selected="true">
+          <span>🃏</span> <span>Kartlar</span>
+        </button>
+        <button class="segment-btn" id="viewBtnHarita" onclick="toggleMapCardsView('harita')" role="tab" aria-selected="false">
+          <span>🗺️</span> <span>Harita</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Filtreler ve Arama Satırı -->
+    <div class="filtre-ve-arama-bari">
+      <!-- Ders Filtre Çipleri (Eşit boy, yatay kaydırmalı) -->
+      <div class="ders-cipleri-sarmal" id="dersCipleriSarmal" role="radiogroup" aria-label="Ders Seçimi">
+        <!-- Dinamik JS çipleri eklenecek -->
+      </div>
+
+      <!-- Arama Kutusu, Bitmemişler Toggle'ı ve Sıralama -->
+      <div class="arama-ve-ekstra-satir">
+        <!-- Arama Kutusu (Türkçe Karakter Duyarsız) -->
+        <div class="arama-kutusu-sarmal">
+          <span class="arama-ikonu">🔍</span>
+          <input type="text" id="aramaKutusu" class="arama-kutusu" placeholder="Ünite adı veya konu ara... (Örn: ışık, çevre)" aria-label="Ünite ara" oninput="handleSearchInput(this.value)" />
+        </div>
+
+        <div class="filtre-secenekleri-sag">
+          <!-- "Sadece Bitmemişler" Toggle Anahtarı -->
+          <label class="toggle-etiket" for="sadeceBitmemislerToggle">
+            <span class="toggle-anahtar">
+              <input type="checkbox" id="sadeceBitmemislerToggle" onchange="handleUnfinishedToggle(this.checked)" />
+              <span class="toggle-kaydirak"></span>
+            </span>
+            <span>Sadece Bitmemişler</span>
+          </label>
+
+          <!-- Sıralama Seçici -->
+          <select class="siralama-secici" id="siralamaSecici" onchange="handleSortChange(this.value)" aria-label="Sıralama">
+            <option value="varsayilan">Varsayılan (1 → 7)</option>
+            <option value="onerilen">Önerilen (Devam Edenler)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- GÖRÜNÜM 1: ÜNİTE KARTLARI IZGARASI (GRID) -->
+    <div class="unite-kartlari-grid" id="uniteKartlariGrid" role="region" aria-label="Ünite Kartları">
+      <!-- JS createMasterUnitCard ile dinamik oluşturulur -->
+    </div>
+
+    <!-- Arama / Filtre Sonuçsuz Durumu (Boş Ekran) -->
+    <div id="bosSonucAlani" style="display:none; text-align:center; padding:60px 20px; background:#FFFFFF; border-radius:var(--r-lg); border:2px dashed var(--cizgi);">
+      <div style="font-size:4rem; margin-bottom:12px;">🦁</div>
+      <h3 style="margin-bottom:8px;">Bu aramada ünite bulunamadı</h3>
+      <p style="color:var(--metin-ikincil); margin-bottom:16px;">Başka bir kelime deneyebilir veya filtreleri temizleyebilirsin 🔍</p>
+      <button class="btn btn-ikincil" onclick="resetFilters()">Filtreleri Temizle</button>
+    </div>
+
+    <!-- GÖRÜNÜM 2: MACERA HARİTASI (KOMUT 3 ÖĞRENME YOLU) -->
+    <div class="macera-haritasi-kapsayici" id="maceraHaritasiKapsayici" style="display:none;" role="region" aria-label="Macera Haritası">
+      <div id="haritaYolIcerik">
+        <!-- SVG kıvrımlı yol ve 72px checkpointler JS ile oluşturulur -->
+      </div>
+      <!-- Erişilebilirlik Ekran Okuyucu Listesi -->
+      <ol class="sr-only" id="haritaErisilebilirListe"></ol>
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       4. OYUN ODASI BÖLÜMÜ (KOMUT 7 MİNİ OYUNLAR)
+       ====================================================================== -->
+  <section class="dersler-bolumu" id="oyunOdasiBolumu" style="padding-top:0;">
+    <div class="bolum-baslik-satiri">
+      <div class="baslik-sol">
+        <h2>🎮 Mini Oyun Odası</h2>
+        <span class="rozet rozet-altin">Öğrenirken Eğlen</span>
+      </div>
+    </div>
+
+    <div class="oyun-odasi-kapsayici">
+      <div class="oyun-sekmeleri" role="tablist">
+        <button class="oyun-sekme-btn aktif" onclick="switchGameTab('flashcards')">🃏 Bilgi Kartları</button>
+        <button class="oyun-sekme-btn" onclick="switchGameTab('matching')">🧩 6-Eşleştirme</button>
+        <button class="oyun-sekme-btn" onclick="switchGameTab('blitz')">⚡ Doğru mu Yanlış mı?</button>
+        <button class="oyun-sekme-btn" onclick="switchGameTab('word')">🔤 Kelime Avcısı</button>
+      </div>
+
+      <div id="oyunAlaniIcerik">
+        <!-- Dinamik Oyun Arayüzü -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       5. ROZETLERİM BÖLÜMÜ (KOMUT 6 21 TOPLANABİLİR ROZET)
+       ====================================================================== -->
+  <section class="rozetler-bolumu" id="rozetlerBolumu">
+    <div class="bolum-baslik-satiri">
+      <div class="baslik-sol">
+        <h2>🏆 Başarılarım ve Rozetlerim</h2>
+        <span class="rozet rozet-marka"><span id="kazanilanRozetSayisi">1</span> / 21 Açıldı</span>
+      </div>
+    </div>
+    <div class="rozetler-grid" id="rozetlerGrid">
+      <!-- 21 rozet JS ile dinamik render edilir -->
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. SİNEMA VİDEO MODALİ (KOMUT 4 SINIF / SİNEMA ATMOSFERİ)
+       ====================================================================== -->
+  <div id="sinemaModalBackdrop" class="sinema-modal-backdrop" onclick="handleSinemaBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="sinemaBaslik">
+    <div class="sinema-kart-konteyner" onclick="event.stopPropagation()">
+      <!-- Nötr 48px Kapatma Butonu (Çarpı) -->
+      <button class="sinema-kapat-butonu-48" onclick="closeSinemaModal()" title="Kapat (ESC)" aria-label="Videoyu Kapat">✕</button>
+
+      <!-- Üst Bilgi Başlığı -->
+      <div class="sinema-ust-bilgi">
+        <span class="rozet rozet-ders" id="sinemaDersTag">Ders</span>
+        <h3 id="sinemaBaslik">1. Ünite Master Videosu</h3>
+      </div>
+
+      <!-- Video Oynatıcı Alanı -->
+      <div class="sinema-video-sarmal" id="sinemaVideoSarmal">
+        <video id="sinemaVideoEl" class="sinema-video-el" playsinline preload="metadata">
+          <source id="sinemaVideoSource" src="" type="video/mp4" />
+          Tarayıcınız video oynatmayı desteklemiyor.
+        </video>
+
+        <!-- Video Hazırlanıyor Ekranı -->
+        <div id="videoHazirlaniyorKutusu" style="display:none; position:absolute; inset:0; background:#0F172A; color:#FFFFFF; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🎬</div>
+          <h3>12-13 Dakikalık Kapsamlı Master Video Hazırlanıyor!</h3>
+          <p style="color:#94A3B8; max-width:480px; margin-top:8px;">Bu ünitenin tüm konularını baştan sona anlatan MEB müfredatına tam uyumlu master video yakında burada olacak.</p>
+        </div>
+      </div>
+
+      <!-- HTML5 Özel Video Kontrolleri -->
+      <div class="ozel-video-kontrolleri" id="ozelVideoKontrolleri">
+        <div class="video-ilerleme-hatti" id="videoIlerlemeHatti" onclick="handleVideoSeek(event)">
+          <div class="video-ilerleme-dolu" id="videoIlerlemeDolu"></div>
+        </div>
+
+        <div class="video-buton-satiri">
+          <div class="video-sol-kontroller">
+            <button class="video-btn" id="btnVideoPlayPause" onclick="toggleVideoPlay()" title="Oynat / Duraklat (Boşluk)">▶</button>
+            <button class="video-btn" onclick="seekVideoRelative(-10)" title="10 Saniye Geri (←)">↺ 10s</button>
+            <button class="video-btn" onclick="seekVideoRelative(10)" title="10 Saniye İleri (→)">↻ 10s</button>
+            <span class="video-zaman-gostergesi" id="videoZamanGostergesi">00:00 / 00:00</span>
+          </div>
+
+          <div class="video-sag-kontroller">
+            <select class="video-hiz-secici" id="videoHizSecici" onchange="changeVideoSpeed(this.value)" title="Oynatma Hızı">
+              <option value="0.75">0.75x</option>
+              <option value="1.0" selected>1.0x</option>
+              <option value="1.25">1.25x</option>
+              <option value="1.5">1.5x</option>
+            </select>
+            <button class="video-btn" id="btnVideoMute" onclick="toggleVideoMute()" title="Sesi Aç / Kapat (M)">🔊</button>
+            <button class="video-btn" onclick="toggleVideoFullscreen()" title="Tam Ekran (F)">⛶</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bölüm Çipleri (📌 Bu videoda:) -->
+      <div class="sinema-bolum-cipleri" id="sinemaBolumCipleri">
+        <span class="bolum-etiket">📌 Bu videoda:</span>
+        <div id="bolumCipleriListesi" style="display:flex; gap:6px;"></div>
+      </div>
+
+      <!-- 20 Dakika Göz Molası Uyarısı (Gerektiğinde Görünür) -->
+      <div class="goz-molasi-uyarisi" id="gozMolasiUyarisi" style="display:none;">
+        <span>👀 Emir, 20 dakikadır video izliyorsun! Gözlerini 20 saniye dinlendirmek için uzaklara bakmak ister misin?</span>
+        <button class="btn btn-ucuncul" style="padding:4px 10px; min-height:32px;" onclick="dismissEyeBreak()">Tamam, Dinlendirdim</button>
+      </div>
+
+      <!-- %90 İzleme Eşiğinde Açılan "🎉 Şimdi Sıra Sende!" Aksiyon Paneli -->
+      <div class="simdi-sira-sende-paneli" id="simdiSiraSendePaneli" style="display:none;">
+        <div class="sira-sende-sol">
+          <div style="font-size:2rem;">🎉</div>
+          <div>
+            <h4>Tebrikler Emir! Ünite Videosunu Tamamladın! (+20 XP)</h4>
+            <p>Şimdi öğrendiklerini pekiştirmek için mini teste katıl ve yıldızları topla!</p>
+          </div>
+        </div>
+        <div class="sira-sende-butonlar">
+          <button class="btn btn-birincil" onclick="launchPostVideoQuiz()" style="background:linear-gradient(135deg, #10B981, #059669);">
+            <span>⚡</span> <span>10 Soruluk Mini Test</span>
+          </button>
+          <button class="btn btn-ikincil" onclick="restartVideoPlay()">
+            <span>↻</span> <span>Tekrar İzle</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- İNTERAKTİF TEST VE QUIZ ALANI (Aynı modal içinde video bitince veya test butonuna basınca açılır) -->
+      <div class="quiz-alani-sarmal" id="sinemaQuizAlani" style="display:none;">
+        <!-- Segmentli 10 Soruluk İlerleme Çubuğu -->
+        <div class="quiz-segmentli-bar" id="quizSegmentliBar">
+          <!-- 10 nokta JS ile oluşturulur -->
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="rozet rozet-ders" id="quizSoruSayacPill">Soru 1 / 10</span>
+          <span class="rozet rozet-altin" id="quizPuanRozet">⭐ 0 Yıldız</span>
+        </div>
+
+        <!-- Aktif Soru Kartı -->
+        <div class="quiz-soru-karti" id="quizAktifSoruKarti">
+          <div class="soru-metin-alani" id="quizSoruMetni">Soru Yükleniyor...</div>
+
+          <!-- Pixar 3D Soru Görseli (Varsa) -->
+          <div id="quizGorselSarmal" style="display:none;">
+            <img src="" id="quizPixarImg" alt="Soru Görseli" class="soru-pixar-gorsel" />
+          </div>
+
+          <!-- Çoktan Seçmeli Seçenekler (≥64px Kartlar) -->
+          <div class="quiz-secenekler-grid" id="quizSeceneklerGrid"></div>
+
+          <!-- "Kontrol Et" Buton Satırı -->
+          <div class="quiz-onay-satiri">
+            <button class="btn btn-birincil" id="btnQuizKontrolEt" onclick="confirmSelectedOption()" disabled>
+              <span>✓</span> <span>Kontrol Et</span>
+            </button>
+          </div>
+
+          <!-- Pedagojik Sesli ve Yazılı Geri Bildirim Bandı -->
+          <div class="pedagojik-geribildirim-bandi" id="quizGeriBildirimBandi" style="display:none;">
+            <div class="geribildirim-baslik-satiri">
+              <strong id="geribildirimBaslik">Harika Bildin! 🎉</strong>
+              <div class="ses-dalgasi-kutusu" id="sesDalgasiKutusu" style="display:none;" title="Öğretmen Açıklıyor">
+                <span class="ses-dalgasi-cubuk"></span>
+                <span class="ses-dalgasi-cubuk"></span>
+                <span class="ses-dalgasi-cubuk"></span>
+              </div>
+            </div>
+            <p class="geribildirim-aciklama" id="geribildirimAciklamaMetni">Gerekçeli açıklama metni...</p>
+            <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+              <button class="btn btn-birincil" onclick="nextQuizStep()">Sonraki Soru →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Test Sonuç & Skor Ekranı -->
+        <div class="quiz-skor-karti" id="quizSonucSkorKarti" style="display:none;">
+          <div class="skor-kupasi">🏆</div>
+          <h2 id="skorKartiBaslik">Muhteşemsin Emir!</h2>
+          <p id="skorKartiOzet" style="font-size:1.1rem; color:var(--metin-ikincil);">10 sorudan 10 tanesini doğru bildin!</p>
+          
+          <div class="yildiz-odulleri-satiri" id="skorYildizDizisi">
+            <span class="yildiz-parlak">⭐</span>
+            <span class="yildiz-parlak">⭐</span>
+            <span class="yildiz-parlak">⭐</span>
+          </div>
+
+          <div style="display:flex; gap:12px; margin-top:12px; flex-wrap:wrap; justify-content:center;">
+            <div class="rozet rozet-altin" style="font-size:1rem; padding:8px 16px;">
+              <span>⭐ +<span id="odulYildizSayisi">10</span> Yıldız</span>
+            </div>
+            <div class="rozet rozet-marka" style="font-size:1rem; padding:8px 16px;">
+              <span>💎 +<span id="odulElmasSayisi">20</span> Elmas</span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap; justify-content:center;">
+            <button class="btn btn-birincil" id="btnYanlislariTekrarCoz" onclick="retryQuizWrongOnly()" style="display:none;">
+              <span>🔁</span> <span>Yanlışlarımı Tekrar Çöz</span>
+            </button>
+            <button class="btn btn-ikincil" onclick="restartFullQuiz()">
+              <span>↻</span> <span>Testi Baştan Çöz</span>
+            </button>
+            <button class="btn btn-ucuncul" onclick="closeSinemaModal()">
+              <span>✕</span> <span>Tamamla ve Kapat</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       7. EBEVEYN KONTROL PANELİ MODALİ (KOMUT 8)
+       ====================================================================== -->
+  <div id="ebeveynModalBackdrop" class="ebeveyn-modal-backdrop" style="display:none;" onclick="handleParentBackdropClick(event)">
+    <div class="ebeveyn-panel-kart" onclick="event.stopPropagation()">
+      <button class="sinema-kapat-butonu-48" onclick="closeParentModal()" title="Kapat">✕</button>
+
+      <!-- PIN Giriş Ekranı -->
+      <div id="ebeveynPinEkrani" class="pin-giris-sarmal">
+        <div style="font-size:3rem;">🔒</div>
+        <h3>Ebeveyn Kontrol Girişi</h3>
+        <p style="color:var(--metin-ikincil); font-size:0.9rem;">Lütfen 4 haneli ebeveyn güvenlik şifresini tuşlayın (Varsayılan: 1234):</p>
+        
+        <div class="pin-noktalar-satiri">
+          <div class="pin-nokta" id="pinNokta1"></div>
+          <div class="pin-nokta" id="pinNokta2"></div>
+          <div class="pin-nokta" id="pinNokta3"></div>
+          <div class="pin-nokta" id="pinNokta4"></div>
+        </div>
+
+        <div class="pin-tus-takimi">
+          <button class="pin-tus" onclick="handlePinKey('1')">1</button>
+          <button class="pin-tus" onclick="handlePinKey('2')">2</button>
+          <button class="pin-tus" onclick="handlePinKey('3')">3</button>
+          <button class="pin-tus" onclick="handlePinKey('4')">4</button>
+          <button class="pin-tus" onclick="handlePinKey('5')">5</button>
+          <button class="pin-tus" onclick="handlePinKey('6')">6</button>
+          <button class="pin-tus" onclick="handlePinKey('7')">7</button>
+          <button class="pin-tus" onclick="handlePinKey('8')">8</button>
+          <button class="pin-tus" onclick="handlePinKey('9')">9</button>
+          <button class="pin-tus" onclick="clearPinKey()">C</button>
+          <button class="pin-tus" onclick="handlePinKey('0')">0</button>
+          <button class="pin-tus" onclick="submitPin()">✓</button>
+        </div>
+        <p id="pinHataMesaji" style="color:var(--yumusak-hata); font-weight:700; font-size:0.85rem; display:none;">Hatalı PIN! Lütfen tekrar deneyin.</p>
+      </div>
+
+      <!-- Ebeveyn Yönetim Paneli (Giriş Başarılı Olduğunda Açılır) -->
+      <div id="ebeveynPanelIcerik" style="display:none;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+          <h2>📊 Ebeveyn Gelişim Raporu</h2>
+          <button class="btn btn-ikincil" onclick="window.print()">🖨️ A4 Karne Yazdır</button>
+        </div>
+
+        <!-- Dairesel Ders İlerleme Halkaları -->
+        <h4 style="margin-top:16px;">Ders Tamamlama Oranları</h4>
+        <div class="ders-halkalari-grid" id="ebeveynDersHalkalari">
+          <!-- JS ile doldurulur -->
+        </div>
+
+        <!-- Haftalık Çalışma Süresi Grafiği -->
+        <h4 style="margin-top:20px;">Haftalık Çalışma Süresi (Dakika)</h4>
+        <div class="haftalik-grafik-kutusu" id="haftalikGrafikKutusu">
+          <!-- SVG Çubuk Grafik -->
+        </div>
+
+        <!-- Pekiştirilebilir Konular Listesi -->
+        <h4 style="margin-top:20px;">💡 Pekiştirilebilir Konular (Yanlış Yapılanlar)</h4>
+        <div id="pekistirilecekKonularListesi" style="margin-top:8px;">
+          <!-- JS ile doldurulur -->
+        </div>
+
+        <!-- Süre & Güvenlik Ayarları -->
+        <h4 style="margin-top:24px;">⚙️ Ekran Süresi ve Güvenlik Ayarları</h4>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-top:8px; background:var(--zemin); padding:16px; border-radius:var(--r-md);">
+          <label style="display:flex; justify-content:space-between; align-items:center; font-weight:700;">
+            <span>Günlük Süre Sınırı:</span>
+            <select id="selectSureSiniri" onchange="updateParentSetting('sureSiniri', this.value)" style="padding:6px 12px; border-radius:var(--r-sm); border:1px solid var(--cizgi);">
+              <option value="30">30 Dakika</option>
+              <option value="45" selected>45 Dakika</option>
+              <option value="60">60 Dakika</option>
+              <option value="90">90 Dakika</option>
+              <option value="0">Sınırsız</option>
+            </select>
+          </label>
+
+          <label style="display:flex; justify-content:space-between; align-items:center; font-weight:700;">
+            <span>Göz Molası Aralığı:</span>
+            <select id="selectMolaAraligi" onchange="updateParentSetting('molaAraligi', this.value)" style="padding:6px 12px; border-radius:var(--r-sm); border:1px solid var(--cizgi);">
+              <option value="15">Her 15 Dakikada Bir</option>
+              <option value="20" selected>Her 20 Dakikada Bir</option>
+              <option value="30">Her 30 Dakikada Bir</option>
+            </select>
+          </label>
+
+          <label style="display:flex; justify-content:space-between; align-items:center; font-weight:700;">
+            <span>Sırayla Açma Modu (Önceki ünite bitmeden sonraki kilitli):</span>
+            <input type="checkbox" id="checkSiraylaAc" onchange="updateParentSetting('siraylaAc', this.checked)" />
+          </label>
+        </div>
+
+        <!-- İlerleme Yedekle / Geri Yükle -->
+        <div style="display:flex; gap:12px; margin-top:20px;">
+          <button class="btn btn-ucuncul" onclick="exportProgressJSON()">💾 İlerlemeyi Yedekle (JSON)</button>
+          <button class="btn btn-ucuncul" onclick="importProgressJSON()">📂 Yedekten Yükle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       8. MOBİL ALT GEZİNTİ ÇUBUĞU (KOMUT 9: 56PX THUMB-FRIENDLY)
+       ====================================================================== -->
+  <nav class="mobil-alt-bar" role="navigation" aria-label="Mobil Gezinti Menüsü">
+    <button class="mobil-bar-ogesi aktif" onclick="navigateToSection('dersler')" aria-label="Ana Sayfa">
+      <span class="mobil-bar-ikon">🏠</span>
+      <span>Dersler</span>
+    </button>
+    <button class="mobil-bar-ogesi" onclick="toggleMapCardsView('harita')" aria-label="Macera Haritası">
+      <span class="mobil-bar-ikon">🗺️</span>
+      <span>Harita</span>
+    </button>
+    <button class="mobil-bar-ogesi" onclick="navigateToSection('oyunlar')" aria-label="Oyun Odası">
+      <span class="mobil-bar-ikon">🎮</span>
+      <span>Oyunlar</span>
+    </button>
+    <button class="mobil-bar-ogesi" onclick="navigateToSection('rozetler')" aria-label="Başarılar">
+      <span class="mobil-bar-ikon">🏆</span>
+      <span>Rozetler</span>
+    </button>
+    <button class="mobil-bar-ogesi" onclick="openParentModal()" aria-label="Ebeveyn">
+      <span class="mobil-bar-ikon">⚙️</span>
+      <span>Ebeveyn</span>
+    </button>
+  </nav>
+
+  <!-- Canvas Konfeti Katmanı -->
+  <canvas id="konfetiKanvas" style="position:fixed; inset:0; pointer-events:none; z-index:9999; display:none;"></canvas>
+
+  <!-- ======================================================================
+       9. JAVASCRIPT BAĞLANTILARI & SERVICE WORKER
+       ====================================================================== -->
+  <script src="data/master-units-data.js"></script>
+  <script src="data/unit-quizzes-data.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    // PWA Service Worker Kaydı
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

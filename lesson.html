@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EmirLearn — Konu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body class="lesson-page">
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-inner">
+      <a href="index.html" class="back-btn">
+        <span>←</span> Ana Sayfa
+      </a>
+      <div class="logo">
+        <span class="logo-rocket">🚀</span>
+        <span class="logo-title">EmirLearn</span>
+      </div>
+      <div class="header-stats">
+        <div class="stat-badge">
+          <span>⭐</span>
+          <span id="starCount">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- LESSON CONTENT -->
+  <main class="lesson-main">
+    <div class="container">
+
+      <!-- Konu başlığı -->
+      <div class="lesson-header" id="lessonHeader">
+        <!-- JS ile doldurulur -->
+      </div>
+
+      <!-- AŞAMA GÖSTERGESİ -->
+      <div class="phase-indicator">
+        <div class="phase-step active" id="phaseVideo">
+          <div class="phase-icon">🎬</div>
+          <div class="phase-label">Video</div>
+        </div>
+        <div class="phase-connector"></div>
+        <div class="phase-step" id="phaseQuiz">
+          <div class="phase-icon">📝</div>
+          <div class="phase-label">Test</div>
+        </div>
+        <div class="phase-connector"></div>
+        <div class="phase-step" id="phaseResult">
+          <div class="phase-icon">🏆</div>
+          <div class="phase-label">Sonuç</div>
+        </div>
+      </div>
+
+      <!-- ==================== VIDEO AŞAMASI ==================== -->
+      <section class="phase-section" id="videoPhase">
+        <div class="video-wrapper">
+          <!-- Custom Video Player -->
+          <div class="video-container" id="videoContainer">
+            <video id="mainVideo" preload="metadata" playsinline>
+              Tarayıcınız video oynatmayı desteklemiyor.
+            </video>
+
+            <!-- Video overlay (in-video soru için) -->
+            <div class="video-overlay hidden" id="videoOverlay">
+              <div class="in-video-question" id="inVideoQuestion">
+                <!-- Soru kartı buraya eklenir -->
+              </div>
+            </div>
+
+            <!-- Custom controls -->
+            <div class="video-controls" id="videoControls">
+              <div class="progress-bar-container" id="progressBarContainer">
+                <div class="progress-bar" id="progressBar"></div>
+                <div class="progress-markers" id="progressMarkers"></div>
+              </div>
+              <div class="controls-row">
+                <div class="controls-left">
+                  <button class="ctrl-btn" id="playBtn" title="Oynat/Duraklat">▶</button>
+                  <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
+                </div>
+                <div class="controls-right">
+                  <button class="ctrl-btn" id="muteBtn" title="Ses">🔊</button>
+                  <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1" class="volume-slider" />
+                  <button class="ctrl-btn" id="fullscreenBtn" title="Tam Ekran">⛶</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo modunda video yoksa göster -->
+          <div class="no-video-placeholder hidden" id="noVideoPlaceholder">
+            <div class="placeholder-inner">
+              <div class="placeholder-icon" id="placeholderIcon">🎬</div>
+              <h3 id="placeholderTitle">Video Yükleniyor...</h3>
+              <p id="placeholderDesc">Video dosyasını <code>assets/videos/</code> klasörüne ekleyin.</p>
+              <button class="btn btn-primary" id="demoModeBtn">🧪 Demo Modda Dene</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video sonrası quiz başlatma -->
+        <div class="start-quiz-bar hidden" id="startQuizBar">
+          <div class="quiz-bar-inner">
+            <div>
+              <h3>🎉 Video Bitti!</h3>
+              <p>Şimdi ne kadar öğrendiğini test edelim!</p>
+            </div>
+            <button class="btn btn-primary btn-large" id="startQuizBtn">
+              📝 Teste Başla →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== QUIZ AŞAMASI ==================== -->
+      <section class="phase-section hidden" id="quizPhase">
+        <div class="quiz-container">
+          <!-- Quiz header -->
+          <div class="quiz-header">
+            <div class="quiz-progress">
+              <div class="quiz-progress-bar" id="quizProgressBar"></div>
+            </div>
+            <div class="quiz-info">
+              <span id="questionCounter">Soru 1 / 5</span>
+              <div class="score-live">
+                ⭐ <span id="liveScore">0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soru alanı -->
+          <div class="question-card" id="questionCard">
+            <div class="question-number" id="questionNumber">1</div>
+            <div class="question-text" id="questionText"></div>
+            <div class="options-grid" id="optionsGrid"></div>
+
+            <!-- Geri bildirim -->
+            <div class="feedback-box hidden" id="feedbackBox">
+              <div class="feedback-icon" id="feedbackIcon"></div>
+              <div class="feedback-text" id="feedbackText"></div>
+              <div class="explanation-text" id="explanationText"></div>
+            </div>
+
+            <button class="btn btn-primary btn-large hidden" id="nextBtn">
+              Sonraki Soru →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SONUÇ AŞAMASI ==================== -->
+      <section class="phase-section hidden" id="resultPhase">
+        <div class="result-container">
+          <div class="result-animation" id="resultAnimation">🏆</div>
+          <h2 class="result-title" id="resultTitle">Harika!</h2>
+          <div class="result-score-display">
+            <div class="score-circle" id="scoreCircle">
+              <span id="scoreDisplay">0/5</span>
+            </div>
+          </div>
+          <p class="result-message" id="resultMessage"></p>
+
+          <!-- Yıldız ödülü -->
+          <div class="stars-earned" id="starsEarned"></div>
+
+          <!-- Rozet -->
+          <div class="badge-earned hidden" id="badgeEarned">
+            <div class="badge-icon" id="badgeIcon"></div>
+            <div class="badge-text" id="badgeText"></div>
+          </div>
+
+          <!-- Cevap özeti -->
+          <div class="answer-summary" id="answerSummary"></div>
+
+          <!-- Butonlar -->
+          <div class="result-actions">
+            <button class="btn btn-secondary" id="reWatchBtn">
+              🎬 Videoyu Tekrar İzle
+            </button>
+            <button class="btn btn-primary" id="nextLessonBtn">
+              📚 Ana Sayfaya Dön
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- SES EFEKTLERİ (Web Audio API ile) -->
+  <script src="data/lessons-data.js"></script>
+  <script src="data/turkce-lessons-data.js"></script>
+  <script src="data/matematik-lessons-data.js"></script>
+  <script src="data/fen-lessons-data.js"></script>
+  <script src="data/sosyal-lessons-data.js"></script>
+  <script src="player.js"></script>
+  <script src="quiz.js"></script>
+  <script src="lesson.js"></script>
+</body>
+</html>
