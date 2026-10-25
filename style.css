@@ -1070,6 +1070,8 @@ img, video {
   position: relative;
   min-height: 480px;
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .harita-svg-yol {
@@ -2244,6 +2246,29 @@ img, video {
   font-weight: 800;
   color: var(--marka);
   letter-spacing: 6px;
+}
+
+.bulut-pin-input {
+  font-family: var(--font-baslik);
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 12px;
+  color: var(--marka);
+  background: #FFFFFF;
+  border: 3px solid var(--marka);
+  border-radius: var(--r-md);
+  padding: 10px 16px;
+  width: 200px;
+  max-width: 100%;
+  margin: 12px auto;
+  outline: none;
+  transition: all var(--gecis-hizli);
+  display: block;
+}
+.bulut-pin-input:focus {
+  border-color: var(--renk-birincil);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
 }
 
 

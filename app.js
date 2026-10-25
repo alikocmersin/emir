@@ -705,16 +705,31 @@ function toggleMapCardsView(viewName) {
   const emptyState = document.getElementById('bosSonucAlani');
 
   if (viewName === 'harita') {
-    btnKartlar.classList.remove('aktif');
-    btnHarita.classList.add('aktif');
-    grid.style.display = 'none';
+    if (btnKartlar) {
+      btnKartlar.classList.remove('aktif');
+      btnKartlar.setAttribute('aria-selected', 'false');
+    }
+    if (btnHarita) {
+      btnHarita.classList.add('aktif');
+      btnHarita.setAttribute('aria-selected', 'true');
+    }
+    if (grid) grid.style.display = 'none';
     if (emptyState) emptyState.style.display = 'none';
-    mapCont.style.display = 'block';
-    renderAdventureMap();
+    if (mapCont) {
+      mapCont.style.display = 'block';
+      renderAdventureMap();
+    }
   } else {
-    btnHarita.classList.remove('aktif');
-    btnKartlar.classList.add('aktif');
-    mapCont.style.display = 'none';
+    if (btnHarita) {
+      btnHarita.classList.remove('aktif');
+      btnHarita.setAttribute('aria-selected', 'false');
+    }
+    if (btnKartlar) {
+      btnKartlar.classList.add('aktif');
+      btnKartlar.setAttribute('aria-selected', 'true');
+    }
+    if (mapCont) mapCont.style.display = 'none';
+    if (grid) grid.style.display = 'grid';
     renderUnitCardsGrid();
   }
 }
@@ -761,23 +776,28 @@ function buildSvgSerpentinePath(container, units, dersKey) {
   const count = units.length;
   const rowHeight = 120;
   const totalHeight = (count + 1) * rowHeight;
+
+  // Güvenli ve dinamik genişlik ölçümü
+  const containerWidth = container.clientWidth || (container.parentElement ? container.parentElement.clientWidth : 0) || Math.min(window.innerWidth - 48, 500) || 360;
+  const width = Math.max(300, Math.min(500, containerWidth));
+
+  container.style.maxWidth = `${width}px`;
+  container.style.margin = '0 auto';
+  container.style.position = 'relative';
   container.style.minHeight = `${totalHeight}px`;
 
   // Koordinatları hesapla (S-kıvrımı)
   const points = [];
-  const width = Math.min(800, container.clientWidth || 600);
-
   units.forEach((u, i) => {
-    // Sağa ve sola kıvrılan sinüs eğrisi
     const isEven = i % 2 === 0;
-    const x = isEven ? width * 0.25 : width * 0.75;
-    const y = (i + 0.6) * rowHeight;
+    const x = isEven ? Math.round(width * 0.28) : Math.round(width * 0.72);
+    const y = Math.round((i + 0.6) * rowHeight);
     points.push({ x, y, unit: u });
   });
 
   // Kupa noktası (en son)
-  const cupX = width * 0.5;
-  const cupY = (count + 0.6) * rowHeight;
+  const cupX = Math.round(width * 0.5);
+  const cupY = Math.round((count + 0.6) * rowHeight);
 
   // SVG Yolunu Oluştur
   let dPath = `M ${points[0].x} ${points[0].y}`;
@@ -797,6 +817,7 @@ function buildSvgSerpentinePath(container, units, dersKey) {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('class', 'harita-svg-yol');
   svg.setAttribute('viewBox', `0 0 ${width} ${totalHeight}`);
+  svg.setAttribute('style', `position:absolute; inset:0; width:100%; height:${totalHeight}px; pointer-events:none;`);
 
   svg.innerHTML = `
     <path d="${dPath}" class="harita-yol-cizgi" />
@@ -827,8 +848,10 @@ function buildSvgSerpentinePath(container, units, dersKey) {
 
     const node = document.createElement('div');
     node.className = `harita-checkpoint-72 ${nodeClass}`;
+    node.style.position = 'absolute';
     node.style.left = `${p.x}px`;
     node.style.top = `${p.y}px`;
+    node.style.transform = 'translate(-50%, -50%)';
     node.setAttribute('data-ders', dersKey);
     node.title = `${u.no}. Ünite: ${u.baslik}`;
 
@@ -851,8 +874,10 @@ function buildSvgSerpentinePath(container, units, dersKey) {
   // Ders Kupası Final Noktası
   const cup = document.createElement('div');
   cup.className = 'harita-kupa-noktasi';
+  cup.style.position = 'absolute';
   cup.style.left = `${cupX}px`;
   cup.style.top = `${cupY}px`;
+  cup.style.transform = 'translate(-50%, -50%)';
   cup.title = 'Tebrikler! Dersi Tamamlama Kupası!';
   cup.innerHTML = '🏆';
   cup.onclick = () => {
@@ -999,7 +1024,10 @@ function closeSinemaModal() {
     videoEl.pause();
   }
   clearInterval(appState.videoPlayTimer);
-  if (modal) modal.classList.remove('aktif');
+  if (modal) {
+    modal.classList.remove('aktif');
+    modal.style.display = 'none';
+  }
   document.body.style.overflow = '';
   renderCurrentView();
 }
@@ -2010,26 +2038,32 @@ function selectSubjectBanner(subjectKey) {
   appState.activeSubject = subjectKey;
   document.body.setAttribute('data-ders', subjectKey);
   renderSubjectChips();
-  renderCurrentView();
   toggleMapCardsView('kartlar');
+  setTimeout(() => {
+    const el = document.getElementById('derslerBolumu');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 50);
+}
 
-  // Tıklanan dersin ilk veya devam eden ünitesinin videosunu hemen aç!
+function playSubjectBannerVideo(event, subjectKey) {
+  if (event) event.stopPropagation();
+  appState.activeSubject = subjectKey;
+  document.body.setAttribute('data-ders', subjectKey);
+  renderSubjectChips();
   const subjectUnits = window.UNITELER.filter(u => u.ders === subjectKey);
   const targetUnit = subjectUnits.find(u => !APP_DATA.ilerleme[u.id] || !APP_DATA.ilerleme[u.id].izlendi) || subjectUnits[0];
   if (targetUnit) {
     openSinemaModal(targetUnit.id);
-  } else {
-    setTimeout(() => {
-      const el = document.getElementById('derslerBolumu');
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 60);
   }
 }
 
 
 function navigateToSection(sec) {
   document.querySelectorAll('.mobil-bar-ogesi').forEach(b => b.classList.remove('aktif'));
-  const btn = Array.from(document.querySelectorAll('.mobil-bar-ogesi')).find(b => b.getAttribute('onclick').includes(sec));
+  const btn = Array.from(document.querySelectorAll('.mobil-bar-ogesi')).find(b => {
+    const oc = b.getAttribute('onclick') || '';
+    return oc.includes(`'${sec}'`);
+  });
   if (btn) btn.classList.add('aktif');
 
   if (sec === 'dersler') {
@@ -2131,13 +2165,18 @@ const CloudSync = {
   lastSyncTime: null,
   debounceTimer: null,
 
-  async init() {
-    const savedPin = localStorage.getItem('emirlearn_sync_pin') || '3333';
-    this.currentPin = savedPin;
-    this.updateUIBadge('online');
+  isAuthActive() {
+    return localStorage.getItem('emirlearn_auth_active') === 'true';
+  },
 
-    // Başlangıçta buluttan kontrol et ve cihazı güncelle
-    await this.pullFromCloud(true);
+  async init() {
+    if (this.isAuthActive()) {
+      this.updateUIBadge('online');
+      // Oturum açıksa buluttan sessizce en son ilerlemeyi senkronize et
+      await this.pullFromCloud(true);
+    } else {
+      this.updateUIBadge('logged_out');
+    }
   },
 
   updateUIBadge(status) {
@@ -2145,22 +2184,31 @@ const CloudSync = {
     const isikEl = document.getElementById('bulutDurumIsik');
     const timeEl = document.getElementById('bulutSonSyncZamani');
 
-    if (textEl) textEl.textContent = this.currentPin;
-    if (isikEl) {
-      if (status === 'syncing') {
-        isikEl.textContent = '🔄';
-      } else if (status === 'online') {
-        isikEl.textContent = '🟢';
-      } else if (status === 'error') {
-        isikEl.textContent = '🟡';
+    if (this.isAuthActive()) {
+      if (textEl) textEl.textContent = 'Hoş geldin Emir';
+      if (isikEl) {
+        if (status === 'syncing') {
+          isikEl.textContent = '🔄';
+        } else if (status === 'online') {
+          isikEl.textContent = '🟢';
+        } else if (status === 'error') {
+          isikEl.textContent = '🟡';
+        } else {
+          isikEl.textContent = '🟢';
+        }
       }
+    } else {
+      if (textEl) textEl.textContent = 'Şifre Gir';
+      if (isikEl) isikEl.textContent = '🔑';
     }
+
     if (timeEl && this.lastSyncTime) {
       timeEl.textContent = `Son senkronizasyon: ${this.lastSyncTime.toLocaleTimeString('tr-TR')}`;
     }
   },
 
   async pullFromCloud(silent) {
+    if (!this.isAuthActive()) return false;
     this.updateUIBadge('syncing');
     try {
       const resp = await fetch(this.binUrl, {
@@ -2193,6 +2241,7 @@ const CloudSync = {
   },
 
   async pushToCloud(silent) {
+    if (!this.isAuthActive()) return;
     if (this.isSyncing) return;
     this.isSyncing = true;
     this.updateUIBadge('syncing');
@@ -2227,6 +2276,7 @@ const CloudSync = {
   },
 
   saveDebounced() {
+    if (!this.isAuthActive()) return;
     clearTimeout(this.debounceTimer);
     this.debounceTimer = setTimeout(() => {
       this.pushToCloud(true);
@@ -2239,7 +2289,7 @@ window.CloudSync = CloudSync;
 function openCloudSyncModal() {
   const m = document.getElementById('bulutSyncModalBackdrop');
   if (m) m.style.display = 'flex';
-  CloudSync.updateUIBadge('online');
+  renderCloudModalContent();
 }
 
 function closeCloudSyncModal() {
@@ -2251,6 +2301,61 @@ function handleCloudModalBackdropClick(e) {
   if (e.target.id === 'bulutSyncModalBackdrop') {
     closeCloudSyncModal();
   }
+}
+
+function renderCloudModalContent() {
+  const loginView = document.getElementById('bulutLoginGorunumu');
+  const activeView = document.getElementById('bulutAktifGorunumu');
+  const pinInput = document.getElementById('bulutSifreGirisInput');
+  const errEl = document.getElementById('bulutSifreHata');
+
+  if (CloudSync.isAuthActive()) {
+    if (loginView) loginView.style.display = 'none';
+    if (activeView) activeView.style.display = 'block';
+  } else {
+    if (loginView) loginView.style.display = 'block';
+    if (activeView) activeView.style.display = 'none';
+    if (pinInput) {
+      pinInput.value = '';
+      setTimeout(() => pinInput.focus(), 150);
+    }
+    if (errEl) errEl.style.display = 'none';
+  }
+}
+
+function submitCloudAuthPin() {
+  const inp = document.getElementById('bulutSifreGirisInput');
+  const errEl = document.getElementById('bulutSifreHata');
+  const val = (inp ? inp.value : '').trim();
+
+  if (val === '3333') {
+    localStorage.setItem('emirlearn_auth_active', 'true');
+    localStorage.setItem('emirlearn_sync_pin', '3333');
+    if (errEl) errEl.style.display = 'none';
+
+    CloudSync.updateUIBadge('online');
+    renderCloudModalContent();
+
+    triggerConfetti();
+    SoundFX.playLevelUp();
+    showToast('🎉 Hoş geldin Emir! Verilerin buluttan yükleniyor...');
+
+    CloudSync.pullFromCloud(false);
+  } else {
+    if (errEl) {
+      errEl.textContent = '❌ Hatalı şifre! Lütfen 3333 girin.';
+      errEl.style.display = 'block';
+    }
+    SoundFX.playWrong();
+    showToast('❌ Hatalı şifre! Lütfen şifrenizi girin.');
+  }
+}
+
+function handleCloudLogout() {
+  localStorage.removeItem('emirlearn_auth_active');
+  CloudSync.updateUIBadge('logged_out');
+  renderCloudModalContent();
+  showToast('🚪 Bulut oturumu kapatıldı.');
 }
 
 function triggerManualCloudPull() {

@@ -77,10 +77,10 @@
         </div>
 
         <!-- Bulut Senkronizasyon Rozeti -->
-        <button class="stat-kapsul bulut-sync-kapsul" id="bulutSyncBtn" onclick="openCloudSyncModal()" title="Bulut İlerleme Senkronizasyonu (Şifre: 3333)">
+        <button class="stat-kapsul bulut-sync-kapsul" id="bulutSyncBtn" onclick="openCloudSyncModal()" title="Bulut İlerleme Girişi ve Senkronizasyon">
           <span>☁️</span>
-          <span id="bulutKoduGosterge">3333</span>
-          <span class="bulut-durum-isik" id="bulutDurumIsik" title="Bulut Bağlantısı">🟢</span>
+          <span id="bulutKoduGosterge">Şifre Gir</span>
+          <span class="bulut-durum-isik" id="bulutDurumIsik" title="Bulut Bağlantısı">🔑</span>
         </button>
 
         <!-- Ebeveyn Paneli Giriş Butonu -->
@@ -137,7 +137,7 @@
           <h3 class="banner-ders-adi">Sosyal Bilgiler</h3>
           <p class="banner-alt-metin">Birey, Toplum, Kültür & Küresel Bağlantılar</p>
         </div>
-        <div class="banner-ok-butonu" title="Videoyu Başlat">▶</div>
+        <div class="banner-ok-butonu" onclick="playSubjectBannerVideo(event, 'sosyal')" title="Videoyu Başlat">▶</div>
       </div>
 
       <!-- Türkçe Kartı -->
@@ -148,7 +148,7 @@
           <h3 class="banner-ders-adi">Türkçe</h3>
           <p class="banner-alt-metin">Sözcük Bilgisi, Cümle, Yazım & Metin Türleri</p>
         </div>
-        <div class="banner-ok-butonu" title="Videoyu Başlat">▶</div>
+        <div class="banner-ok-butonu" onclick="playSubjectBannerVideo(event, 'turkce')" title="Videoyu Başlat">▶</div>
       </div>
 
       <!-- Matematik Kartı -->
@@ -159,7 +159,7 @@
           <h3 class="banner-ders-adi">Matematik</h3>
           <p class="banner-alt-metin">Doğal Sayılar, Kesirler, Zaman & Geometri</p>
         </div>
-        <div class="banner-ok-butonu" title="Videoyu Başlat">▶</div>
+        <div class="banner-ok-butonu" onclick="playSubjectBannerVideo(event, 'matematik')" title="Videoyu Başlat">▶</div>
       </div>
 
       <!-- Fen Bilimleri Kartı -->
@@ -170,7 +170,7 @@
           <h3 class="banner-ders-adi">Fen Bilimleri</h3>
           <p class="banner-alt-metin">Yer Kabuğu, Kuvvet, Madde & Devreler</p>
         </div>
-        <div class="banner-ok-butonu" title="Videoyu Başlat">▶</div>
+        <div class="banner-ok-butonu" onclick="playSubjectBannerVideo(event, 'fen')" title="Videoyu Başlat">▶</div>
       </div>
     </div>
   </section>
@@ -297,7 +297,7 @@
   <!-- ======================================================================
        6. SİNEMA VİDEO MODALİ (KOMUT 4 SINIF / SİNEMA ATMOSFERİ)
        ====================================================================== -->
-  <div id="sinemaModalBackdrop" class="sinema-modal-backdrop" onclick="handleSinemaBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="sinemaBaslik">
+  <div id="sinemaModalBackdrop" class="sinema-modal-backdrop" style="display:none;" onclick="handleSinemaBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="sinemaBaslik">
     <div class="sinema-kart-konteyner" onclick="event.stopPropagation()">
       <!-- Nötr 48px Kapatma Butonu (Çarpı) -->
       <button class="sinema-kapat-butonu-48" onclick="closeSinemaModal()" title="Kapat (ESC)" aria-label="Videoyu Kapat">✕</button>
@@ -469,33 +469,60 @@
   <!-- ======================================================================
        BULUT SENKRONİZASYON MODALİ (FARKLI CİHAZLARDAN DEVAM ETME)
        ====================================================================== -->
-  <div id="bulutSyncModalBackdrop" class="ebeveyn-modal-backdrop" style="display:none;" onclick="handleCloudModalBackdropClick(event)">
+    <div id="bulutSyncModalBackdrop" class="ebeveyn-modal-backdrop" style="display:none;" onclick="handleCloudModalBackdropClick(event)">
     <div class="bulut-modal-kart" onclick="event.stopPropagation()">
       <button class="sinema-kapat-butonu-48" onclick="closeCloudSyncModal()" title="Kapat">✕</button>
-      <div style="font-size:3rem; margin-bottom:8px;">☁️</div>
-      <h2>Bulut İlerleme Senkronizasyonu</h2>
-      <p style="color:var(--metin-ikincil); font-size:0.95rem; margin-top:6px;">
-        Telefon, tablet veya başka bir bilgisayardan girdiğinde yıldızların ve izlediğin videolar kaybolmaz!
-      </p>
 
-      <div class="bulut-kod-kutusu">
-        <span style="font-size:0.85rem; font-weight:800; color:var(--metin-ikincil);">ÖĞRENCİ BULUT KODU</span>
-        <div class="bulut-kod-deger" id="bulutKodInputBox">3333</div>
-        <small style="color:var(--basari); font-weight:800;">Otomatik Bulut Eşitlemesi Aktif ✅</small>
+      <!-- GÖRÜNÜM 1: ŞİFRE GİRİŞ EKRANI (Giriş yapılmadığında) -->
+      <div id="bulutLoginGorunumu">
+        <div style="font-size:3rem; margin-bottom:8px;">☁️</div>
+        <h2>Bulut İlerleme Girişi</h2>
+        <p style="color:var(--metin-ikincil); font-size:0.95rem; margin-top:6px;">
+          Farklı telefon, tablet veya bilgisayardan girdiğinde yıldızların ve ilerlemenin silinmemesi için lütfen 4 haneli şifreni gir:
+        </p>
+
+        <div class="bulut-kod-kutusu" style="margin-top:20px;">
+          <span style="font-size:0.85rem; font-weight:800; color:var(--metin-ikincil);">ÖĞRENCİ ŞİFRESİ</span>
+          <input type="password" inputmode="numeric" id="bulutSifreGirisInput" class="bulut-pin-input" maxlength="4" placeholder="••••" autocomplete="off" onkeydown="if(event.key==='Enter') submitCloudAuthPin()" />
+          <div id="bulutSifreHata" style="color:var(--hata); font-weight:800; font-size:0.85rem; margin-top:6px; display:none;"></div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <button class="btn btn-birincil" style="width:100%; font-size:1.05rem; padding:12px;" onclick="submitCloudAuthPin()">
+            <span>🔑</span> <span>Giriş Yap ve Senkronize Et</span>
+          </button>
+        </div>
       </div>
 
-      <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
-        <button class="btn btn-birincil" onclick="triggerManualCloudPull()">
-          <span>📥</span> <span>Buluttan Şimdi Yükle (Eşitle)</span>
-        </button>
-        <button class="btn btn-ikincil" onclick="triggerManualCloudPush()">
-          <span>📤</span> <span>Buluta Şimdi Gönder (Yedekle)</span>
-        </button>
-      </div>
+      <!-- GÖRÜNÜM 2: GİRİŞ YAPILMIŞ EKRANI (Hoş geldin Emir) -->
+      <div id="bulutAktifGorunumu" style="display:none;">
+        <div style="font-size:3rem; margin-bottom:8px;">🎉</div>
+        <h2>Hoş geldin Emir! 👋</h2>
+        <p style="color:var(--metin-ikincil); font-size:0.95rem; margin-top:6px;">
+          Bulut senkronizasyonun aktif! Tüm cihazlarında yıldızların, elmasların ve ilerlemen korunuyor.
+        </p>
 
-      <p id="bulutSonSyncZamani" style="font-size:0.8rem; color:var(--metin-ikincil); margin-top:16px;">
-        Son senkronizasyon: Az önce
-      </p>
+        <div class="bulut-kod-kutusu" style="margin-top:16px;">
+          <div style="font-size:1.15rem; font-weight:800; color:var(--basari);">🟢 Otomatik Bulut Eşitlemesi Aktif</div>
+          <small style="color:var(--metin-ikincil);">Öğrenci Kodu: 3333 (Emir)</small>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+          <button class="btn btn-birincil" onclick="triggerManualCloudPull()">
+            <span>📥</span> <span>Buluttan Şimdi Yükle (Eşitle)</span>
+          </button>
+          <button class="btn btn-ikincil" onclick="triggerManualCloudPush()">
+            <span>📤</span> <span>Buluta Şimdi Gönder (Yedekle)</span>
+          </button>
+          <button class="btn btn-ikincil" style="background:transparent; border-color:var(--cizgi); color:var(--metin-ikincil); margin-top:8px;" onclick="handleCloudLogout()">
+            <span>🚪</span> <span>Oturumu Kapat</span>
+          </button>
+        </div>
+
+        <p id="bulutSonSyncZamani" style="font-size:0.8rem; color:var(--metin-ikincil); margin-top:16px;">
+          Son senkronizasyon: Az önce
+        </p>
+      </div>
     </div>
   </div>
 
@@ -607,7 +634,7 @@
       <span class="mobil-bar-ikon">🏠</span>
       <span>Dersler</span>
     </button>
-    <button class="mobil-bar-ogesi" onclick="toggleMapCardsView('harita')" aria-label="Macera Haritası">
+    <button class="mobil-bar-ogesi" onclick="navigateToSection('harita')" aria-label="Macera Haritası">
       <span class="mobil-bar-ikon">🗺️</span>
       <span>Harita</span>
     </button>
