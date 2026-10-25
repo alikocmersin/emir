@@ -1,12 +1,12 @@
-// sw.js — EmirLearn Service Worker (v2.2 Network-First)
-const CACHE_NAME = 'emirlearn-v2.2';
+// sw.js — EmirLearn Service Worker (v2.3 Network-First)
+const CACHE_NAME = 'emirlearn-v2.3';
 const STATIC_ASSETS = [
   './',
   './index.html',
-  './style.css?v=2.2',
-  './app.js?v=2.2',
-  './data/master-units-data.js?v=2.2',
-  './data/unit-quizzes-data.js?v=2.2',
+  './style.css?v=2.3',
+  './app.js?v=2.3',
+  './data/master-units-data.js?v=2.3',
+  './data/unit-quizzes-data.js?v=2.3',
   './manifest.webmanifest'
 ];
 
@@ -37,7 +37,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Network-First stratejisi: Önce güncel dosyayı sunucudan al, yoksa önbelleğe bak
+  // Network-First: Önce ağdan en günceli al
   event.respondWith(
     fetch(event.request)
       .then((networkResponse) => {

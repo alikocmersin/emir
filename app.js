@@ -641,10 +641,9 @@ function createMasterUnitCard(unit, idx) {
 
       <!-- Konu Çipleri -->
       <div class="kart-konular-alani">
-        <span class="kart-konular-baslik">Bu Ünitede Öğreneceklerin:</span>
+        <span class="kart-konular-baslik">Bu Ünitede Öğreneceklerin (Konular):</span>
         <div class="kart-konu-cipleri">
-          ${ilkKonular.map(k => `<span class="mini-konu-cipi">${k}</span>`).join('')}
-          ${kalanSayi > 0 ? `<button class="daha-fazla-konu-cipi" onclick="event.stopPropagation(); showAllTopicsModal('${unit.id}')">+${kalanSayi} konu daha</button>` : ''}
+          ${unit.konular.map(k => `<span class="mini-konu-cipi">${k}</span>`).join('')}
         </div>
       </div>
 
@@ -2060,12 +2059,19 @@ function selectSubjectBanner(subjectKey) {
   renderSubjectChips();
   toggleMapCardsView('kartlar');
 
-  // Derse tıklandığında ilgili dersin ilk veya devam eden ünitesinin videosunu hemen aç!
-  const subjectUnits = window.UNITELER.filter(u => u.ders === subjectKey);
-  const targetUnit = subjectUnits.find(u => !APP_DATA.ilerleme[u.id] || !APP_DATA.ilerleme[u.id].izlendi) || subjectUnits[0];
-  if (targetUnit) {
-    openSinemaModal(targetUnit.id);
-  }
+  // Konuların ve ünitelerin olduğu bölüme pürüzsüz kaydır
+  setTimeout(() => {
+    const el = document.getElementById('derslerBolumu');
+    if (el) {
+      const headerOffset = 70;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }, 40);
 }
 
 function playSubjectBannerVideo(event, subjectKey) {

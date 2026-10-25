@@ -2375,6 +2375,37 @@ img, video {
   flex-shrink: 0;
   transition: all var(--gecis-hizli);
 }
+.banner-alt-eylem {
+  display: flex;
+  align-items: center;
+  gap: var(--s-12);
+  margin-top: 8px;
+}
+.banner-konu-link {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--ders-koyu);
+  background: var(--ders-acik);
+  padding: 3px 8px;
+  border-radius: var(--r-sm);
+  display: inline-block;
+  transition: all var(--gecis-hizli);
+}
+.ders-banner-karti:hover .banner-konu-link {
+  background: var(--ders-ana);
+  color: #FFFFFF;
+}
+.banner-sayfa-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--metin-ikincil);
+  text-decoration: underline;
+  transition: color var(--gecis-hizli);
+}
+.banner-sayfa-link:hover {
+  color: var(--ders-ana);
+}
+
 .ders-banner-karti:hover .banner-ok-butonu {
   background: var(--ders-ana);
   color: #FFFFFF;

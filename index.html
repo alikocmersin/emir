@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Tasarım Sistemi Stili -->
-  <link rel="stylesheet" href="style.css?v=2.2" />
+  <link rel="stylesheet" href="style.css?v=2.3" />
 </head>
 <body data-ders="sosyal">
 
@@ -130,45 +130,61 @@
   <section class="ders-banner-alani" aria-label="Ders Seçimi">
     <div class="ders-banner-govde">
       <!-- Sosyal Bilgiler Kartı -->
-      <div class="ders-banner-karti ders-tema-sosyal" onclick="selectSubjectBanner('sosyal')" role="button" tabindex="0" title="Sosyal Bilgiler Dersini Aç">
+      <div class="ders-banner-karti ders-tema-sosyal" onclick="selectSubjectBanner('sosyal')" role="button" tabindex="0" title="Sosyal Bilgiler Konularını Aç">
         <div class="banner-sol-ikon">🌍</div>
         <div class="banner-icerik">
           <div class="banner-ust-etiket">7 Master Ünite</div>
           <h3 class="banner-ders-adi">Sosyal Bilgiler</h3>
           <p class="banner-alt-metin">Birey, Toplum, Kültür & Küresel Bağlantılar</p>
+          <div class="banner-alt-eylem">
+            <span class="banner-konu-link">📚 Konuları Gör ↓</span>
+            <a href="sosyal/" onclick="event.stopPropagation()" class="banner-sayfa-link" title="Sosyal Bilgiler Konu Sayfası">Konu Sayfası ↗</a>
+          </div>
         </div>
         <div class="banner-ok-butonu" onclick="playSubjectBannerVideo(event, 'sosyal')" title="Videoyu Başlat">▶</div>
       </div>
 
       <!-- Türkçe Kartı -->
-      <div class="ders-banner-karti ders-tema-turkce" onclick="selectSubjectBanner('turkce')" role="button" tabindex="0" title="Türkçe Dersini Aç">
+      <div class="ders-banner-karti ders-tema-turkce" onclick="selectSubjectBanner('turkce')" role="button" tabindex="0" title="Türkçe Konularını Aç">
         <div class="banner-sol-ikon">📖</div>
         <div class="banner-icerik">
           <div class="banner-ust-etiket">5 Master Ünite</div>
           <h3 class="banner-ders-adi">Türkçe</h3>
           <p class="banner-alt-metin">Sözcük Bilgisi, Cümle, Yazım & Metin Türleri</p>
+          <div class="banner-alt-eylem">
+            <span class="banner-konu-link">📚 Konuları Gör ↓</span>
+            <a href="turkce/" onclick="event.stopPropagation()" class="banner-sayfa-link" title="Türkçe Konu Sayfası">Konu Sayfası ↗</a>
+          </div>
         </div>
         <div class="banner-ok-butonu" onclick="playSubjectBannerVideo(event, 'turkce')" title="Videoyu Başlat">▶</div>
       </div>
 
       <!-- Matematik Kartı -->
-      <div class="ders-banner-karti ders-tema-matematik" onclick="selectSubjectBanner('matematik')" role="button" tabindex="0" title="Matematik Dersini Aç">
+      <div class="ders-banner-karti ders-tema-matematik" onclick="selectSubjectBanner('matematik')" role="button" tabindex="0" title="Matematik Konularını Aç">
         <div class="banner-sol-ikon">📐</div>
         <div class="banner-icerik">
           <div class="banner-ust-etiket">6 Master Ünite</div>
           <h3 class="banner-ders-adi">Matematik</h3>
           <p class="banner-alt-metin">Doğal Sayılar, Kesirler, Zaman & Geometri</p>
+          <div class="banner-alt-eylem">
+            <span class="banner-konu-link">📚 Konuları Gör ↓</span>
+            <a href="matematik/" onclick="event.stopPropagation()" class="banner-sayfa-link" title="Matematik Konu Sayfası">Konu Sayfası ↗</a>
+          </div>
         </div>
         <div class="banner-ok-butonu" onclick="playSubjectBannerVideo(event, 'matematik')" title="Videoyu Başlat">▶</div>
       </div>
 
       <!-- Fen Bilimleri Kartı -->
-      <div class="ders-banner-karti ders-tema-fen" onclick="selectSubjectBanner('fen')" role="button" tabindex="0" title="Fen Bilimleri Dersini Aç">
+      <div class="ders-banner-karti ders-tema-fen" onclick="selectSubjectBanner('fen')" role="button" tabindex="0" title="Fen Bilimleri Konularını Aç">
         <div class="banner-sol-ikon">🔬</div>
         <div class="banner-icerik">
           <div class="banner-ust-etiket">7 Master Ünite</div>
           <h3 class="banner-ders-adi">Fen Bilimleri</h3>
           <p class="banner-alt-metin">Yer Kabuğu, Kuvvet, Madde & Devreler</p>
+          <div class="banner-alt-eylem">
+            <span class="banner-konu-link">📚 Konuları Gör ↓</span>
+            <a href="fen/" onclick="event.stopPropagation()" class="banner-sayfa-link" title="Fen Bilimleri Konu Sayfası">Konu Sayfası ↗</a>
+          </div>
         </div>
         <div class="banner-ok-butonu" onclick="playSubjectBannerVideo(event, 'fen')" title="Videoyu Başlat">▶</div>
       </div>
@@ -658,15 +674,15 @@
   <!-- ======================================================================
        9. JAVASCRIPT BAĞLANTILARI & SERVICE WORKER
        ====================================================================== -->
-  <script src="data/master-units-data.js?v=2.2"></script>
-  <script src="data/unit-quizzes-data.js?v=2.2"></script>
-  <script src="app.js?v=2.2"></script>
+  <script src="data/master-units-data.js?v=2.3"></script>
+  <script src="data/unit-quizzes-data.js?v=2.3"></script>
+  <script src="app.js?v=2.3"></script>
 
   <script>
     // PWA Service Worker Kaydı & Anında Güncelleme (Cache Buster v2.1)
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=2.2').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=2.3').then((reg) => {
           reg.update();
         }).catch(() => {});
       });
