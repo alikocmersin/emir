@@ -924,7 +924,10 @@ function attachVideoEventListeners(v) {
 
 function openSinemaModal(unitId) {
   const unit = window.UNITELER.find(u => u.id === unitId);
-  if (!unit) return;
+  if (!unit) {
+    console.warn("Ünite bulunamadı:", unitId);
+    return;
+  }
 
   appState.currentModalUnit = unit;
   const modal = document.getElementById('sinemaModalBackdrop');
@@ -938,46 +941,55 @@ function openSinemaModal(unitId) {
   const videoSarmal = document.getElementById('sinemaVideoSarmal');
   const videoControls = document.getElementById('ozelVideoKontrolleri');
 
-  // Modal üst teması
-  modal.setAttribute('data-ders', unit.ders);
   if (titleEl) titleEl.textContent = `${unit.tamBaslik}`;
   if (tagEl) tagEl.textContent = `${unit.dersAdi} • 12-13 Dk Master Video`;
 
-  // Quiz alanını kapat, videoyu hazırla
+  if (modal) {
+    modal.setAttribute('data-ders', unit.ders);
+    modal.style.display = 'flex';
+    modal.classList.add('aktif');
+  }
+  document.body.style.overflow = 'hidden';
+
+  // Quiz alanını kapat, video oynatıcıyı hazırla
   if (quizArea) quizArea.style.display = 'none';
   if (videoSarmal) videoSarmal.style.display = 'block';
   if (videoControls) videoControls.style.display = 'flex';
   if (siraSendePanel) siraSendePanel.style.display = 'none';
 
-  // Video kaynağı kontrolü
   if (unit.video && unit.hasVideo) {
     if (pendingBox) pendingBox.style.display = 'none';
-    if (videoSrc) videoSrc.src = unit.video;
-    videoEl.load();
-    attachVideoEventListeners(videoEl);
 
-    // Kaldığı yerden devam etme kontrolü
-    const prog = APP_DATA.ilerleme[unit.id];
-    if (prog && prog.sonSaniye > 10 && prog.sonSaniye < (videoEl.duration || 600) - 20) {
-      if (confirm(`Önceki izlemede ${Math.floor(prog.sonSaniye / 60)}:${Math.floor(prog.sonSaniye % 60)} saniyesinde kalmıştın. Kaldığın yerden devam edilsin mi?`)) {
+    // Hem video.src hem source.src doğrudan ayarlanır
+    if (videoSrc) videoSrc.src = unit.video;
+    if (videoEl) {
+      videoEl.src = unit.video;
+      videoEl.load();
+      attachVideoEventListeners(videoEl);
+
+      // Kaldığı saniyeden akıcı devam etme (engelleyici confirm olmadan)
+      const prog = APP_DATA.ilerleme && APP_DATA.ilerleme[unit.id];
+      if (prog && prog.sonSaniye > 10 && prog.sonSaniye < (videoEl.duration || 600) - 20) {
         videoEl.currentTime = prog.sonSaniye;
+        showToast(`⏱️ Kaldığın yerden (${formatTime(prog.sonSaniye)}) devam ediliyor...`);
+      }
+
+      // Güvenli otomatik oynatma
+      const playPromise = videoEl.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((e) => {
+          console.log("Tarayıcı kullanıcı dokunuşu bekliyor:", e);
+        });
       }
     }
-
-    videoEl.play().catch(() => {});
   } else {
     if (pendingBox) pendingBox.style.display = 'flex';
   }
 
-  // Bölüm Çiplerini Yerleştir
   renderVideoChapterChips(unit);
 
-  // 5 Saniyede Bir Otomatik İlerleme Kaydı ve Göz Molası Takibi
   clearInterval(appState.videoPlayTimer);
   appState.videoPlayTimer = setInterval(handleVideoPlaybackTick, 5000);
-
-  modal.classList.add('aktif');
-  document.body.style.overflow = 'hidden';
 }
 
 function closeSinemaModal() {
@@ -2000,12 +2012,18 @@ function selectSubjectBanner(subjectKey) {
   renderSubjectChips();
   renderCurrentView();
   toggleMapCardsView('kartlar');
-  setTimeout(() => {
-    const el = document.getElementById('derslerBolumu');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }, 60);
+
+  // Tıklanan dersin ilk veya devam eden ünitesinin videosunu hemen aç!
+  const subjectUnits = window.UNITELER.filter(u => u.ders === subjectKey);
+  const targetUnit = subjectUnits.find(u => !APP_DATA.ilerleme[u.id] || !APP_DATA.ilerleme[u.id].izlendi) || subjectUnits[0];
+  if (targetUnit) {
+    openSinemaModal(targetUnit.id);
+  } else {
+    setTimeout(() => {
+      const el = document.getElementById('derslerBolumu');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  }
 }
 
 
